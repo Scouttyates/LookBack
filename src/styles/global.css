@@ -1,0 +1,542 @@
+/* ============================================================================
+   LookBack — Global Styles
+   Art Direction: Foundry — editorial broadsheet, elevated (sepia/atlas variant)
+   ============================================================================ */
+
+:root {
+  /* Palette — sepia/ochre accent distinguishes LookBack from Verbatim's red */
+  --ink: #1a1a1a;
+  --ink-soft: #2c2520;
+  --paper: #f4ede0;
+  --paper-raised: #fbf6e9;
+  --paper-deep: #ebe2cf;
+  --rule: #d9cfbc;
+  --rule-strong: #b8ac95;
+  --accent: #8a5a2b;
+  --accent-soft: #ab7c4e;
+  --muted-ink: #5a4f3d;
+  --muted-ink-2: #7a6f5e;
+  --wrong: #7a2820;
+  --correct: #2f5d3a;
+  --correct-soft: #e3ecdf;
+  --wrong-soft: #f1d9d4;
+
+  /* Type stacks */
+  --serif: 'Fraunces', 'Newsreader', Georgia, 'Iowan Old Style', serif;
+  --serif-text: 'Newsreader', 'Fraunces', Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --mono: 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Scale */
+  --step-0: 1rem;
+  --step-1: 1.125rem;
+  --step-2: 1.375rem;
+  --step-3: 1.75rem;
+  --step-4: 2.375rem;
+  --step-5: 3.25rem;
+  --step-6: 4.5rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  /* Radii — minimal; this is a print aesthetic */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-base: 220ms;
+  --dur-slow: 400ms;
+
+  /* Layout */
+  --content-width: 520px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif-text);
+  font-size: var(--step-0);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  touch-action: manipulation;
+}
+
+/* Subtle paper texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(58,40,20,0.025) 1px, transparent 1.5px),
+    radial-gradient(circle at 78% 32%, rgba(58,40,20,0.02)  1px, transparent 1.5px),
+    radial-gradient(circle at 30% 80%, rgba(58,40,20,0.03)  1px, transparent 1.5px),
+    radial-gradient(circle at 90% 90%, rgba(58,40,20,0.02)  1px, transparent 1.5px);
+  background-size: 60px 60px, 80px 80px, 50px 50px, 70px 70px;
+}
+
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: max(env(safe-area-inset-left), var(--space-4));
+  padding-right: max(env(safe-area-inset-right), var(--space-4));
+}
+
+#app, .app-shell {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-7);
+}
+
+/* ---------- Typography ---------------------------------------------------- */
+
+h1, h2, h3, .display {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+h1 { font-size: var(--step-4); }
+h2 { font-size: var(--step-3); }
+h3 { font-size: var(--step-2); }
+
+p { margin: 0 0 var(--space-4); }
+
+em { font-style: italic; }
+.serif { font-family: var(--serif); }
+.serif-text { font-family: var(--serif-text); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* The big serif italic masthead. */
+.masthead {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(3.5rem, 16vw, var(--step-6));
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--muted-ink);
+  margin: 0;
+}
+
+.muted { color: var(--muted-ink); }
+.muted-2 { color: var(--muted-ink-2); }
+.accent { color: var(--accent); }
+
+/* ---------- Top strip (Vol · No · Date) ---------------------------------- */
+
+.top-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-ink);
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+/* Heavy double-rule (broadsheet style: 3px over 1px) */
+.heavy-rule {
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  height: 4px;
+  margin: var(--space-4) 0;
+}
+
+/* Date line under heavy rule */
+.date-line {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-ink);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+/* ---------- Rules --------------------------------------------------------- */
+
+hr.rule {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: var(--space-5) 0;
+}
+hr.rule-strong { border-top: 1px solid var(--rule-strong); }
+hr.rule-ink { border-top: 1px solid var(--ink); }
+hr.rule-dotted { border-top: 1px dotted var(--rule-strong); }
+
+/* Ornament — fleuron centred between sections */
+.fleuron {
+  text-align: center;
+  font-family: var(--serif);
+  color: var(--accent);
+  font-size: 1.1rem;
+  letter-spacing: 0.5em;
+  margin: var(--space-4) 0;
+  user-select: none;
+}
+.fleuron::before { content: '❦'; }
+
+.stars {
+  font-family: var(--serif);
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  display: inline-block;
+}
+
+/* ---------- Cards --------------------------------------------------------- */
+
+.card {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  padding: var(--space-5);
+}
+.card + .card { margin-top: var(--space-4); }
+
+/* ---------- Buttons ------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 50px;
+  padding: var(--space-3) var(--space-5);
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease),
+              color var(--dur-fast) var(--ease),
+              border-color var(--dur-fast) var(--ease);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.btn:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
+  outline: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    outline: none;
+  }
+}
+
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+}
+.btn-ghost:focus-visible {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn-ghost:hover {
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+}
+
+.btn-block { width: 100%; }
+
+.link {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+  background: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding: 0 0 2px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.link:hover, .link:focus-visible {
+  color: var(--accent);
+  border-bottom-color: currentColor;
+  outline: none;
+}
+
+/* Inline serif link variant */
+.link-serif {
+  color: var(--ink);
+  font-family: var(--serif-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--rule-strong);
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+.link-serif:hover { color: var(--accent); text-decoration-color: currentColor; }
+
+/* ---------- Choice card (used by most mechanics) -------------------------- */
+
+.choice {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  border-radius: 0;
+  padding: var(--space-4) var(--space-4);
+  font-family: var(--serif-text);
+  font-size: 0.97rem;
+  line-height: 1.45;
+  color: var(--ink);
+  cursor: pointer;
+  position: relative;
+  transition: border-color var(--dur-fast) var(--ease),
+              background var(--dur-fast) var(--ease),
+              transform var(--dur-fast) var(--ease);
+  -webkit-tap-highlight-color: transparent;
+  min-height: 48px;
+}
+
+.choice[data-label] { padding-top: 22px; }
+
+.choice + .choice { margin-top: var(--space-3); }
+
+@media (hover: hover) and (pointer: fine) {
+  .choice:hover:not([disabled]) { border-color: var(--ink); }
+}
+
+.choice[aria-pressed='true'] {
+  border-color: var(--ink);
+  box-shadow: inset 3px 0 0 0 var(--ink);
+}
+
+/* A/B/C/D label inside upper-left of each choice */
+.choice[data-label]::before {
+  content: attr(data-label);
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  padding: 0 6px;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: var(--muted-ink);
+}
+
+.choice[data-state='correct'] {
+  background: var(--correct-soft);
+  border-color: var(--correct);
+  color: var(--correct);
+  box-shadow: inset 3px 0 0 0 var(--correct);
+}
+.choice[data-state='correct']::after {
+  content: '✓';
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-4);
+  color: var(--correct);
+  font-family: var(--serif);
+}
+
+.choice[data-state='wrong'] {
+  background: var(--wrong-soft);
+  border-color: var(--wrong);
+  color: var(--wrong);
+  opacity: 1;
+  box-shadow: inset 3px 0 0 0 var(--wrong);
+}
+.choice[data-state='wrong']::after {
+  content: '✗';
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-4);
+  color: var(--wrong);
+  font-family: var(--serif);
+}
+
+.choice[data-state='missed'] {
+  border-style: dashed;
+  border-color: var(--accent-soft);
+  color: var(--accent-soft);
+}
+
+.choice.choice--word {
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step-1);
+}
+
+.choice[disabled] { cursor: default; }
+
+/* ---------- Dotted-leader row (scorecard) ---------------------------------- */
+.leader-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  font-family: var(--serif-text);
+  font-size: 0.95rem;
+}
+.leader-row + .leader-row { border-top: 1px dotted var(--rule-strong); }
+.leader-row .name { white-space: nowrap; }
+.leader-row .dots { flex: 1; border-bottom: 1px dotted var(--rule-strong); transform: translateY(-4px); }
+.leader-row .val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 0.9rem; }
+
+/* ---------- Utilities ----------------------------------------------------- */
+
+.stack { display: flex; flex-direction: column; }
+.stack-2 > * + * { margin-top: var(--space-2); }
+.stack-3 > * + * { margin-top: var(--space-3); }
+.stack-4 > * + * { margin-top: var(--space-4); }
+.stack-5 > * + * { margin-top: var(--space-5); }
+.stack-6 > * + * { margin-top: var(--space-6); }
+
+.row { display: flex; align-items: center; gap: var(--space-3); }
+.row-between { justify-content: space-between; }
+.center { text-align: center; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-2); }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0);
+  white-space: nowrap; border: 0;
+}
+
+/* Dashed progress ticker — 7 ticks for 7 rounds */
+.ticker {
+  display: flex;
+  gap: 4px;
+  margin: var(--space-3) 0;
+}
+.ticker > span {
+  flex: 1;
+  height: 3px;
+  background: var(--rule);
+}
+.ticker > span[data-on='true'] { background: var(--ink); }
+.ticker > span[data-current='true'] { background: var(--accent); }
+
+/* ---------- Toast --------------------------------------------------------- */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(env(safe-area-inset-bottom) + var(--space-5));
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: var(--paper);
+  padding: var(--space-3) var(--space-5);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step-1);
+  z-index: 10;
+  animation: toast-in var(--dur-base) var(--ease),
+             toast-out var(--dur-base) var(--ease) 1.8s forwards;
+}
+
+/* ---------- Image + attribution (LookBack-specific) ------------------------ */
+
+.image-frame {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--rule-strong);
+  background: var(--paper-deep);
+  overflow: hidden;
+}
+.image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.credit-btn {
+  position: absolute;
+  bottom: var(--space-2);
+  right: var(--space-2);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--rule-strong);
+  background: rgba(244, 237, 224, 0.9);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.credit-popover {
+  position: absolute;
+  bottom: calc(var(--space-2) + 32px);
+  right: var(--space-2);
+  max-width: 240px;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  padding: var(--space-3);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  line-height: 1.5;
+  color: var(--muted-ink);
+  z-index: 2;
+}
+.credit-popover a { color: var(--accent); }

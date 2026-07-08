@@ -1,0 +1,31 @@
+{
+  "name": "lookback",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "lint:puzzles": "node scripts/lint-puzzles.mjs",
+    "borders": "node scripts/generate-borders.mjs",
+    "fetch-image": "node scripts/fetch-image.mjs",
+    "prepare": "git config core.hooksPath .githooks"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/node": "^24.12.2",
+    "d3-geo": "^3.1.1",
+    "svelte": "^5.55.1",
+    "svelte-check": "^4.4.6",
+    "topojson-client": "^3.1.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.4",
+    "world-atlas": "^2.0.2"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}

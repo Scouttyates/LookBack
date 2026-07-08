@@ -1,0 +1,92 @@
+{
+  "puzzleNumber": 6,
+  "date": "2026-07-18",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-18/face.jpg",
+        "alt": "Photographic portrait of a stern-faced British statesman in a suit",
+        "attribution": { "fileTitle": "File:Winston Churchill cph.3a49758 (cropped).jpg", "author": "J. Russell and Sons", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Winston_Churchill_cph.3a49758_(cropped).jpg" }
+      },
+      "options": ["Franklin D. Roosevelt", "Charles de Gaulle", "Winston Churchill", "Dwight D. Eisenhower"],
+      "correctIndex": 2,
+      "revealFact": "Winston Churchill served as British Prime Minister during World War II and again in the early 1950s."
+    },
+    {
+      "type": "borderline",
+      "countryId": "brazil",
+      "answer": "Brazil",
+      "continentHint": "South America"
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-18/battle.jpg",
+        "alt": "Medieval illustration of armored knights and archers clashing in a muddy field",
+        "attribution": { "fileTitle": "File:Battle of Agincourt, St. Alban's Chronicle by Thomas Walsingham.jpg", "author": "Unknown, English School (15th century)", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Battle_of_Agincourt,_St._Alban%27s_Chronicle_by_Thomas_Walsingham.jpg" }
+      },
+      "clues": [
+        "English longbowmen played a decisive role against a much larger French force.",
+        "Fought in northern France in October 1415."
+      ],
+      "options": ["Battle of Crécy", "Battle of Poitiers", "Battle of Agincourt", "Battle of Formigny"],
+      "correctIndex": 2,
+      "revealYear": 1415
+    },
+    {
+      "type": "timeline",
+      "events": [
+        { "label": "The Louisiana Purchase roughly doubles the size of the United States", "year": 1803 },
+        { "label": "The first photograph of a human being is captured on a Paris street", "year": 1838 },
+        { "label": "The Suez Canal opens, connecting the Mediterranean and Red Seas", "year": 1869 },
+        { "label": "Marconi transmits the first transatlantic radio signal", "year": 1901 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-18/moment.jpg",
+        "alt": "A vast crowd of people seated outdoors on a grassy field stretching to the horizon",
+        "attribution": { "fileTitle": "File:Looking toward the back of the field at Woodstock.jpg", "author": "James M Shelley", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Looking_toward_the_back_of_the_field_at_Woodstock.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What event is shown here?",
+        "options": ["The Woodstock festival", "The Monterey Pop Festival", "Live Aid", "The Isle of Wight Festival"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "Where was this festival held?",
+        "options": ["Bethel, New York", "Woodstock, New York", "Monticello, New York", "Saugerties, New York"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "Nelson Mandela walks free after 27 years in prison.",
+      "answerYear": 1990,
+      "minYear": 1970,
+      "maxYear": 2010,
+      "tolerance": 2,
+      "revealFact": "Mandela was released after decades of imprisonment and became South Africa's first Black president in 1994."
+    },
+    {
+      "type": "zoomOut",
+      "image": {
+        "src": "/images/2026-07-18/zoom.jpg",
+        "alt": "Extreme close-up of weathered dark volcanic stone with a smooth carved edge",
+        "attribution": { "fileTitle": "File:Moai Rano raraku.jpg", "author": "Aurbina", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moai_Rano_raraku.jpg" }
+      },
+      "options": ["Carnac Stones", "Uluru", "Moai of Easter Island", "Newgrange", "Skara Brae", "Callanish Stones"],
+      "correctIndex": 2,
+      "zoomLevels": [
+        { "scale": 8, "x": 68, "y": 55 },
+        { "scale": 5, "x": 65, "y": 52 },
+        { "scale": 3, "x": 60, "y": 50 },
+        { "scale": 1.8, "x": 55, "y": 50 },
+        { "scale": 1, "x": 50, "y": 50 }
+      ],
+      "revealFact": "Nearly 1,000 moai statues were carved by the Rapa Nui people of Easter Island, mostly between 1250 and 1500 CE."
+    }
+  ]
+}

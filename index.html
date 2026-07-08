@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Games</title>
+    <meta name="theme-color" content="#f4ede0" />
+    <meta name="description" content="A small hub of daily games: Verbatim (vocabulary) and LookBack (history & geography)." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --ink: #1a1a1a;
+        --paper: #f4ede0;
+        --paper-raised: #fbf6e9;
+        --rule-strong: #b8ac95;
+        --muted-ink: #5a4f3d;
+        --serif: 'Fraunces', 'Newsreader', Georgia, serif;
+        --serif-text: 'Newsreader', 'Fraunces', Georgia, serif;
+        --mono: 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        min-height: 100dvh;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--serif-text);
+      }
+      .wrap {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 3rem 1rem 4rem;
+      }
+      .eyebrow {
+        font-family: var(--mono);
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.7rem;
+        color: var(--muted-ink);
+        text-align: center;
+        margin: 0 0 0.5rem;
+      }
+      h1 {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-style: italic;
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+        letter-spacing: -0.03em;
+        text-align: center;
+        margin: 0 0 2.5rem;
+      }
+      .cards {
+        display: grid;
+        gap: 1.25rem;
+      }
+      .card {
+        display: block;
+        text-decoration: none;
+        color: var(--ink);
+        background: var(--paper-raised);
+        border: 1px solid var(--rule-strong);
+        padding: 1.75rem;
+        transition: border-color 150ms ease, transform 150ms ease;
+      }
+      .card:hover, .card:focus-visible {
+        border-color: var(--ink);
+        transform: translateY(-2px);
+      }
+      .card .name {
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 600;
+        font-size: 1.75rem;
+        letter-spacing: -0.02em;
+      }
+      .card .tag {
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted-ink);
+        display: block;
+        margin-top: 0.5rem;
+      }
+      .card .desc {
+        margin-top: 0.75rem;
+        font-style: italic;
+        color: var(--muted-ink);
+        line-height: 1.5;
+      }
+      .accent-a { border-left: 3px solid #a8321e; }
+      .accent-b { border-left: 3px solid #8a5a2b; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="eyebrow">A small collection of daily games</p>
+      <h1>Daily Games</h1>
+      <div class="cards">
+        <a class="card accent-a" href="https://verbatim-azure.vercel.app">
+          <span class="name">Verbatim</span>
+          <span class="tag">Vocabulary · 7 rounds · ~5 min</span>
+          <p class="desc">A daily diversion in the English language. Sentences, synonyms, and one tricky CrossClue.</p>
+        </a>
+        <a class="card accent-b" href="/play.html">
+          <span class="name">LookBack</span>
+          <span class="tag">History &amp; geography · 7 rounds · ~10 min</span>
+          <p class="desc">A daily journey through history and geography. Faces, borders, battles, and one image that starts far too close to guess.</p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

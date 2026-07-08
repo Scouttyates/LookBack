@@ -1,0 +1,92 @@
+{
+  "puzzleNumber": 4,
+  "date": "2026-07-16",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-16/face.jpg",
+        "alt": "Ornate painted portrait of an English queen in an elaborate jeweled gown",
+        "attribution": { "fileTitle": "File:Elizabeth I (Armada Portrait).jpg", "author": "Formerly attributed to George Gower", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elizabeth_I_(Armada_Portrait).jpg" }
+      },
+      "options": ["Mary Queen of Scots", "Elizabeth I", "Catherine of Aragon", "Anne Boleyn"],
+      "correctIndex": 1,
+      "revealFact": "Elizabeth I ruled England for 44 years, a period later called the Elizabethan era."
+    },
+    {
+      "type": "borderline",
+      "countryId": "egypt",
+      "answer": "Egypt",
+      "continentHint": "Africa"
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-16/battle.jpg",
+        "alt": "Painting of massed cavalry and infantry clashing on a smoke-filled battlefield",
+        "attribution": { "fileTitle": "File:Thomas Jones Barker, The Battle of Waterloo.jpg", "author": "Thomas Jones Barker", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Jones_Barker,_The_Battle_of_Waterloo.jpg" }
+      },
+      "clues": [
+        "Ended one emperor's final bid to reclaim power in Europe.",
+        "Fought in present-day Belgium in June 1815."
+      ],
+      "options": ["Battle of Austerlitz", "Battle of Borodino", "Battle of Waterloo", "Battle of Leipzig"],
+      "correctIndex": 2,
+      "revealYear": 1815
+    },
+    {
+      "type": "timeline",
+      "events": [
+        { "label": "Michelangelo begins painting the Sistine Chapel ceiling", "year": 1508 },
+        { "label": "Isaac Newton is born in Woolsthorpe, England", "year": 1642 },
+        { "label": "James Watt patents a greatly improved steam engine", "year": 1769 },
+        { "label": "Nicéphore Niépce captures the first permanent photograph", "year": 1826 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-16/moment.jpg",
+        "alt": "An early wooden biplane aircraft lifting just off the ground, with a man running alongside",
+        "attribution": { "fileTitle": "File:The Wright Brothers; first powered flight HU98267.jpg", "author": "Daniels John T, Kill Devil Hills Life Saving Station", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Wright_Brothers;_first_powered_flight_HU98267.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What event is shown here?",
+        "options": ["The Wright brothers' first powered flight", "Charles Lindbergh's transatlantic takeoff", "The first flight of the Spirit of St. Louis", "An early glider test by Otto Lilienthal"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "Where did this flight take place?",
+        "options": ["Kitty Hawk, North Carolina", "Dayton, Ohio", "Cape Canaveral, Florida", "Wright Field, Ohio"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "Mount Vesuvius erupts, burying the Roman city of Pompeii in ash.",
+      "answerYear": 79,
+      "minYear": -100,
+      "maxYear": 300,
+      "tolerance": 20,
+      "revealFact": "The eruption preserved much of Pompeii almost perfectly, giving historians a detailed snapshot of Roman daily life."
+    },
+    {
+      "type": "zoomOut",
+      "image": {
+        "src": "/images/2026-07-16/zoom.jpg",
+        "alt": "Extreme close-up of a weathered grey-brown terracotta face with fine sculpted detail",
+        "attribution": { "fileTitle": "File:Head of a terracotta soldier, Sotilaan pää.jpg", "author": "JKestilä", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Head_of_a_terracotta_soldier,_Sotilaan_p%C3%A4%C3%A4.jpg" }
+      },
+      "options": ["Forbidden City", "Angkor Wat", "Terracotta Army", "Petra", "Machu Picchu", "Alhambra"],
+      "correctIndex": 2,
+      "zoomLevels": [
+        { "scale": 8, "x": 48, "y": 30 },
+        { "scale": 5, "x": 48, "y": 32 },
+        { "scale": 3, "x": 50, "y": 35 },
+        { "scale": 1.8, "x": 50, "y": 40 },
+        { "scale": 1, "x": 50, "y": 50 }
+      ],
+      "revealFact": "Buried with China's first emperor around 210 BCE, each of the thousands of soldier figures has a unique face."
+    }
+  ]
+}

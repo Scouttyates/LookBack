@@ -1,0 +1,93 @@
+{
+  "puzzleNumber": 5,
+  "date": "2026-07-17",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-17/face.jpg",
+        "alt": "Black-and-white photographic portrait of a young Mexican woman with dark hair, wearing earrings and a shawl",
+        "attribution": { "fileTitle": "File:Frida Kahlo, by Guillermo Kahlo (cropped).jpg", "author": "Guillermo Kahlo", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frida_Kahlo,_by_Guillermo_Kahlo_(cropped).jpg" }
+      },
+      "options": ["Frida Kahlo", "Diego Rivera", "Pablo Picasso", "Salvador Dalí"],
+      "correctIndex": 0,
+      "revealFact": "Frida Kahlo is known for vivid self-portraits exploring identity, pain, and Mexican culture."
+    },
+    {
+      "type": "borderline",
+      "countryId": "india",
+      "answer": "India",
+      "continentHint": "Asia"
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-17/battle.jpg",
+        "alt": "Aerial black-and-white photo of a warship leaving a wake on the open sea",
+        "attribution": { "fileTitle": "File:Japanese aircraft carrier Sōryū underway during Battle of Midway on 4 June 1942.jpg", "author": "United States Army Air Forces", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Japanese_aircraft_carrier_S%C5%8Dry%C5%AB_underway_during_Battle_of_Midway_on_4_June_1942.jpg" }
+      },
+      "clues": [
+        "A decisive naval battle in the Pacific theater of World War II.",
+        "Fought in June 1942, six months after Pearl Harbor."
+      ],
+      "options": ["Battle of Coral Sea", "Battle of Midway", "Battle of Leyte Gulf", "Battle of Iwo Jima"],
+      "correctIndex": 1,
+      "revealYear": 1942
+    },
+    {
+      "type": "whichCameFirst",
+      "pairs": [
+        { "a": "The Panama Canal opens to traffic", "b": "The Wall Street Crash triggers the Great Depression", "firstIndex": 0, "aYear": 1914, "bYear": 1929 },
+        { "a": "Charles Lindbergh completes the first solo transatlantic flight", "b": "Amelia Earhart disappears over the Pacific", "firstIndex": 0, "aYear": 1927, "bYear": 1937 },
+        { "a": "The first regular television broadcasts are demonstrated", "b": "Penicillin is discovered by Alexander Fleming", "firstIndex": 0, "aYear": 1925, "bYear": 1928 },
+        { "a": "The Eiffel Tower is completed", "b": "The Ottoman Empire enters the First World War", "firstIndex": 0, "aYear": 1889, "bYear": 1914 },
+        { "a": "Anesthesia is first used in surgery", "b": "Louis Pasteur develops the process of pasteurization", "firstIndex": 0, "aYear": 1846, "bYear": 1864 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-17/moment.jpg",
+        "alt": "Black-and-white aerial photo of a single bridge tower rising from a bay, with no roadway deck yet in place",
+        "attribution": { "fileTitle": "File:Aerial view with Golden Gate Bridge under construction 3b44743u.jpg", "author": "Associated Oil Company / Chas. M. Hiller", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_with_Golden_Gate_Bridge_under_construction_3b44743u.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What is being built here?",
+        "options": ["The Golden Gate Bridge", "The Brooklyn Bridge", "The Sydney Harbour Bridge", "The Tower Bridge"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "Which city is this bridge in?",
+        "options": ["San Francisco", "Oakland", "Seattle", "Portland"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "Christopher Columbus makes landfall in the Caribbean.",
+      "answerYear": 1492,
+      "minYear": 1300,
+      "maxYear": 1600,
+      "tolerance": 5,
+      "revealFact": "Columbus believed he had reached Asia; he never realized he had encountered a continent unknown to Europeans."
+    },
+    {
+      "type": "zoomOut",
+      "image": {
+        "src": "/images/2026-07-17/zoom.jpg",
+        "alt": "Extreme close-up of weathered grey stone steps and carved geometric pattern",
+        "attribution": { "fileTitle": "File:Pyramid of Kukulkan Chichen Itza 2012 (8952118044).jpg", "author": "Kirt Edblom", "license": "CC BY-SA 2.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pyramid_of_Kukulkan_Chichen_Itza_2012_(8952118044).jpg" }
+      },
+      "options": ["Chichen Itza", "Teotihuacan", "Tikal", "Tulum", "Caracol", "Copán"],
+      "correctIndex": 0,
+      "zoomLevels": [
+        { "scale": 8, "x": 48, "y": 40 },
+        { "scale": 5, "x": 48, "y": 38 },
+        { "scale": 3, "x": 49, "y": 40 },
+        { "scale": 1.8, "x": 50, "y": 42 },
+        { "scale": 1, "x": 50, "y": 50 }
+      ],
+      "revealFact": "This Maya step pyramid, El Castillo, was built by the Maya civilization on the Yucatán Peninsula."
+    }
+  ]
+}

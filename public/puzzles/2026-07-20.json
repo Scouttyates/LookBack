@@ -1,0 +1,92 @@
+{
+  "puzzleNumber": 8,
+  "date": "2026-07-20",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-20/face.jpg",
+        "alt": "Black-and-white photographic portrait of an American woman abolitionist",
+        "attribution": { "fileTitle": "File:Carte-de-visite portrait of Harriet Tubman.jpg", "author": "Benjamin F. Powelson", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carte-de-visite_portrait_of_Harriet_Tubman.jpg" }
+      },
+      "options": ["Sojourner Truth", "Harriet Tubman", "Frederick Douglass", "Rosa Parks"],
+      "correctIndex": 1,
+      "revealFact": "Harriet Tubman escaped slavery and then made repeated missions to rescue enslaved people via the Underground Railroad."
+    },
+    {
+      "type": "borderline",
+      "countryId": "france",
+      "answer": "France",
+      "continentHint": "Europe"
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-20/battle.jpg",
+        "alt": "Painting of troops marching along a landscape with distant siege trenches and cannon smoke",
+        "attribution": { "fileTitle": "File:Louis Nicolas van Blarenberghe - The siege of Yorktown (1781).jpg", "author": "Louis Nicolas van Blarenberghe", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Louis_Nicolas_van_Blarenberghe_-_The_siege_of_Yorktown_(1781).jpg" }
+      },
+      "clues": [
+        "A combined American and French force forced a British surrender.",
+        "Fought in Virginia in 1781, effectively ending the Revolutionary War."
+      ],
+      "options": ["Battle of Saratoga", "Battle of Yorktown", "Battle of Bunker Hill", "Battle of Trenton"],
+      "correctIndex": 1,
+      "revealYear": 1781
+    },
+    {
+      "type": "timeline",
+      "events": [
+        { "label": "The Congress of Vienna redraws the map of Europe", "year": 1815 },
+        { "label": "Slavery is abolished throughout the British Empire", "year": 1833 },
+        { "label": "Alexander Graham Bell is granted a patent for the telephone", "year": 1876 },
+        { "label": "Women gain the right to vote across the United States", "year": 1920 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-20/moment.webp",
+        "alt": "A helicopter hovering above a crowded rooftop with a line of people waiting near a ladder",
+        "attribution": { "fileTitle": "File:Helicopter evacuation of Saigon atop 22 Gia Long Street.webp", "author": "Hubert van Es", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Helicopter_evacuation_of_Saigon_atop_22_Gia_Long_Street.webp" }
+      },
+      "eventQuestion": {
+        "prompt": "What event is shown here?",
+        "options": ["The fall of Saigon", "The Berlin airlift", "The evacuation of Dunkirk", "The Tehran hostage rescue attempt"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "What conflict did this mark the end of, for the United States?",
+        "options": ["The Korean War", "The Vietnam War", "The First Indochina War", "The Cold War"],
+        "correctIndex": 1
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "The first modern Olympic Games open in Athens.",
+      "answerYear": 1896,
+      "minYear": 1800,
+      "maxYear": 1950,
+      "tolerance": 4,
+      "revealFact": "Just 14 nations and around 240 athletes, all men, competed in the first modern Games."
+    },
+    {
+      "type": "zoomOut",
+      "image": {
+        "src": "/images/2026-07-20/zoom.jpg",
+        "alt": "Weathered grey stone temple towers reflected in a still moat, framed by palm trees",
+        "attribution": { "fileTitle": "File:20171128 Angkor Wat 5551 DxO.jpg", "author": "Jakub Hałun", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:20171128_Angkor_Wat_5551_DxO.jpg" }
+      },
+      "options": ["Borobudur", "Bagan Temples", "Angkor Wat", "Prambanan", "Ayutthaya", "Wat Arun"],
+      "correctIndex": 2,
+      "zoomLevels": [
+        { "scale": 8, "x": 48, "y": 25 },
+        { "scale": 5, "x": 48, "y": 28 },
+        { "scale": 3, "x": 48, "y": 32 },
+        { "scale": 1.8, "x": 49, "y": 38 },
+        { "scale": 1, "x": 50, "y": 50 }
+      ],
+      "revealFact": "Built in the 12th century by the Khmer Empire, Angkor Wat is the largest religious monument in the world."
+    }
+  ]
+}

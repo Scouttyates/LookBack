@@ -1,0 +1,15 @@
+#!/bin/sh
+# LookBack pre-commit hook.
+# Blocks commits that introduce an answer repeat within REUSE_WINDOW_DAYS in any
+# public/puzzles/*.json, or that ship an image without valid attribution.
+# Skip with `git commit --no-verify` only as an emergency escape hatch.
+#
+# To install (once per clone): npm run prepare
+# Or manually: git config core.hooksPath .githooks
+
+set -e
+
+if git diff --cached --name-only | grep -q '^public/puzzles/.*\.json$'; then
+  echo "→ LookBack: linting puzzles…"
+  npm run lint:puzzles --silent
+fi

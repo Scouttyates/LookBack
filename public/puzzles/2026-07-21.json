@@ -1,0 +1,93 @@
+{
+  "puzzleNumber": 9,
+  "date": "2026-07-21",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-21/face.jpg",
+        "alt": "Ancient mosaic depicting a young clean-shaven military commander in battle",
+        "attribution": { "fileTitle": "File:Alexander the Great mosaic.jpg", "author": "Unknown author", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alexander_the_Great_mosaic.jpg" }
+      },
+      "options": ["Alexander the Great", "Julius Caesar", "Hannibal Barca", "Cyrus the Great"],
+      "correctIndex": 0,
+      "revealFact": "Alexander the Great built one of the largest empires of the ancient world by his early thirties."
+    },
+    {
+      "type": "borderline",
+      "countryId": "turkey",
+      "answer": "Turkey",
+      "continentHint": "spanning Europe and Asia"
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-21/battle.jpg",
+        "alt": "Painting of sailing warships engulfed in cannon smoke on the open sea",
+        "attribution": { "fileTitle": "File:The Battle of Trafalgar by William Clarkson Stanfield.jpg", "author": "Clarkson Frederick Stanfield", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Battle_of_Trafalgar_by_William_Clarkson_Stanfield.jpg" }
+      },
+      "clues": [
+        "A British fleet decisively defeated a combined French and Spanish force.",
+        "Fought off Spain's southwest coast in 1805."
+      ],
+      "options": ["Battle of the Nile", "Battle of Trafalgar", "Battle of Copenhagen", "Battle of Jutland"],
+      "correctIndex": 1,
+      "revealYear": 1805
+    },
+    {
+      "type": "whichCameFirst",
+      "pairs": [
+        { "a": "The Rosetta Stone is discovered near Rosetta, Egypt", "b": "Charles Darwin publishes On the Origin of Species", "firstIndex": 0, "aYear": 1799, "bYear": 1859 },
+        { "a": "The American Civil War begins at Fort Sumter", "b": "The transcontinental railroad is completed in the United States", "firstIndex": 0, "aYear": 1861, "bYear": 1869 },
+        { "a": "Thomas Edison patents the practical incandescent light bulb", "b": "Alfred Nobel establishes the Nobel Prize in his will", "firstIndex": 0, "aYear": 1879, "bYear": 1895 },
+        { "a": "Henry Ford introduces the moving assembly line", "b": "The Treaty of Versailles ends the First World War", "firstIndex": 0, "aYear": 1913, "bYear": 1919 },
+        { "a": "Vasco da Gama reaches India by an all-sea route", "b": "Ferdinand Magellan's expedition completes the first circumnavigation of the globe", "firstIndex": 0, "aYear": 1498, "bYear": 1522 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-21/moment.jpg",
+        "alt": "A crowd of people with luggage waiting inside a large hall with tall arched windows",
+        "attribution": { "fileTitle": "File:Ellis Island arrivals.jpg", "author": "Underwood & Underwood", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ellis_Island_arrivals.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What is shown in this photograph?",
+        "options": ["Immigrants arriving at Ellis Island", "Refugees at a European train station", "Travelers at Grand Central Terminal", "Passengers boarding an ocean liner"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "Which city's harbor is Ellis Island in?",
+        "options": ["New York", "Boston", "Philadelphia", "Baltimore"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "A plague pandemic arrives in Europe aboard trade ships from the Black Sea.",
+      "answerYear": 1347,
+      "minYear": 1200,
+      "maxYear": 1500,
+      "tolerance": 10,
+      "revealFact": "The Black Death killed an estimated third of Europe's population over the following years."
+    },
+    {
+      "type": "zoomOut",
+      "image": {
+        "src": "/images/2026-07-21/zoom.jpg",
+        "alt": "Extreme close-up of weathered tan stone arches and worn brickwork",
+        "attribution": { "fileTitle": "File:Arch Colosseum Rome Italy.jpg", "author": "Jebulon", "license": "CC0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arch_Colosseum_Rome_Italy.jpg" }
+      },
+      "options": ["Colosseum", "Pantheon", "Roman Forum", "Circus Maximus", "Baths of Caracalla", "Arch of Constantine"],
+      "correctIndex": 0,
+      "zoomLevels": [
+        { "scale": 8, "x": 50, "y": 45 },
+        { "scale": 5, "x": 50, "y": 42 },
+        { "scale": 3, "x": 50, "y": 40 },
+        { "scale": 1.8, "x": 50, "y": 42 },
+        { "scale": 1, "x": 50, "y": 50 }
+      ],
+      "revealFact": "Completed in 80 CE, the Colosseum could hold up to 80,000 spectators for gladiatorial contests."
+    }
+  ]
+}
