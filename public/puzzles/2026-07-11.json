@@ -1,0 +1,93 @@
+{
+  "puzzleNumber": 3,
+  "date": "2026-07-11",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-11/face.jpg",
+        "alt": "Painted portrait of a Central Asian ruler seated in formal robes",
+        "attribution": { "fileTitle": "File:YuanEmperorAlbumGenghisPortrait.jpg", "author": "Unknown author", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg" }
+      },
+      "options": ["Genghis Khan", "Kublai Khan", "Tamerlane", "Attila the Hun"],
+      "correctIndex": 0,
+      "revealFact": "Genghis Khan founded the Mongol Empire, which became the largest contiguous land empire in history."
+    },
+    {
+      "type": "borderline",
+      "countryId": "chile",
+      "answer": "Chile",
+      "continentHint": "South America"
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-11/battle.jpg",
+        "alt": "Ancient illustration of armored soldiers holding a narrow mountain pass",
+        "attribution": { "fileTitle": "File:Jacques-Louis David - Leonidas at Thermopylae - WGA6095.jpg", "author": "Jacques-Louis David", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_Leonidas_at_Thermopylae_-_WGA6095.jpg" }
+      },
+      "clues": [
+        "A small force held a narrow coastal pass against a much larger invading army.",
+        "Fought in ancient Greece in 480 BCE."
+      ],
+      "options": ["Battle of Marathon", "Battle of Thermopylae", "Battle of Salamis", "Battle of Plataea"],
+      "correctIndex": 1,
+      "revealYear": -480
+    },
+    {
+      "type": "whichCameFirst",
+      "pairs": [
+        { "a": "The Code of Hammurabi is inscribed", "b": "The Trojan War is traditionally dated", "firstIndex": 0, "aYear": -1754, "bYear": -1180 },
+        { "a": "The first Olympic Games are held in Olympia", "b": "The city of Rome is traditionally founded", "firstIndex": 0, "aYear": -776, "bYear": -753 },
+        { "a": "Alexander the Great is crowned king of Macedon", "b": "Julius Caesar crosses the Rubicon", "firstIndex": 0, "aYear": -336, "bYear": -49 },
+        { "a": "Construction begins on the Great Wall of China", "b": "The Rosetta Stone is created", "firstIndex": 0, "aYear": -221, "bYear": -196 },
+        { "a": "The Han Dynasty is founded in China", "b": "The Silk Road trade routes open between East and West", "firstIndex": 0, "aYear": -202, "bYear": -130 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-11/moment.jpg",
+        "alt": "Several soldiers straining together to raise a pole with a flag atop a rocky summit",
+        "attribution": { "fileTitle": "File:Raising the Flag on Iwo Jima by Joe Rosenthal.jpg", "author": "Joe Rosenthal", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Raising_the_Flag_on_Iwo_Jima_by_Joe_Rosenthal.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What event is shown here?",
+        "options": ["Raising the Flag on Iwo Jima", "V-J Day in Times Square", "The liberation of Paris", "The fall of Berlin"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "Where was this photographed?",
+        "options": ["Mount Suribachi", "Mount Fuji", "Okinawa", "Guadalcanal"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "Revolutionaries storm the Bastille prison in Paris.",
+      "answerYear": 1789,
+      "minYear": 1700,
+      "maxYear": 1850,
+      "tolerance": 3,
+      "revealFact": "The storming of the Bastille became a symbol of the French Revolution and is still celebrated as Bastille Day."
+    },
+    {
+      "type": "zoomOut",
+      "image": {
+        "src": "/images/2026-07-11/zoom.jpg",
+        "alt": "Extreme close-up of weathered tan limestone with subtle carved detail",
+        "attribution": { "fileTitle": "File:Profile Sphinx.jpg", "author": "Bilal Detailz", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Profile_Sphinx.jpg" }
+      },
+      "options": ["Great Sphinx of Giza", "Stonehenge", "Nazca Lines", "Moai of Easter Island", "Great Wall of China", "Machu Picchu"],
+      "correctIndex": 0,
+      "zoomLevels": [
+        { "scale": 8, "x": 55, "y": 40 },
+        { "scale": 5, "x": 55, "y": 42 },
+        { "scale": 3, "x": 52, "y": 45 },
+        { "scale": 1.8, "x": 50, "y": 48 },
+        { "scale": 1, "x": 50, "y": 50 }
+      ],
+      "revealFact": "Carved from limestone bedrock, the Great Sphinx is one of the largest and oldest monumental statues in the world."
+    }
+  ]
+}

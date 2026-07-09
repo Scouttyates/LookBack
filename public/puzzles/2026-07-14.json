@@ -1,112 +1,92 @@
 {
-  "puzzleNumber": 2,
+  "puzzleNumber": 6,
   "date": "2026-07-14",
   "rounds": [
     {
       "type": "faceFromPast",
       "image": {
         "src": "/images/2026-07-14/face.jpg",
-        "alt": "Ancient carved bust of a woman wearing a royal headdress",
-        "attribution": {
-          "fileTitle": "File:Bust of Cleopatra VII - Altes Museum - Berlin - Germany 2017.jpg",
-          "author": "José Luiz",
-          "license": "Public domain",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_Cleopatra_VII_-_Altes_Museum_-_Berlin_-_Germany_2017.jpg"
-        }
+        "alt": "Photographic portrait of a stern-faced British statesman in a suit",
+        "attribution": { "fileTitle": "File:Winston Churchill cph.3a49758 (cropped).jpg", "author": "J. Russell and Sons", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Winston_Churchill_cph.3a49758_(cropped).jpg" }
       },
-      "options": ["Nefertiti", "Hatshepsut", "Cleopatra VII", "Boudica"],
+      "options": ["Franklin D. Roosevelt", "Charles de Gaulle", "Winston Churchill", "Dwight D. Eisenhower"],
       "correctIndex": 2,
-      "revealFact": "Cleopatra VII was the last active ruler of the Ptolemaic Kingdom of Egypt, reigning until 30 BCE."
+      "revealFact": "Winston Churchill served as British Prime Minister during World War II and again in the early 1950s."
     },
     {
       "type": "borderline",
-      "countryId": "japan",
-      "answer": "Japan",
-      "continentHint": "Asia"
+      "countryId": "brazil",
+      "answer": "Brazil",
+      "continentHint": "South America"
     },
     {
       "type": "battlefield",
       "image": {
         "src": "/images/2026-07-14/battle.jpg",
-        "alt": "Painting of soldiers in Civil War-era uniforms in combat on open farmland",
-        "attribution": {
-          "fileTitle": "File:Thure de Thulstrup - L. Prang and Co. - Battle of Gettysburg - Restoration by Adam Cuerden (cropped).jpg",
-          "author": "Thure de Thulstrup / Adam Cuerden",
-          "license": "Public domain",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thure_de_Thulstrup_-_L._Prang_and_Co._-_Battle_of_Gettysburg_-_Restoration_by_Adam_Cuerden_(cropped).jpg"
-        }
+        "alt": "Medieval illustration of armored knights and archers clashing in a muddy field",
+        "attribution": { "fileTitle": "File:Battle of Agincourt, St. Alban's Chronicle by Thomas Walsingham.jpg", "author": "Unknown, English School (15th century)", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Battle_of_Agincourt,_St._Alban%27s_Chronicle_by_Thomas_Walsingham.jpg" }
       },
       "clues": [
-        "Fought over three days in Pennsylvania in July 1863.",
-        "Often called the turning point of the American Civil War."
+        "English longbowmen played a decisive role against a much larger French force.",
+        "Fought in northern France in October 1415."
       ],
-      "options": ["Battle of Gettysburg", "Battle of Antietam", "Battle of Bull Run", "Battle of Shiloh"],
-      "correctIndex": 0,
-      "revealYear": 1863
+      "options": ["Battle of Crécy", "Battle of Poitiers", "Battle of Agincourt", "Battle of Formigny"],
+      "correctIndex": 2,
+      "revealYear": 1415
     },
     {
       "type": "timeline",
       "events": [
-        { "label": "The Ottoman Turks capture Constantinople, ending the Byzantine Empire", "year": 1453 },
-        { "label": "Martin Luther posts his 95 Theses, sparking the Reformation", "year": 1517 },
-        { "label": "The German states unify into a single empire", "year": 1871 },
-        { "label": "The United Nations is founded in San Francisco", "year": 1945 }
+        { "label": "The Louisiana Purchase roughly doubles the size of the United States", "year": 1803 },
+        { "label": "The first photograph of a human being is captured on a Paris street", "year": 1838 },
+        { "label": "The Suez Canal opens, connecting the Mediterranean and Red Seas", "year": 1869 },
+        { "label": "Marconi transmits the first transatlantic radio signal", "year": 1901 }
       ]
     },
     {
       "type": "whereInHistory",
       "image": {
         "src": "/images/2026-07-14/moment.jpg",
-        "alt": "A large airship engulfed in flames as it descends toward a landing field",
-        "attribution": {
-          "fileTitle": "File:Hindenburg disaster, 1937.jpg",
-          "author": "Murray Becker / Associated Press",
-          "license": "Public domain",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hindenburg_disaster,_1937.jpg"
-        }
+        "alt": "A vast crowd of people seated outdoors on a grassy field stretching to the horizon",
+        "attribution": { "fileTitle": "File:Looking toward the back of the field at Woodstock.jpg", "author": "James M Shelley", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Looking_toward_the_back_of_the_field_at_Woodstock.jpg" }
       },
       "eventQuestion": {
         "prompt": "What event is shown here?",
-        "options": ["The Hindenburg disaster", "The R101 airship crash", "The Graf Zeppelin's final flight", "The USS Akron crash"],
+        "options": ["The Woodstock festival", "The Monterey Pop Festival", "Live Aid", "The Isle of Wight Festival"],
         "correctIndex": 0
       },
       "followUpQuestion": {
-        "prompt": "Where did this happen?",
-        "options": ["Newark, New Jersey", "Lakehurst, New Jersey", "Akron, Ohio", "Friedrichshafen, Germany"],
-        "correctIndex": 1
+        "prompt": "Where was this festival held?",
+        "options": ["Bethel, New York", "Woodstock, New York", "Monticello, New York", "Saugerties, New York"],
+        "correctIndex": 0
       }
     },
     {
       "type": "guessTheYear",
-      "prompt": "The RMS Titanic sinks in the North Atlantic after striking an iceberg.",
-      "answerYear": 1912,
-      "minYear": 1880,
-      "maxYear": 1950,
+      "prompt": "Nelson Mandela walks free after 27 years in prison.",
+      "answerYear": 1990,
+      "minYear": 1970,
+      "maxYear": 2010,
       "tolerance": 2,
-      "revealFact": "More than 1,500 people died when the supposedly unsinkable liner went down on her maiden voyage."
+      "revealFact": "Mandela was released after decades of imprisonment and became South Africa's first Black president in 1994."
     },
     {
       "type": "zoomOut",
       "image": {
         "src": "/images/2026-07-14/zoom.jpg",
-        "alt": "Extreme close-up detail of white marble inlay and carved stonework",
-        "attribution": {
-          "fileTitle": "File:Taj Mahal detail-2.jpg",
-          "author": "David Castor",
-          "license": "Public domain",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_detail-2.jpg"
-        }
+        "alt": "Extreme close-up of weathered dark volcanic stone with a smooth carved edge",
+        "attribution": { "fileTitle": "File:Moai Rano raraku.jpg", "author": "Aurbina", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moai_Rano_raraku.jpg" }
       },
-      "options": ["Hagia Sophia", "Alhambra", "Blue Mosque", "Taj Mahal", "Forbidden City", "Potala Palace"],
-      "correctIndex": 3,
+      "options": ["Carnac Stones", "Uluru", "Moai of Easter Island", "Newgrange", "Skara Brae", "Callanish Stones"],
+      "correctIndex": 2,
       "zoomLevels": [
-        { "scale": 8, "x": 50, "y": 45 },
-        { "scale": 5, "x": 50, "y": 42 },
-        { "scale": 3, "x": 50, "y": 40 },
-        { "scale": 1.8, "x": 50, "y": 42 },
+        { "scale": 8, "x": 68, "y": 55 },
+        { "scale": 5, "x": 65, "y": 52 },
+        { "scale": 3, "x": 60, "y": 50 },
+        { "scale": 1.8, "x": 55, "y": 50 },
         { "scale": 1, "x": 50, "y": 50 }
       ],
-      "revealFact": "Built by Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal, it was completed around 1653."
+      "revealFact": "Nearly 1,000 moai statues were carved by the Rapa Nui people of Easter Island, mostly between 1250 and 1500 CE."
     }
   ]
 }

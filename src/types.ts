@@ -13,7 +13,7 @@ export interface ImageAttribution {
 }
 
 export interface ImageRef {
-  src: string;   // site-absolute, e.g. "/images/2026-07-13/face.jpg"
+  src: string;   // site-absolute, e.g. "/images/YYYY-MM-DD/face.jpg"
   alt: string;   // must NOT reveal the answer
   attribution: ImageAttribution;
 }

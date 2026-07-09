@@ -1,113 +1,93 @@
 {
-  "puzzleNumber": 1,
+  "puzzleNumber": 5,
   "date": "2026-07-13",
   "rounds": [
     {
       "type": "faceFromPast",
       "image": {
         "src": "/images/2026-07-13/face.jpg",
-        "alt": "Painted portrait of a European military and political leader in formal dress",
-        "attribution": {
-          "fileTitle": "File:Jacques-Louis David - The Emperor Napoleon in His Study at the Tuileries - Google Art Project.jpg",
-          "author": "Jacques-Louis David",
-          "license": "Public domain",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"
-        }
+        "alt": "Black-and-white photographic portrait of a young Mexican woman with dark hair, wearing earrings and a shawl",
+        "attribution": { "fileTitle": "File:Frida Kahlo, by Guillermo Kahlo (cropped).jpg", "author": "Guillermo Kahlo", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frida_Kahlo,_by_Guillermo_Kahlo_(cropped).jpg" }
       },
-      "options": ["Napoleon Bonaparte", "Klemens von Metternich", "Alexander I of Russia", "Duke of Wellington"],
+      "options": ["Frida Kahlo", "Diego Rivera", "Pablo Picasso", "Salvador Dalí"],
       "correctIndex": 0,
-      "revealFact": "Napoleon crowned himself Emperor of the French in 1804 and dominated European politics for over a decade."
+      "revealFact": "Frida Kahlo is known for vivid self-portraits exploring identity, pain, and Mexican culture."
     },
     {
       "type": "borderline",
-      "countryId": "italy",
-      "answer": "Italy",
-      "continentHint": "Europe"
+      "countryId": "india",
+      "answer": "India",
+      "continentHint": "Asia"
     },
     {
       "type": "battlefield",
       "image": {
         "src": "/images/2026-07-13/battle.jpg",
-        "alt": "Detail from an embroidered medieval scene depicting mounted soldiers and archers in combat",
-        "attribution": {
-          "fileTitle": "File:Bayeux Tapestry scene51 Battle of Hastings Norman knights and archers.jpg",
-          "author": "Myrabella",
-          "license": "Public domain",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_scene51_Battle_of_Hastings_Norman_knights_and_archers.jpg"
-        }
+        "alt": "Aerial black-and-white photo of a warship leaving a wake on the open sea",
+        "attribution": { "fileTitle": "File:Japanese aircraft carrier Sōryū underway during Battle of Midway on 4 June 1942.jpg", "author": "United States Army Air Forces", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Japanese_aircraft_carrier_S%C5%8Dry%C5%AB_underway_during_Battle_of_Midway_on_4_June_1942.jpg" }
       },
       "clues": [
-        "Fought on English soil in 1066.",
-        "Ended with the death of the reigning English king."
+        "A decisive naval battle in the Pacific theater of World War II.",
+        "Fought in June 1942, six months after Pearl Harbor."
       ],
-      "options": ["Battle of Agincourt", "Battle of Hastings", "Battle of Bosworth Field", "Battle of Tours"],
+      "options": ["Battle of Coral Sea", "Battle of Midway", "Battle of Leyte Gulf", "Battle of Iwo Jima"],
       "correctIndex": 1,
-      "revealYear": 1066
+      "revealYear": 1942
     },
     {
       "type": "whichCameFirst",
       "pairs": [
-        { "a": "The Great Pyramid of Giza is completed", "b": "Stonehenge's final stone circle is raised", "firstIndex": 0, "aYear": -2560, "bYear": -1900 },
-        { "a": "Magna Carta is signed", "b": "Marco Polo reaches the court of Kublai Khan", "firstIndex": 0, "aYear": 1215, "bYear": 1275 },
-        { "a": "Gutenberg prints his first Bible", "b": "Columbus reaches the Americas", "firstIndex": 0, "aYear": 1440, "bYear": 1492 },
-        { "a": "Newton publishes the Principia Mathematica", "b": "The United States declares independence", "firstIndex": 0, "aYear": 1687, "bYear": 1776 },
-        { "a": "The Wright brothers achieve powered flight", "b": "Ford's Model T goes into production", "firstIndex": 0, "aYear": 1903, "bYear": 1908 }
+        { "a": "The Panama Canal opens to traffic", "b": "The Wall Street Crash triggers the Great Depression", "firstIndex": 0, "aYear": 1914, "bYear": 1929 },
+        { "a": "Charles Lindbergh completes the first solo transatlantic flight", "b": "Amelia Earhart disappears over the Pacific", "firstIndex": 0, "aYear": 1927, "bYear": 1937 },
+        { "a": "The first regular television broadcasts are demonstrated", "b": "Penicillin is discovered by Alexander Fleming", "firstIndex": 0, "aYear": 1925, "bYear": 1928 },
+        { "a": "The Eiffel Tower is completed", "b": "The Ottoman Empire enters the First World War", "firstIndex": 0, "aYear": 1889, "bYear": 1914 },
+        { "a": "Anesthesia is first used in surgery", "b": "Louis Pasteur develops the process of pasteurization", "firstIndex": 0, "aYear": 1846, "bYear": 1864 }
       ]
     },
     {
       "type": "whereInHistory",
       "image": {
         "src": "/images/2026-07-13/moment.jpg",
-        "alt": "An astronaut in a spacesuit standing on a grey, cratered surface beside a flag",
-        "attribution": {
-          "fileTitle": "File:Aldrin Apollo 11 original.jpg",
-          "author": "Neil Armstrong",
-          "license": "Public domain",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11_original.jpg"
-        }
+        "alt": "Black-and-white aerial photo of a single bridge tower rising from a bay, with no roadway deck yet in place",
+        "attribution": { "fileTitle": "File:Aerial view with Golden Gate Bridge under construction 3b44743u.jpg", "author": "Associated Oil Company / Chas. M. Hiller", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_with_Golden_Gate_Bridge_under_construction_3b44743u.jpg" }
       },
       "eventQuestion": {
-        "prompt": "What event is shown here?",
-        "options": ["Sputnik launch", "Apollo 13 crisis", "Apollo 11 Moon landing", "Space Shuttle Challenger launch"],
-        "correctIndex": 2
+        "prompt": "What is being built here?",
+        "options": ["The Golden Gate Bridge", "The Brooklyn Bridge", "The Sydney Harbour Bridge", "The Tower Bridge"],
+        "correctIndex": 0
       },
       "followUpQuestion": {
-        "prompt": "Where on the Moon did the astronauts land?",
-        "options": ["Sea of Serenity", "Sea of Tranquility", "Ocean of Storms", "Mare Imbrium"],
-        "correctIndex": 1
+        "prompt": "Which city is this bridge in?",
+        "options": ["San Francisco", "Oakland", "Seattle", "Portland"],
+        "correctIndex": 0
       }
     },
     {
       "type": "guessTheYear",
-      "prompt": "The Berlin Wall falls after weeks of mass protests across East Germany.",
-      "answerYear": 1989,
-      "minYear": 1950,
-      "maxYear": 2025,
-      "tolerance": 2,
-      "revealFact": "Crowds began tearing down sections of the wall on the night of November 9, 1989; Germany formally reunified less than a year later."
+      "prompt": "Christopher Columbus makes landfall in the Caribbean.",
+      "answerYear": 1492,
+      "minYear": 1300,
+      "maxYear": 1600,
+      "tolerance": 5,
+      "revealFact": "Columbus believed he had reached Asia; he never realized he had encountered a continent unknown to Europeans."
     },
     {
       "type": "zoomOut",
       "image": {
         "src": "/images/2026-07-13/zoom.jpg",
-        "alt": "Extreme close-up detail of a Renaissance oil painting",
-        "attribution": {
-          "fileTitle": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg",
-          "author": "Leonardo da Vinci",
-          "license": "Public domain",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg"
-        }
+        "alt": "Extreme close-up of weathered grey stone steps and carved geometric pattern",
+        "attribution": { "fileTitle": "File:Pyramid of Kukulkan Chichen Itza 2012 (8952118044).jpg", "author": "Kirt Edblom", "license": "CC BY-SA 2.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pyramid_of_Kukulkan_Chichen_Itza_2012_(8952118044).jpg" }
       },
-      "options": ["Mona Lisa", "Girl with a Pearl Earring", "The Birth of Venus", "American Gothic", "The Scream", "Las Meninas"],
+      "options": ["Chichen Itza", "Teotihuacan", "Tikal", "Tulum", "Caracol", "Copán"],
       "correctIndex": 0,
       "zoomLevels": [
-        { "scale": 8, "x": 46, "y": 38 },
-        { "scale": 5, "x": 48, "y": 36 },
-        { "scale": 3, "x": 50, "y": 35 },
-        { "scale": 1.8, "x": 50, "y": 40 },
+        { "scale": 8, "x": 48, "y": 40 },
+        { "scale": 5, "x": 48, "y": 38 },
+        { "scale": 3, "x": 49, "y": 40 },
+        { "scale": 1.8, "x": 50, "y": 42 },
         { "scale": 1, "x": 50, "y": 50 }
       ],
-      "revealFact": "Painted by Leonardo da Vinci in the early 1500s, it has hung in the Louvre since 1797."
+      "revealFact": "This Maya step pyramid, El Castillo, was built by the Maya civilization on the Yucatán Peninsula."
     }
   ]
 }

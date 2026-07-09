@@ -1,0 +1,112 @@
+{
+  "puzzleNumber": 2,
+  "date": "2026-07-10",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-10/face.jpg",
+        "alt": "Ancient carved bust of a woman wearing a royal headdress",
+        "attribution": {
+          "fileTitle": "File:Bust of Cleopatra VII - Altes Museum - Berlin - Germany 2017.jpg",
+          "author": "José Luiz",
+          "license": "Public domain",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_Cleopatra_VII_-_Altes_Museum_-_Berlin_-_Germany_2017.jpg"
+        }
+      },
+      "options": ["Nefertiti", "Hatshepsut", "Cleopatra VII", "Boudica"],
+      "correctIndex": 2,
+      "revealFact": "Cleopatra VII was the last active ruler of the Ptolemaic Kingdom of Egypt, reigning until 30 BCE."
+    },
+    {
+      "type": "borderline",
+      "countryId": "japan",
+      "answer": "Japan",
+      "continentHint": "Asia"
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-10/battle.jpg",
+        "alt": "Painting of soldiers in Civil War-era uniforms in combat on open farmland",
+        "attribution": {
+          "fileTitle": "File:Thure de Thulstrup - L. Prang and Co. - Battle of Gettysburg - Restoration by Adam Cuerden (cropped).jpg",
+          "author": "Thure de Thulstrup / Adam Cuerden",
+          "license": "Public domain",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thure_de_Thulstrup_-_L._Prang_and_Co._-_Battle_of_Gettysburg_-_Restoration_by_Adam_Cuerden_(cropped).jpg"
+        }
+      },
+      "clues": [
+        "Fought over three days in Pennsylvania in July 1863.",
+        "Often called the turning point of the American Civil War."
+      ],
+      "options": ["Battle of Gettysburg", "Battle of Antietam", "Battle of Bull Run", "Battle of Shiloh"],
+      "correctIndex": 0,
+      "revealYear": 1863
+    },
+    {
+      "type": "timeline",
+      "events": [
+        { "label": "The Ottoman Turks capture Constantinople, ending the Byzantine Empire", "year": 1453 },
+        { "label": "Martin Luther posts his 95 Theses, sparking the Reformation", "year": 1517 },
+        { "label": "The German states unify into a single empire", "year": 1871 },
+        { "label": "The United Nations is founded in San Francisco", "year": 1945 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-10/moment.jpg",
+        "alt": "A large airship engulfed in flames as it descends toward a landing field",
+        "attribution": {
+          "fileTitle": "File:Hindenburg disaster, 1937.jpg",
+          "author": "Murray Becker / Associated Press",
+          "license": "Public domain",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hindenburg_disaster,_1937.jpg"
+        }
+      },
+      "eventQuestion": {
+        "prompt": "What event is shown here?",
+        "options": ["The Hindenburg disaster", "The R101 airship crash", "The Graf Zeppelin's final flight", "The USS Akron crash"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "Where did this happen?",
+        "options": ["Newark, New Jersey", "Lakehurst, New Jersey", "Akron, Ohio", "Friedrichshafen, Germany"],
+        "correctIndex": 1
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "The RMS Titanic sinks in the North Atlantic after striking an iceberg.",
+      "answerYear": 1912,
+      "minYear": 1880,
+      "maxYear": 1950,
+      "tolerance": 2,
+      "revealFact": "More than 1,500 people died when the supposedly unsinkable liner went down on her maiden voyage."
+    },
+    {
+      "type": "zoomOut",
+      "image": {
+        "src": "/images/2026-07-10/zoom.jpg",
+        "alt": "Extreme close-up detail of white marble inlay and carved stonework",
+        "attribution": {
+          "fileTitle": "File:Taj Mahal detail-2.jpg",
+          "author": "David Castor",
+          "license": "Public domain",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_detail-2.jpg"
+        }
+      },
+      "options": ["Hagia Sophia", "Alhambra", "Blue Mosque", "Taj Mahal", "Forbidden City", "Potala Palace"],
+      "correctIndex": 3,
+      "zoomLevels": [
+        { "scale": 8, "x": 50, "y": 45 },
+        { "scale": 5, "x": 50, "y": 42 },
+        { "scale": 3, "x": 50, "y": 40 },
+        { "scale": 1.8, "x": 50, "y": 42 },
+        { "scale": 1, "x": 50, "y": 50 }
+      ],
+      "revealFact": "Built by Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal, it was completed around 1653."
+    }
+  ]
+}

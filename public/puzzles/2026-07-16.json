@@ -1,92 +1,92 @@
 {
-  "puzzleNumber": 4,
+  "puzzleNumber": 8,
   "date": "2026-07-16",
   "rounds": [
     {
       "type": "faceFromPast",
       "image": {
         "src": "/images/2026-07-16/face.jpg",
-        "alt": "Ornate painted portrait of an English queen in an elaborate jeweled gown",
-        "attribution": { "fileTitle": "File:Elizabeth I (Armada Portrait).jpg", "author": "Formerly attributed to George Gower", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elizabeth_I_(Armada_Portrait).jpg" }
+        "alt": "Black-and-white photographic portrait of an American woman abolitionist",
+        "attribution": { "fileTitle": "File:Carte-de-visite portrait of Harriet Tubman.jpg", "author": "Benjamin F. Powelson", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carte-de-visite_portrait_of_Harriet_Tubman.jpg" }
       },
-      "options": ["Mary Queen of Scots", "Elizabeth I", "Catherine of Aragon", "Anne Boleyn"],
+      "options": ["Sojourner Truth", "Harriet Tubman", "Frederick Douglass", "Rosa Parks"],
       "correctIndex": 1,
-      "revealFact": "Elizabeth I ruled England for 44 years, a period later called the Elizabethan era."
+      "revealFact": "Harriet Tubman escaped slavery and then made repeated missions to rescue enslaved people via the Underground Railroad."
     },
     {
       "type": "borderline",
-      "countryId": "egypt",
-      "answer": "Egypt",
-      "continentHint": "Africa"
+      "countryId": "france",
+      "answer": "France",
+      "continentHint": "Europe"
     },
     {
       "type": "battlefield",
       "image": {
         "src": "/images/2026-07-16/battle.jpg",
-        "alt": "Painting of massed cavalry and infantry clashing on a smoke-filled battlefield",
-        "attribution": { "fileTitle": "File:Thomas Jones Barker, The Battle of Waterloo.jpg", "author": "Thomas Jones Barker", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Jones_Barker,_The_Battle_of_Waterloo.jpg" }
+        "alt": "Painting of troops marching along a landscape with distant siege trenches and cannon smoke",
+        "attribution": { "fileTitle": "File:Louis Nicolas van Blarenberghe - The siege of Yorktown (1781).jpg", "author": "Louis Nicolas van Blarenberghe", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Louis_Nicolas_van_Blarenberghe_-_The_siege_of_Yorktown_(1781).jpg" }
       },
       "clues": [
-        "Ended one emperor's final bid to reclaim power in Europe.",
-        "Fought in present-day Belgium in June 1815."
+        "A combined American and French force forced a British surrender.",
+        "Fought in Virginia in 1781, effectively ending the Revolutionary War."
       ],
-      "options": ["Battle of Austerlitz", "Battle of Borodino", "Battle of Waterloo", "Battle of Leipzig"],
-      "correctIndex": 2,
-      "revealYear": 1815
+      "options": ["Battle of Saratoga", "Battle of Yorktown", "Battle of Bunker Hill", "Battle of Trenton"],
+      "correctIndex": 1,
+      "revealYear": 1781
     },
     {
       "type": "timeline",
       "events": [
-        { "label": "Michelangelo begins painting the Sistine Chapel ceiling", "year": 1508 },
-        { "label": "Isaac Newton is born in Woolsthorpe, England", "year": 1642 },
-        { "label": "James Watt patents a greatly improved steam engine", "year": 1769 },
-        { "label": "Nicéphore Niépce captures the first permanent photograph", "year": 1826 }
+        { "label": "The Congress of Vienna redraws the map of Europe", "year": 1815 },
+        { "label": "Slavery is abolished throughout the British Empire", "year": 1833 },
+        { "label": "Alexander Graham Bell is granted a patent for the telephone", "year": 1876 },
+        { "label": "Women gain the right to vote across the United States", "year": 1920 }
       ]
     },
     {
       "type": "whereInHistory",
       "image": {
-        "src": "/images/2026-07-16/moment.jpg",
-        "alt": "An early wooden biplane aircraft lifting just off the ground, with a man running alongside",
-        "attribution": { "fileTitle": "File:The Wright Brothers; first powered flight HU98267.jpg", "author": "Daniels John T, Kill Devil Hills Life Saving Station", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Wright_Brothers;_first_powered_flight_HU98267.jpg" }
+        "src": "/images/2026-07-16/moment.webp",
+        "alt": "A helicopter hovering above a crowded rooftop with a line of people waiting near a ladder",
+        "attribution": { "fileTitle": "File:Helicopter evacuation of Saigon atop 22 Gia Long Street.webp", "author": "Hubert van Es", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Helicopter_evacuation_of_Saigon_atop_22_Gia_Long_Street.webp" }
       },
       "eventQuestion": {
         "prompt": "What event is shown here?",
-        "options": ["The Wright brothers' first powered flight", "Charles Lindbergh's transatlantic takeoff", "The first flight of the Spirit of St. Louis", "An early glider test by Otto Lilienthal"],
+        "options": ["The fall of Saigon", "The Berlin airlift", "The evacuation of Dunkirk", "The Tehran hostage rescue attempt"],
         "correctIndex": 0
       },
       "followUpQuestion": {
-        "prompt": "Where did this flight take place?",
-        "options": ["Kitty Hawk, North Carolina", "Dayton, Ohio", "Cape Canaveral, Florida", "Wright Field, Ohio"],
-        "correctIndex": 0
+        "prompt": "What conflict did this mark the end of, for the United States?",
+        "options": ["The Korean War", "The Vietnam War", "The First Indochina War", "The Cold War"],
+        "correctIndex": 1
       }
     },
     {
       "type": "guessTheYear",
-      "prompt": "Mount Vesuvius erupts, burying the Roman city of Pompeii in ash.",
-      "answerYear": 79,
-      "minYear": -100,
-      "maxYear": 300,
-      "tolerance": 20,
-      "revealFact": "The eruption preserved much of Pompeii almost perfectly, giving historians a detailed snapshot of Roman daily life."
+      "prompt": "The first modern Olympic Games open in Athens.",
+      "answerYear": 1896,
+      "minYear": 1800,
+      "maxYear": 1950,
+      "tolerance": 4,
+      "revealFact": "Just 14 nations and around 240 athletes, all men, competed in the first modern Games."
     },
     {
       "type": "zoomOut",
       "image": {
         "src": "/images/2026-07-16/zoom.jpg",
-        "alt": "Extreme close-up of a weathered grey-brown terracotta face with fine sculpted detail",
-        "attribution": { "fileTitle": "File:Head of a terracotta soldier, Sotilaan pää.jpg", "author": "JKestilä", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Head_of_a_terracotta_soldier,_Sotilaan_p%C3%A4%C3%A4.jpg" }
+        "alt": "Weathered grey stone temple towers reflected in a still moat, framed by palm trees",
+        "attribution": { "fileTitle": "File:20171128 Angkor Wat 5551 DxO.jpg", "author": "Jakub Hałun", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:20171128_Angkor_Wat_5551_DxO.jpg" }
       },
-      "options": ["Forbidden City", "Angkor Wat", "Terracotta Army", "Petra", "Machu Picchu", "Alhambra"],
+      "options": ["Borobudur", "Bagan Temples", "Angkor Wat", "Prambanan", "Ayutthaya", "Wat Arun"],
       "correctIndex": 2,
       "zoomLevels": [
-        { "scale": 8, "x": 48, "y": 30 },
-        { "scale": 5, "x": 48, "y": 32 },
-        { "scale": 3, "x": 50, "y": 35 },
-        { "scale": 1.8, "x": 50, "y": 40 },
+        { "scale": 8, "x": 48, "y": 25 },
+        { "scale": 5, "x": 48, "y": 28 },
+        { "scale": 3, "x": 48, "y": 32 },
+        { "scale": 1.8, "x": 49, "y": 38 },
         { "scale": 1, "x": 50, "y": 50 }
       ],
-      "revealFact": "Buried with China's first emperor around 210 BCE, each of the thousands of soldier figures has a unique face."
+      "revealFact": "Built in the 12th century by the Khmer Empire, Angkor Wat is the largest religious monument in the world."
     }
   ]
 }

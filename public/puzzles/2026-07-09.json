@@ -1,0 +1,113 @@
+{
+  "puzzleNumber": 1,
+  "date": "2026-07-09",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-09/face.jpg",
+        "alt": "Painted portrait of a European military and political leader in formal dress",
+        "attribution": {
+          "fileTitle": "File:Jacques-Louis David - The Emperor Napoleon in His Study at the Tuileries - Google Art Project.jpg",
+          "author": "Jacques-Louis David",
+          "license": "Public domain",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"
+        }
+      },
+      "options": ["Napoleon Bonaparte", "Klemens von Metternich", "Alexander I of Russia", "Duke of Wellington"],
+      "correctIndex": 0,
+      "revealFact": "Napoleon crowned himself Emperor of the French in 1804 and dominated European politics for over a decade."
+    },
+    {
+      "type": "borderline",
+      "countryId": "italy",
+      "answer": "Italy",
+      "continentHint": "Europe"
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-09/battle.jpg",
+        "alt": "Detail from an embroidered medieval scene depicting mounted soldiers and archers in combat",
+        "attribution": {
+          "fileTitle": "File:Bayeux Tapestry scene51 Battle of Hastings Norman knights and archers.jpg",
+          "author": "Myrabella",
+          "license": "Public domain",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_scene51_Battle_of_Hastings_Norman_knights_and_archers.jpg"
+        }
+      },
+      "clues": [
+        "Fought on English soil in 1066.",
+        "Ended with the death of the reigning English king."
+      ],
+      "options": ["Battle of Agincourt", "Battle of Hastings", "Battle of Bosworth Field", "Battle of Tours"],
+      "correctIndex": 1,
+      "revealYear": 1066
+    },
+    {
+      "type": "whichCameFirst",
+      "pairs": [
+        { "a": "The Great Pyramid of Giza is completed", "b": "Stonehenge's final stone circle is raised", "firstIndex": 0, "aYear": -2560, "bYear": -1900 },
+        { "a": "Magna Carta is signed", "b": "Marco Polo reaches the court of Kublai Khan", "firstIndex": 0, "aYear": 1215, "bYear": 1275 },
+        { "a": "Gutenberg prints his first Bible", "b": "Columbus reaches the Americas", "firstIndex": 0, "aYear": 1440, "bYear": 1492 },
+        { "a": "Newton publishes the Principia Mathematica", "b": "The United States declares independence", "firstIndex": 0, "aYear": 1687, "bYear": 1776 },
+        { "a": "The Wright brothers achieve powered flight", "b": "Ford's Model T goes into production", "firstIndex": 0, "aYear": 1903, "bYear": 1908 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-09/moment.jpg",
+        "alt": "An astronaut in a spacesuit standing on a grey, cratered surface beside a flag",
+        "attribution": {
+          "fileTitle": "File:Aldrin Apollo 11 original.jpg",
+          "author": "Neil Armstrong",
+          "license": "Public domain",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11_original.jpg"
+        }
+      },
+      "eventQuestion": {
+        "prompt": "What event is shown here?",
+        "options": ["Sputnik launch", "Apollo 13 crisis", "Apollo 11 Moon landing", "Space Shuttle Challenger launch"],
+        "correctIndex": 2
+      },
+      "followUpQuestion": {
+        "prompt": "Where on the Moon did the astronauts land?",
+        "options": ["Sea of Serenity", "Sea of Tranquility", "Ocean of Storms", "Mare Imbrium"],
+        "correctIndex": 1
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "The Berlin Wall falls after weeks of mass protests across East Germany.",
+      "answerYear": 1989,
+      "minYear": 1950,
+      "maxYear": 2025,
+      "tolerance": 2,
+      "revealFact": "Crowds began tearing down sections of the wall on the night of November 9, 1989; Germany formally reunified less than a year later."
+    },
+    {
+      "type": "zoomOut",
+      "image": {
+        "src": "/images/2026-07-09/zoom.jpg",
+        "alt": "Extreme close-up detail of a Renaissance oil painting",
+        "attribution": {
+          "fileTitle": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg",
+          "author": "Leonardo da Vinci",
+          "license": "Public domain",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg"
+        }
+      },
+      "options": ["Mona Lisa", "Girl with a Pearl Earring", "The Birth of Venus", "American Gothic", "The Scream", "Las Meninas"],
+      "correctIndex": 0,
+      "zoomLevels": [
+        { "scale": 8, "x": 46, "y": 38 },
+        { "scale": 5, "x": 48, "y": 36 },
+        { "scale": 3, "x": 50, "y": 35 },
+        { "scale": 1.8, "x": 50, "y": 40 },
+        { "scale": 1, "x": 50, "y": 50 }
+      ],
+      "revealFact": "Painted by Leonardo da Vinci in the early 1500s, it has hung in the Louvre since 1797."
+    }
+  ]
+}

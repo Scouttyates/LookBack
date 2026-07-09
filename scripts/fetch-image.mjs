@@ -3,7 +3,7 @@
 // LookBack puzzle authoring. Zero dependencies — uses Node's native fetch.
 //
 // Search:  node scripts/fetch-image.mjs --search "battle of hastings tapestry"
-// Fetch:   node scripts/fetch-image.mjs --title "File:X.jpg" --out public/images/2026-07-13/battle.jpg --width 1200
+// Fetch:   node scripts/fetch-image.mjs --title "File:X.jpg" --out public/images/YYYY-MM-DD/battle.jpg --width 1200
 //
 // On fetch, prints a ready-to-paste `attribution` JSON block to stdout and
 // fails hard (exit 1) if the license isn't in the allowlist.

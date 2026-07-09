@@ -1,92 +1,92 @@
 {
-  "puzzleNumber": 6,
+  "puzzleNumber": 10,
   "date": "2026-07-18",
   "rounds": [
     {
       "type": "faceFromPast",
       "image": {
         "src": "/images/2026-07-18/face.jpg",
-        "alt": "Photographic portrait of a stern-faced British statesman in a suit",
-        "attribution": { "fileTitle": "File:Winston Churchill cph.3a49758 (cropped).jpg", "author": "J. Russell and Sons", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Winston_Churchill_cph.3a49758_(cropped).jpg" }
+        "alt": "Painted portrait of a Russian empress in an elaborate crown and formal gown",
+        "attribution": { "fileTitle": "File:Levitzky Catherine the Great.jpg", "author": "After Dmitry Levitzky", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Levitzky_Catherine_the_Great.jpg" }
       },
-      "options": ["Franklin D. Roosevelt", "Charles de Gaulle", "Winston Churchill", "Dwight D. Eisenhower"],
+      "options": ["Peter the Great", "Ivan the Terrible", "Catherine the Great", "Nicholas II"],
       "correctIndex": 2,
-      "revealFact": "Winston Churchill served as British Prime Minister during World War II and again in the early 1950s."
+      "revealFact": "Catherine the Great ruled the Russian Empire for over three decades, expanding its territory and influence."
     },
     {
       "type": "borderline",
-      "countryId": "brazil",
-      "answer": "Brazil",
-      "continentHint": "South America"
+      "countryId": "canada",
+      "answer": "Canada",
+      "continentHint": "North America"
     },
     {
       "type": "battlefield",
       "image": {
         "src": "/images/2026-07-18/battle.jpg",
-        "alt": "Medieval illustration of armored knights and archers clashing in a muddy field",
-        "attribution": { "fileTitle": "File:Battle of Agincourt, St. Alban's Chronicle by Thomas Walsingham.jpg", "author": "Unknown, English School (15th century)", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Battle_of_Agincourt,_St._Alban%27s_Chronicle_by_Thomas_Walsingham.jpg" }
+        "alt": "Illustration of a fortified island city under siege by canoes and soldiers on causeways",
+        "attribution": { "fileTitle": "File:The Conquest of Tenochtitlan.jpg", "author": "Unknown", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Conquest_of_Tenochtitlan.jpg" }
       },
       "clues": [
-        "English longbowmen played a decisive role against a much larger French force.",
-        "Fought in northern France in October 1415."
+        "Spanish conquistadors and their allies besieged an island capital city.",
+        "Marked the end of the Aztec Empire in 1521."
       ],
-      "options": ["Battle of Crécy", "Battle of Poitiers", "Battle of Agincourt", "Battle of Formigny"],
-      "correctIndex": 2,
-      "revealYear": 1415
+      "options": ["Fall of Tenochtitlan", "Battle of Cajamarca", "Battle of Otumba", "Battle of Puebla"],
+      "correctIndex": 0,
+      "revealYear": 1521
     },
     {
       "type": "timeline",
       "events": [
-        { "label": "The Louisiana Purchase roughly doubles the size of the United States", "year": 1803 },
-        { "label": "The first photograph of a human being is captured on a Paris street", "year": 1838 },
-        { "label": "The Suez Canal opens, connecting the Mediterranean and Red Seas", "year": 1869 },
-        { "label": "Marconi transmits the first transatlantic radio signal", "year": 1901 }
+        { "label": "Much of Rome burns during the reign of Emperor Nero", "year": 64 },
+        { "label": "The Council of Nicaea establishes core Christian doctrine", "year": 325 },
+        { "label": "The Byzantine Empire reaches its greatest extent under Justinian I", "year": 555 },
+        { "label": "Genghis Khan unites the Mongol tribes under his rule", "year": 1206 }
       ]
     },
     {
       "type": "whereInHistory",
       "image": {
         "src": "/images/2026-07-18/moment.jpg",
-        "alt": "A vast crowd of people seated outdoors on a grassy field stretching to the horizon",
-        "attribution": { "fileTitle": "File:Looking toward the back of the field at Woodstock.jpg", "author": "James M Shelley", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Looking_toward_the_back_of_the_field_at_Woodstock.jpg" }
+        "alt": "Abandoned apartment buildings among overgrown trees, with a large containment structure visible in the distance",
+        "attribution": { "fileTitle": "File:Chernobyl nuclear disaster aftermath abandoned town of Pripyat 02.jpg", "author": "Hnapel", "license": "CC0", "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chernobyl_nuclear_disaster_aftermath_abandoned_town_of_Pripyat_02.jpg" }
       },
       "eventQuestion": {
         "prompt": "What event is shown here?",
-        "options": ["The Woodstock festival", "The Monterey Pop Festival", "Live Aid", "The Isle of Wight Festival"],
+        "options": ["The Chernobyl nuclear disaster", "The Three Mile Island accident", "The Fukushima Daiichi disaster", "The Windscale fire"],
         "correctIndex": 0
       },
       "followUpQuestion": {
-        "prompt": "Where was this festival held?",
-        "options": ["Bethel, New York", "Woodstock, New York", "Monticello, New York", "Saugerties, New York"],
+        "prompt": "Which nearby city was evacuated?",
+        "options": ["Pripyat", "Kyiv", "Minsk", "Gomel"],
         "correctIndex": 0
       }
     },
     {
       "type": "guessTheYear",
-      "prompt": "Nelson Mandela walks free after 27 years in prison.",
-      "answerYear": 1990,
-      "minYear": 1970,
-      "maxYear": 2010,
-      "tolerance": 2,
-      "revealFact": "Mandela was released after decades of imprisonment and became South Africa's first Black president in 1994."
+      "prompt": "The last Western Roman emperor, Romulus Augustulus, is deposed.",
+      "answerYear": 476,
+      "minYear": 200,
+      "maxYear": 700,
+      "tolerance": 25,
+      "revealFact": "This event is traditionally used to mark the fall of the Western Roman Empire and the start of the medieval period in Europe."
     },
     {
       "type": "zoomOut",
       "image": {
         "src": "/images/2026-07-18/zoom.jpg",
-        "alt": "Extreme close-up of weathered dark volcanic stone with a smooth carved edge",
-        "attribution": { "fileTitle": "File:Moai Rano raraku.jpg", "author": "Aurbina", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moai_Rano_raraku.jpg" }
+        "alt": "Extreme close-up of rose-pink carved sandstone with fine columned detail",
+        "attribution": { "fileTitle": "File:Petra detail of Al Khazneh (The treasury) 1822.jpg", "author": "Dosseman", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Petra_detail_of_Al_Khazneh_(The_treasury)_1822.jpg" }
       },
-      "options": ["Carnac Stones", "Uluru", "Moai of Easter Island", "Newgrange", "Skara Brae", "Callanish Stones"],
+      "options": ["Palmyra", "Persepolis", "Petra", "Ephesus", "Baalbek", "Leptis Magna"],
       "correctIndex": 2,
       "zoomLevels": [
-        { "scale": 8, "x": 68, "y": 55 },
-        { "scale": 5, "x": 65, "y": 52 },
-        { "scale": 3, "x": 60, "y": 50 },
-        { "scale": 1.8, "x": 55, "y": 50 },
+        { "scale": 8, "x": 50, "y": 40 },
+        { "scale": 5, "x": 50, "y": 42 },
+        { "scale": 3, "x": 50, "y": 45 },
+        { "scale": 1.8, "x": 50, "y": 45 },
         { "scale": 1, "x": 50, "y": 50 }
       ],
-      "revealFact": "Nearly 1,000 moai statues were carved by the Rapa Nui people of Easter Island, mostly between 1250 and 1500 CE."
+      "revealFact": "Carved directly into rose-colored sandstone cliffs, Petra was the capital of the Nabataean kingdom in present-day Jordan."
     }
   ]
 }

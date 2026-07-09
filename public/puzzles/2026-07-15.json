@@ -1,93 +1,93 @@
 {
-  "puzzleNumber": 3,
+  "puzzleNumber": 7,
   "date": "2026-07-15",
   "rounds": [
     {
       "type": "faceFromPast",
       "image": {
         "src": "/images/2026-07-15/face.jpg",
-        "alt": "Painted portrait of a Central Asian ruler seated in formal robes",
-        "attribution": { "fileTitle": "File:YuanEmperorAlbumGenghisPortrait.jpg", "author": "Unknown author", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg" }
+        "alt": "Black-and-white photographic portrait of a woman scientist in early 20th-century dress",
+        "attribution": { "fileTitle": "File:Marie Curie c. 1920s.jpg", "author": "Henri Manuel", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marie_Curie_c._1920s.jpg" }
       },
-      "options": ["Genghis Khan", "Kublai Khan", "Tamerlane", "Attila the Hun"],
+      "options": ["Marie Curie", "Ada Lovelace", "Rosalind Franklin", "Florence Nightingale"],
       "correctIndex": 0,
-      "revealFact": "Genghis Khan founded the Mongol Empire, which became the largest contiguous land empire in history."
+      "revealFact": "Marie Curie won Nobel Prizes in both Physics and Chemistry for her research on radioactivity."
     },
     {
       "type": "borderline",
-      "countryId": "chile",
-      "answer": "Chile",
-      "continentHint": "South America"
+      "countryId": "greece",
+      "answer": "Greece",
+      "continentHint": "Europe"
     },
     {
       "type": "battlefield",
       "image": {
         "src": "/images/2026-07-15/battle.jpg",
-        "alt": "Ancient illustration of armored soldiers holding a narrow mountain pass",
-        "attribution": { "fileTitle": "File:Jacques-Louis David - Leonidas at Thermopylae - WGA6095.jpg", "author": "Jacques-Louis David", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_Leonidas_at_Thermopylae_-_WGA6095.jpg" }
+        "alt": "Ruined snow-covered city buildings with soldiers moving through rubble",
+        "attribution": { "fileTitle": "File:RIAN archive 2383 The ruins of Stalingrad.jpg", "author": "Zelma / Георгий Зельма", "license": "CC BY-SA 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:RIAN_archive_2383_The_ruins_of_Stalingrad.jpg" }
       },
       "clues": [
-        "A small force held a narrow coastal pass against a much larger invading army.",
-        "Fought in ancient Greece in 480 BCE."
+        "One of the bloodiest battles of World War II, fought in a Soviet city.",
+        "Ended with a German army's surrender in early 1943."
       ],
-      "options": ["Battle of Marathon", "Battle of Thermopylae", "Battle of Salamis", "Battle of Plataea"],
+      "options": ["Battle of Kursk", "Battle of Stalingrad", "Battle of Berlin", "Battle of Leningrad"],
       "correctIndex": 1,
-      "revealYear": -480
+      "revealYear": 1943
     },
     {
       "type": "whichCameFirst",
       "pairs": [
-        { "a": "The Code of Hammurabi is inscribed", "b": "The Trojan War is traditionally dated", "firstIndex": 0, "aYear": -1754, "bYear": -1180 },
-        { "a": "The first Olympic Games are held in Olympia", "b": "The city of Rome is traditionally founded", "firstIndex": 0, "aYear": -776, "bYear": -753 },
-        { "a": "Alexander the Great is crowned king of Macedon", "b": "Julius Caesar crosses the Rubicon", "firstIndex": 0, "aYear": -336, "bYear": -49 },
-        { "a": "Construction begins on the Great Wall of China", "b": "The Rosetta Stone is created", "firstIndex": 0, "aYear": -221, "bYear": -196 },
-        { "a": "The Han Dynasty is founded in China", "b": "The Silk Road trade routes open between East and West", "firstIndex": 0, "aYear": -202, "bYear": -130 }
+        { "a": "Mahatma Gandhi leads the Salt March against British rule", "b": "India gains independence from Britain", "firstIndex": 0, "aYear": 1930, "bYear": 1947 },
+        { "a": "The state of Israel is established", "b": "The Korean War begins", "firstIndex": 0, "aYear": 1948, "bYear": 1950 },
+        { "a": "Sputnik becomes the first artificial satellite in orbit", "b": "Yuri Gagarin becomes the first human in space", "firstIndex": 0, "aYear": 1957, "bYear": 1961 },
+        { "a": "John F. Kennedy is assassinated in Dallas", "b": "Alexei Leonov performs the first spacewalk", "firstIndex": 0, "aYear": 1963, "bYear": 1965 },
+        { "a": "The Watergate scandal forces Nixon's resignation", "b": "The Soviet Union dissolves", "firstIndex": 0, "aYear": 1974, "bYear": 1991 }
       ]
     },
     {
       "type": "whereInHistory",
       "image": {
         "src": "/images/2026-07-15/moment.jpg",
-        "alt": "Several soldiers straining together to raise a pole with a flag atop a rocky summit",
-        "attribution": { "fileTitle": "File:Raising the Flag on Iwo Jima by Joe Rosenthal.jpg", "author": "Joe Rosenthal", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Raising_the_Flag_on_Iwo_Jima_by_Joe_Rosenthal.jpg" }
+        "alt": "A city street with collapsed buildings and smoke rising in the distance",
+        "attribution": { "fileTitle": "File:San Francisco in ruin edit2.jpg", "author": "George R. Lawrence (1869-1938), George R. Lawrence Co.", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_in_ruin_edit2.jpg" }
       },
       "eventQuestion": {
         "prompt": "What event is shown here?",
-        "options": ["Raising the Flag on Iwo Jima", "V-J Day in Times Square", "The liberation of Paris", "The fall of Berlin"],
+        "options": ["1906 San Francisco earthquake", "1923 Great Kanto earthquake", "1989 Loma Prieta earthquake", "1994 Northridge earthquake"],
         "correctIndex": 0
       },
       "followUpQuestion": {
-        "prompt": "Where was this photographed?",
-        "options": ["Mount Suribachi", "Mount Fuji", "Okinawa", "Guadalcanal"],
-        "correctIndex": 0
+        "prompt": "About how much of the city did the resulting fires destroy?",
+        "options": ["Less than 10 percent", "Roughly a quarter", "About half", "Nearly 80 percent"],
+        "correctIndex": 3
       }
     },
     {
       "type": "guessTheYear",
-      "prompt": "Revolutionaries storm the Bastille prison in Paris.",
-      "answerYear": 1789,
-      "minYear": 1700,
-      "maxYear": 1850,
-      "tolerance": 3,
-      "revealFact": "The storming of the Bastille became a symbol of the French Revolution and is still celebrated as Bastille Day."
+      "prompt": "A fire that started in a bakery destroys much of the city of London.",
+      "answerYear": 1666,
+      "minYear": 1500,
+      "maxYear": 1800,
+      "tolerance": 5,
+      "revealFact": "The Great Fire of London burned for four days and destroyed most of the medieval city, though few deaths were recorded."
     },
     {
       "type": "zoomOut",
       "image": {
         "src": "/images/2026-07-15/zoom.jpg",
-        "alt": "Extreme close-up of weathered tan limestone with subtle carved detail",
-        "attribution": { "fileTitle": "File:Profile Sphinx.jpg", "author": "Bilal Detailz", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Profile_Sphinx.jpg" }
+        "alt": "Extreme close-up of oxidized green-grey draped metal folds",
+        "attribution": { "fileTitle": "File:Statue of Liberty close-up-NPS.jpg", "author": "National Park Service", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_Liberty_close-up-NPS.jpg" }
       },
-      "options": ["Great Sphinx of Giza", "Stonehenge", "Nazca Lines", "Moai of Easter Island", "Great Wall of China", "Machu Picchu"],
+      "options": ["Statue of Liberty", "Christ the Redeemer", "Motherland Calls", "Angel of the North", "Brandenburg Gate", "Leaning Tower of Pisa"],
       "correctIndex": 0,
       "zoomLevels": [
-        { "scale": 8, "x": 55, "y": 40 },
-        { "scale": 5, "x": 55, "y": 42 },
-        { "scale": 3, "x": 52, "y": 45 },
-        { "scale": 1.8, "x": 50, "y": 48 },
+        { "scale": 8, "x": 45, "y": 55 },
+        { "scale": 5, "x": 45, "y": 52 },
+        { "scale": 3, "x": 48, "y": 48 },
+        { "scale": 1.8, "x": 50, "y": 45 },
         { "scale": 1, "x": 50, "y": 50 }
       ],
-      "revealFact": "Carved from limestone bedrock, the Great Sphinx is one of the largest and oldest monumental statues in the world."
+      "revealFact": "A gift from France, the Statue of Liberty was dedicated in New York Harbor in 1886."
     }
   ]
 }

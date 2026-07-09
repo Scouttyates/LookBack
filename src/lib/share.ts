@@ -55,7 +55,7 @@ export function buildShareText(
   } else if (streak.currentStreak >= 2) {
     lines.push(`✅ ${streak.currentStreak}-day streak`);
   }
-  lines.push('https://look-back-lemon.vercel.app/play');
+  lines.push('https://look-back-lemon.vercel.app');
 
   return lines.join('\n');
 }
