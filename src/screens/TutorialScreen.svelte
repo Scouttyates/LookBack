@@ -24,29 +24,28 @@
     if (i === picked) return 'wrong';
     return null;
   }
+
+  const LABELS = ['A', 'B', 'C', 'D'];
 </script>
 
 <section class="anim-enter">
-  <p class="eyebrow">A quick demo — unscored</p>
-  <h1 class="display" style="margin-top: var(--space-2); font-size: var(--step-3)">
-    How LookBack works
-  </h1>
-  <p class="muted serif" style="margin-top: var(--space-3); font-style: italic">
-    Each day has seven quick rounds of history and geography. Here's one: name the person in the portrait.
+  <p class="eyebrow accent">A quick demo — unscored</p>
+  <h1 class="tut-title">How LookBack works</h1>
+  <p class="tut-intro">
+    Seven quick rounds of history and geography, fresh every morning. Here's one — name the person in the portrait.
   </p>
 
-  <hr class="rule" />
+  <div class="cover-rule"><span></span></div>
 
-  <p class="eyebrow">Round — Face from the Past</p>
-  <h2 class="display" style="margin-top: var(--space-2)">
-    Who is <em class="accent">this</em>?
-  </h2>
-  <p class="muted" style="margin-top: var(--space-2)">A European military and political leader, painted in his study.</p>
+  <p class="eyebrow">Round I · Face from the Past</p>
+  <h2 class="tut-prompt">Who is <em class="accent">this</em>?</h2>
+  <p class="tut-hint">A European military and political leader, painted in his study.</p>
 
   <div class="stack stagger" style="margin-top: var(--space-5)">
     {#each options as name, i}
       <button
         class="choice"
+        data-label={LABELS[i]}
         aria-pressed={picked === i}
         data-state={stateFor(i)}
         disabled={locked}
@@ -63,3 +62,33 @@
     </button>
   </div>
 </section>
+
+<style>
+  .tut-title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: var(--step-4);
+    margin-top: var(--space-3);
+  }
+  .tut-intro {
+    font-family: var(--serif-text);
+    font-style: italic;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--muted-ink-2);
+    margin-top: var(--space-3);
+  }
+  .cover-rule { display: flex; margin: var(--space-5) 0; }
+  .cover-rule span { width: 44px; height: 2px; background: var(--accent); }
+  .tut-prompt {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: var(--step-3);
+    margin-top: var(--space-3);
+  }
+  .tut-hint {
+    font-family: var(--serif-text);
+    color: var(--muted-ink);
+    margin-top: var(--space-2);
+  }
+</style>

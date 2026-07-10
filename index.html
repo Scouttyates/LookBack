@@ -64,20 +64,26 @@
       }
       .cta--ghost { background: transparent; color: var(--muted-2); border: 1px solid var(--line); }
 
+      .thumb { flex: none; position: relative; overflow: hidden; align-self: stretch; }
+      .thumb img { width: 100%; height: 100%; object-fit: cover; }
+
       /* LookBack (featured, dark) */
       .card--lookback { background: var(--ink); box-shadow: 0 12px 28px -14px rgba(0,0,0,.55); }
       .card--lookback .spine { background: var(--ochre); }
-      .card--lookback .thumb { width: 116px; flex: none; position: relative; overflow: hidden; }
-      .card--lookback .thumb img { width: 100%; height: 100%; object-fit: cover; filter: sepia(.28) contrast(1.04) brightness(.92); }
-      .card--lookback .thumb::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 38%, var(--ink)); }
+      .card--lookback .thumb { width: 134px; }
+      .card--lookback .thumb img { filter: sepia(.16) contrast(1.05) brightness(.98); }
+      .card--lookback .thumb::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 50%, var(--ink)); }
       .card--lookback .kicker { color: var(--ochre); }
       .card--lookback .status { font-size: 11px; font-weight: 700; color: var(--ochre); }
       .card--lookback .name { font-size: 31px; color: var(--paper); margin-top: 4px; }
       .card--lookback .sub { font-size: 12px; color: #a7a396; margin-top: 6px; }
 
-      /* Verbatim (light) */
+      /* Verbatim (light, with type-case thumb) */
       .card--verbatim { background: var(--paper-card); border: 1px solid var(--line); box-shadow: 0 6px 16px -12px rgba(0,0,0,.3); }
       .card--verbatim .spine { background: var(--ink-2); }
+      .card--verbatim .thumb { width: 118px; }
+      .card--verbatim .thumb img { filter: sepia(.14) contrast(1.02); }
+      .card--verbatim .thumb::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 42%, var(--paper-card)); }
       .card--verbatim .kicker { color: var(--muted); }
       .card--verbatim .name { font-size: 27px; margin-top: 3px; }
       .card--verbatim .sub { font-size: 12px; color: var(--muted); margin-top: 3px; }
@@ -94,6 +100,8 @@
       .stat { text-align: center; flex: 1; }
       .stat .num { font-family: 'DM Serif Display', serif; font-size: 24px; line-height: 1; }
       .stat .lbl { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+
+      .credit { font-size: 8.5px; line-height: 1.5; letter-spacing: 0.02em; color: #b3ab99; text-align: center; margin-top: 2px; }
     </style>
   </head>
   <body>
@@ -121,6 +129,7 @@
 
         <a class="card card--verbatim" href="https://verbatim-azure.vercel.app">
           <span class="spine"></span>
+          <span class="thumb"><img src="/hub/verbatim.jpg" alt="Letterpress movable type" /></span>
           <span class="body">
             <span class="row"><span class="kicker">Vocabulary</span></span>
             <span class="name">Verbatim</span>
@@ -144,6 +153,8 @@
         <div class="stat"><div class="num" id="stat-best">—</div><div class="lbl">Best score</div></div>
         <div class="stat"><div class="num" id="stat-played">0</div><div class="lbl">Days played</div></div>
       </footer>
+
+      <p class="credit">Card art via Wikimedia Commons — Ortelius world map (1570, public domain); letterpress type by Willi Heidelbach (CC BY 2.5)</p>
     </main>
 
     <script>

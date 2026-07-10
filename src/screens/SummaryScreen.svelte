@@ -21,6 +21,16 @@
   let starCount = $derived(stars(total));
   let shareText = $derived(buildShareText(game, puzzle, streak));
 
+  function toRoman(n: number): string {
+    const map: [number, string][] = [
+      [1000,'M'],[900,'CM'],[500,'D'],[400,'CD'],[100,'C'],[90,'XC'],
+      [50,'L'],[40,'XL'],[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I'],
+    ];
+    let out = '', x = n;
+    for (const [v, s] of map) { while (x >= v) { out += s; x -= v; } }
+    return out;
+  }
+
   // svelte-ignore state_referenced_locally
   let displayedScore = $state(total);
   $effect(() => {
@@ -61,19 +71,20 @@
   function roundLabel(r: RoundResult): string {
     return ROUND_LABELS[r.type];
   }
+
+  let dateLabel = $derived(new Date(`${puzzle.date}T00:00:00`).toLocaleDateString(undefined, { month: 'long', day: 'numeric' }));
 </script>
 
-<section class="stack stack-4 anim-enter">
-  <div class="top-strip">
-    <span>Final edition</span>
-    <span>No. {puzzle.puzzleNumber}</span>
-    <span>{new Date(`${puzzle.date}T00:00:00`).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</span>
+<section class="stack stack-5 anim-enter">
+  <div class="topbar">
+    <span class="wordmark">LookBack</span>
+    <span class="progress">No. {toRoman(puzzle.puzzleNumber)}</span>
   </div>
 
   <div class="center">
-    <p class="eyebrow">Your score</p>
-    <p class="serif" style="font-size: var(--step-6); font-weight: 500; line-height: 1; letter-spacing: -0.04em; margin-top: var(--space-3)">
-      {displayedScore}<span class="muted" style="font-size: var(--step-2)">/800</span>
+    <p class="eyebrow">{mode === 'practice' ? 'Practice' : `${dateLabel} — your score`}</p>
+    <p class="summary-score">
+      {displayedScore}<span class="muted">/800</span>
     </p>
     <p class="stars" style="font-size: var(--step-3); margin-top: var(--space-3)">
       {#each Array(5) as _, i}
@@ -82,21 +93,15 @@
     </p>
 
     {#if mode === 'practice'}
-      <p class="eyebrow accent" style="margin-top: var(--space-3)">Practice — not scored</p>
+      <p class="summary-streak">Practice — not scored</p>
     {:else if streak.currentPerfectStreak >= 2}
-      <p class="mono accent" style="margin-top: var(--space-3); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase">
-        ★ {streak.currentPerfectStreak}-day perfect streak
-      </p>
+      <p class="summary-streak">🔥 {streak.currentPerfectStreak}-day perfect streak</p>
     {:else if streak.currentStreak >= 2}
-      <p class="mono muted" style="margin-top: var(--space-3); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase">
-        {streak.currentStreak}-day streak
-      </p>
+      <p class="summary-streak">★ {streak.currentStreak}-day streak</p>
     {/if}
   </div>
 
-  <div class="fleuron"></div>
-
-  <div style="border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); padding: var(--space-3) 0">
+  <div class="scorecard">
     {#each game.roundResults as r}
       <div class="leader-row">
         <span class="name">{roundLabel(r)}</span>
@@ -104,25 +109,21 @@
         <span class="val">{r.score}</span>
       </div>
     {/each}
-    <div class="leader-row" style="border-top: 1px solid var(--rule-strong); padding-top: var(--space-3); margin-top: var(--space-2)">
-      <span class="name serif" style="font-style: italic; font-size: var(--step-1)">Total</span>
+    <div class="leader-row leader-row--total">
+      <span class="name">Total</span>
       <span class="dots"></span>
-      <span class="val serif" style="font-size: var(--step-1); font-style: italic">{total} <span class="muted">/800</span></span>
+      <span class="val">{total} <span class="muted">/800</span></span>
     </div>
   </div>
 
   {#if mode === 'daily'}
     <button class="btn btn-block" onclick={share}>Share today's edition</button>
-    <pre class="mono muted" style="white-space: pre-wrap; font-size: 0.75rem; padding: var(--space-4); background: var(--paper-deep); border: 1px solid var(--rule-strong); margin: 0">{shareText}</pre>
+    <pre class="share-text">{shareText}</pre>
   {/if}
 
-  <hr class="rule rule-strong" />
-
-  <div class="stack stack-3">
-    <button class="btn btn-ghost btn-block" onclick={onhome}>
-      {mode === 'practice' ? 'Back to archive' : 'Back to home'}
-    </button>
-  </div>
+  <button class="btn btn-ghost btn-block" onclick={onhome}>
+    {mode === 'practice' ? 'Back to the Archive' : 'Back to home'}
+  </button>
 </section>
 
 {#key toastKey}
@@ -130,3 +131,54 @@
     <div class="toast" role="status">{toast}</div>
   {/if}
 {/key}
+
+<style>
+  .summary-score {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: var(--step-6);
+    line-height: 1;
+    margin-top: var(--space-3);
+  }
+  .summary-score .muted { font-size: var(--step-2); }
+  .summary-streak {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: var(--space-3);
+  }
+  .scorecard {
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: var(--space-2) 0;
+  }
+  .leader-row--total {
+    border-top: 1px solid var(--rule-strong);
+    margin-top: var(--space-2);
+    padding-top: var(--space-3);
+  }
+  .leader-row--total .name {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: var(--step-1);
+  }
+  .leader-row--total .val {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: var(--step-1);
+  }
+  .share-text {
+    white-space: pre-wrap;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--muted-ink-2);
+    padding: var(--space-4);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-sm);
+    margin: 0;
+  }
+</style>
