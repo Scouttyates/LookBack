@@ -86,6 +86,13 @@
 
   // ---------- Helpers ------------------------------------------------------
 
+  function roman(n: number): string {
+    const map: [number, string][] = [[10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']];
+    let out = '', x = n;
+    for (const [v, s] of map) { while (x >= v) { out += s; x -= v; } }
+    return out;
+  }
+
   function newGame(p: Puzzle, m: Mode): GameState {
     return {
       date: p.date,
@@ -257,7 +264,11 @@
       type={currentRound.type}
       oncontinue={startRound}
     />
-  {:else if screen === 'round' && currentRound}
+  {:else if screen === 'round' && currentRound && game}
+    <div class="topbar">
+      <span class="wordmark">LookBack</span>
+      <span class="progress">{roman(game.currentRoundIndex + 1)} / {roman(TOTAL_ROUNDS)}</span>
+    </div>
     {#if currentRound.type === 'faceFromPast'}
       <FaceFromPast round={currentRound} oncomplete={handleRoundComplete} />
     {:else if currentRound.type === 'borderline'}
