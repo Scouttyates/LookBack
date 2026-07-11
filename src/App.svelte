@@ -34,6 +34,7 @@
   import WhereInHistory from './mechanics/WhereInHistory.svelte';
   import GuessTheYear from './mechanics/GuessTheYear.svelte';
   import ZoomOut from './mechanics/ZoomOut.svelte';
+  import Atlas from './mechanics/Atlas.svelte';
 
   const TOTAL_ROUNDS = 7;
 
@@ -283,6 +284,8 @@
       <WhereInHistory round={currentRound} oncomplete={handleRoundComplete} />
     {:else if currentRound.type === 'guessTheYear'}
       <GuessTheYear round={currentRound} oncomplete={handleRoundComplete} />
+    {:else if currentRound.type === 'atlas'}
+      <Atlas round={currentRound} oncomplete={handleRoundComplete} />
     {:else if currentRound.type === 'zoomOut'}
       <ZoomOut
         round={currentRound}
