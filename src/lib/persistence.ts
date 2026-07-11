@@ -1,7 +1,8 @@
-import type { PersistedState, GameState, ZoomOutDraft } from '../types';
+import type { PersistedState, GameState, ZoomOutDraft, ThroughLineDraft } from '../types';
 
 const KEY = 'lookback:v1';
 const ZOOMOUT_DRAFT_KEY = 'lookback:zoomout:draft:v1';
+const THROUGHLINE_DRAFT_KEY = 'lookback:throughline:draft:v1';
 
 const DEFAULT: PersistedState = {
   version: 1,
@@ -64,6 +65,7 @@ export function markOnboarded(state: PersistedState): PersistedState {
 export function resetAll(): void {
   try { localStorage.removeItem(KEY); } catch { /* noop */ }
   try { localStorage.removeItem(ZOOMOUT_DRAFT_KEY); } catch { /* noop */ }
+  try { localStorage.removeItem(THROUGHLINE_DRAFT_KEY); } catch { /* noop */ }
 }
 
 export function saveZoomOutDraft(draft: ZoomOutDraft): void {
@@ -93,4 +95,27 @@ export function loadZoomOutDraft(date: string): ZoomOutDraft | null {
 
 export function clearZoomOutDraft(): void {
   try { localStorage.removeItem(ZOOMOUT_DRAFT_KEY); } catch { /* noop */ }
+}
+
+export function saveThroughLineDraft(draft: ThroughLineDraft): void {
+  try { localStorage.setItem(THROUGHLINE_DRAFT_KEY, JSON.stringify(draft)); }
+  catch { /* ignore quota/availability */ }
+}
+
+export function loadThroughLineDraft(date: string): ThroughLineDraft | null {
+  if (typeof localStorage === 'undefined') return null;
+  try {
+    const raw = localStorage.getItem(THROUGHLINE_DRAFT_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as ThroughLineDraft;
+    if (parsed.date !== date) {
+      try { localStorage.removeItem(THROUGHLINE_DRAFT_KEY); } catch { /* noop */ }
+      return null;
+    }
+    return parsed;
+  } catch { return null; }
+}
+
+export function clearThroughLineDraft(): void {
+  try { localStorage.removeItem(THROUGHLINE_DRAFT_KEY); } catch { /* noop */ }
 }

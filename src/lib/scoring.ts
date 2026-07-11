@@ -9,6 +9,8 @@ import type {
   WhereInHistoryRound,
   GuessTheYearRound,
   ZoomOutRound,
+  AtlasRound,
+  ThroughLineRound,
 } from '../types';
 
 // ---------- Per-mechanic answer shapes (stored in RoundResult.detail) -------
@@ -21,6 +23,8 @@ export interface TimelineAnswer { order: number[] } // final ordering: indices i
 export interface WhereInHistoryAnswer { pickedEvent: number; pickedFollowUp: number }
 export interface GuessTheYearAnswer { guessYear: number }
 export interface ZoomOutAnswer { solvedAtLevel: 0 | 1 | 2 | 3 | 4 | null; picks: number[] }
+export interface AtlasAnswer { guessLat: number; guessLng: number; distanceKm: number }
+export interface ThroughLineAnswer { solvedGroupIndices: number[]; mistakes: number }
 
 // ---------- Scoring ----------------------------------------------------------
 
@@ -84,6 +88,25 @@ export function scoreZoomOut(_r: ZoomOutRound, a: ZoomOutAnswer): number {
   return ZOOMOUT_SCORES[a.solvedAtLevel];
 }
 
+// Banded exactly like Guess-the-Year: 100 within tolKm, then doubling bands.
+export function scoreAtlas(r: AtlasRound, a: AtlasAnswer): number {
+  const d = a.distanceKm, t = r.tolKm;
+  if (d <= t)      return 100;
+  if (d <= t * 2)  return 80;
+  if (d <= t * 4)  return 60;
+  if (d <= t * 8)  return 40;
+  if (d <= t * 16) return 20;
+  return 0;
+}
+
+// 40 per solved group (max 160) + 40 clean-solve bonus (all 4, <=1 mistake) = 200.
+export function scoreThroughLine(_r: ThroughLineRound, a: ThroughLineAnswer): number {
+  const solved = a.solvedGroupIndices.length;      // 0..4
+  const base = solved * 40;                         // 0/40/80/120/160
+  const bonus = solved === 4 && a.mistakes <= 1 ? 40 : 0;
+  return base + bonus;                              // max 200
+}
+
 export function scoreRound(round: Round, detail: unknown): number {
   switch (round.type) {
     case 'faceFromPast':    return scoreFaceFromPast(round, detail as FaceFromPastAnswer);
@@ -94,6 +117,8 @@ export function scoreRound(round: Round, detail: unknown): number {
     case 'whereInHistory':  return scoreWhereInHistory(round, detail as WhereInHistoryAnswer);
     case 'guessTheYear':    return scoreGuessTheYear(round, detail as GuessTheYearAnswer);
     case 'zoomOut':         return scoreZoomOut(round, detail as ZoomOutAnswer);
+    case 'atlas':        return scoreAtlas(round, detail as AtlasAnswer);
+    case 'throughLine':  return scoreThroughLine(round, detail as ThroughLineAnswer);
   }
 }
 

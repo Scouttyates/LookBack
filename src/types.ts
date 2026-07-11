@@ -28,7 +28,9 @@ export type RoundType =
   | 'timeline'
   | 'whereInHistory'
   | 'guessTheYear'
-  | 'zoomOut';
+  | 'zoomOut'
+  | 'atlas'
+  | 'throughLine';
 
 export interface FaceFromPastRound {
   type: 'faceFromPast';
@@ -99,6 +101,27 @@ export interface ZoomOutRound {
   revealFact: string;
 }
 
+export interface AtlasRound {
+  type: 'atlas';
+  prompt: string;      // "Where in the world was the Kingdom of Aksum centered?"
+  image?: ImageRef;    // optional; deferred-reveal, alt must NOT name the place
+  answer: string;      // canonical place name, shown on reveal
+  lat: number;         // target latitude  (-90..90)
+  lng: number;         // target longitude (-180..180)
+  tolKm: number;       // full-credit radius (km); bands double from there (>= 1)
+  revealFact: string;
+}
+
+export interface ThroughLineGroup {
+  category: string;                           // revealed only after the group is solved
+  members: [string, string, string, string]; // exactly 4 tile labels
+}
+
+export interface ThroughLineRound {
+  type: 'throughLine';
+  groups: [ThroughLineGroup, ThroughLineGroup, ThroughLineGroup, ThroughLineGroup];
+}
+
 export type Round =
   | FaceFromPastRound
   | BorderlineRound
@@ -107,7 +130,9 @@ export type Round =
   | TimelineRound
   | WhereInHistoryRound
   | GuessTheYearRound
-  | ZoomOutRound;
+  | ZoomOutRound
+  | AtlasRound
+  | ThroughLineRound;
 
 // ---------- Puzzle file shape ----------------------------------------------
 
@@ -169,4 +194,10 @@ export interface ZoomOutDraft {
   date: string; // puzzle date — drafts for any other date are stale
   levelIndex: number;
   wrongPicks: number[];
+}
+
+export interface ThroughLineDraft {
+  date: string;                 // puzzle date — drafts for any other date are stale
+  solvedGroupIndices: number[];
+  mistakes: number;
 }

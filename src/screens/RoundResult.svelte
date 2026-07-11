@@ -17,7 +17,7 @@
     onnext: () => void;
   } = $props();
 
-  let roundMax = $derived(round.type === 'zoomOut' ? 200 : 100);
+  let roundMax = $derived(round.type === 'zoomOut' || round.type === 'throughLine' ? 200 : 100);
   let pct = $derived(result.score / roundMax);
   let verdict = $derived(
     pct >= 1     ? 'Nailed it.' :
@@ -72,6 +72,15 @@
           sub: '',
           blurb: '',
           list: r.events.map((e) => ({ label: e.label, detail: formatYear(e.year) })),
+        };
+      case 'atlas':
+        return { headline: r.answer, sub: '', blurb: r.revealFact, list: [] };
+      case 'throughLine':
+        return {
+          headline: 'The four groups',
+          sub: '',
+          blurb: '',
+          list: r.groups.map((g) => ({ label: g.category, detail: g.members.join(' · ') })),
         };
     }
   }

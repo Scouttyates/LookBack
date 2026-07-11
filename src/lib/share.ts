@@ -10,6 +10,8 @@ const GLYPH: Record<RoundResult['type'], string> = {
   whereInHistory: '📸',
   guessTheYear: '📅',
   zoomOut: '🔍',
+  atlas: '📍',
+  throughLine: '🔗',
 };
 
 const SHORT_MONTHS = [

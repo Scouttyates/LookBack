@@ -67,6 +67,8 @@
     whereInHistory: 'Where in History',
     guessTheYear: 'Guess the Year',
     zoomOut: 'Zoom Out',
+    atlas: 'Atlas',
+    throughLine: 'Through-Line',
   };
   function roundLabel(r: RoundResult): string {
     return ROUND_LABELS[r.type];

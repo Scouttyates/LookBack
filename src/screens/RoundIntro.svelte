@@ -22,6 +22,8 @@
     whereInHistory: { title: 'Where in History',   hint: 'A moment in time — what is it, and where?' },
     guessTheYear:   { title: 'Guess the Year',     hint: 'Slide to the year you think it happened.' },
     zoomOut:        { title: 'Zoom Out',           hint: 'It starts far too close. Guess before it pulls back.' },
+    atlas:          { title: 'Atlas',          hint: 'A place in history — pin it on the world map.' },
+    throughLine:    { title: 'Through-Line',   hint: 'Sixteen tiles, four hidden groups. Find the links.' },
   };
 
   function roman(n: number): string {
