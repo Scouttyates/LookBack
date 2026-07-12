@@ -5,7 +5,6 @@ import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 const PUZZLES_DIR = 'public/puzzles';
-const BORDERS_DIR = 'public/borders';
 const REUSE_WINDOW_DAYS = 90;
 const BIAS_THRESHOLD = 0.6;
 const BIAS_SAMPLE_SIZE = 30;
@@ -16,9 +15,9 @@ const LICENSE_ALLOWLIST = /^(public domain|pd(-|\s|$)|cc0|cc[- ]by(-sa)?(\s\d\.\
 const LICENSE_REJECT = /\b(nc|nd|non[- ]?commercial|no[- ]?derivatives|fair use)\b/i;
 
 const CANONICAL_ORDER = [
-  'faceFromPast', 'borderline', 'battlefield',
+  'faceFromPast', 'battlefield',
   ['whichCameFirst', 'timeline'],
-  'whereInHistory', 'guessTheYear', 'zoomOut',
+  'whereInHistory', 'guessTheYear', 'atlas', 'throughLine',
 ];
 
 function norm(s) {
@@ -40,9 +39,6 @@ function collectAnswers(puzzle) {
       case 'faceFromPast':
         add(r.options?.[r.correctIndex]);
         break;
-      case 'borderline':
-        add(r.answer);
-        break;
       case 'battlefield':
         add(r.options?.[r.correctIndex]);
         break;
@@ -58,8 +54,14 @@ function collectAnswers(puzzle) {
       case 'guessTheYear':
         add(r.prompt?.split(/\s+/).slice(0, 6).join(' '));
         break;
-      case 'zoomOut':
-        add(r.options?.[r.correctIndex]);
+      case 'atlas':
+        add(r.answer);
+        break;
+      case 'throughLine':
+        for (const g of r.groups ?? []) {
+          add(g.category);
+          for (const m of g.members ?? []) add(m);
+        }
         break;
     }
   }
@@ -133,17 +135,33 @@ for (const p of puzzles) {
         if (new Set(opts.map(norm)).size !== opts.length) failures.push(`structure: ${p.file} ${r.type} has duplicate options`);
         break;
       }
-      case 'zoomOut': {
-        const opts = r.options ?? [];
-        if (opts.length !== 6) failures.push(`structure: ${p.file} zoomOut needs 6 options, got ${opts.length}`);
-        if (r.correctIndex < 0 || r.correctIndex > 5) failures.push(`structure: ${p.file} zoomOut correctIndex out of range`);
-        const levels = r.zoomLevels ?? [];
-        if (levels.length !== 5) failures.push(`structure: ${p.file} zoomOut needs 5 zoomLevels, got ${levels.length}`);
-        for (let i = 1; i < levels.length; i++) {
-          if (levels[i].scale >= levels[i - 1].scale) failures.push(`structure: ${p.file} zoomOut levels must have strictly decreasing scale`);
+      case 'atlas': {
+        if (typeof r.lat !== 'number' || r.lat < -90 || r.lat > 90) failures.push(`structure: ${p.file} atlas lat must be a number in [-90, 90]`);
+        if (typeof r.lng !== 'number' || r.lng < -180 || r.lng > 180) failures.push(`structure: ${p.file} atlas lng must be a number in [-180, 180]`);
+        if (!(r.tolKm >= 1)) failures.push(`structure: ${p.file} atlas tolKm must be >= 1`);
+        if (!r.answer) failures.push(`structure: ${p.file} atlas missing answer`);
+        if (!r.revealFact) failures.push(`structure: ${p.file} atlas missing revealFact`);
+        break;
+      }
+      case 'throughLine': {
+        const groups = r.groups ?? [];
+        if (groups.length !== 4) failures.push(`structure: ${p.file} throughLine needs 4 groups, got ${groups.length}`);
+        const allMembers = [];
+        const categories = [];
+        for (const g of groups) {
+          const members = g.members ?? [];
+          if (members.length !== 4) failures.push(`structure: ${p.file} throughLine group "${g.category}" needs 4 members, got ${members.length}`);
+          if (!g.category) failures.push(`structure: ${p.file} throughLine group missing category`);
+          categories.push(g.category);
+          allMembers.push(...members);
         }
-        const last = levels[levels.length - 1];
-        if (last && last.scale !== 1) failures.push(`structure: ${p.file} zoomOut final level must be scale:1`);
+        const normMembers = allMembers.map(norm);
+        if (new Set(normMembers).size !== normMembers.length) failures.push(`structure: ${p.file} throughLine has duplicate members across groups`);
+        const normCategories = categories.map(norm);
+        if (new Set(normCategories).size !== normCategories.length) failures.push(`structure: ${p.file} throughLine has duplicate categories`);
+        for (const m of normMembers) {
+          if (normCategories.includes(m)) failures.push(`structure: ${p.file} throughLine member "${m}" equals a category name`);
+        }
         break;
       }
       case 'whichCameFirst': {
@@ -178,14 +196,6 @@ for (const p of puzzles) {
           failures.push(`structure: ${p.file} guessTheYear requires minYear < answerYear < maxYear`);
         }
         if (!(r.tolerance >= 1)) failures.push(`structure: ${p.file} guessTheYear tolerance must be >= 1`);
-        break;
-      }
-      case 'borderline': {
-        if (!r.countryId) failures.push(`structure: ${p.file} borderline missing countryId`);
-        else if (!existsSync(join(BORDERS_DIR, `${r.countryId}.svg`))) {
-          failures.push(`missing-border: ${p.file} borderline countryId "${r.countryId}" has no public/borders/${r.countryId}.svg`);
-        }
-        if (!r.answer) failures.push(`structure: ${p.file} borderline missing answer`);
         break;
       }
     }
@@ -271,12 +281,13 @@ try {
   failures.push(`index: could not read/parse index.json (${err.message})`);
 }
 
-// ---- Rule: slot-4 alternation drift (warning) -------------------------------
+// ---- Rule: chronology-slot alternation drift (warning) ----------------------
+// Chronology (whichCameFirst/timeline) is slot 3 (index 2) in CANONICAL_ORDER.
 for (let i = 1; i < puzzles.length; i++) {
-  const prevType = puzzles[i - 1].data.rounds?.[3]?.type;
-  const curType = puzzles[i].data.rounds?.[3]?.type;
+  const prevType = puzzles[i - 1].data.rounds?.[2]?.type;
+  const curType = puzzles[i].data.rounds?.[2]?.type;
   if (prevType && curType && prevType === curType) {
-    warnings.push(`alternation: ${puzzles[i].file} slot-4 type "${curType}" repeats the previous day's puzzle`);
+    warnings.push(`alternation: ${puzzles[i].file} chronology slot type "${curType}" repeats the previous day's puzzle`);
   }
 }
 
