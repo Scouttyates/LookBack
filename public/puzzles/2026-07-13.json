@@ -14,12 +14,6 @@
       "revealFact": "Frida Kahlo is known for vivid self-portraits exploring identity, pain, and Mexican culture."
     },
     {
-      "type": "borderline",
-      "countryId": "india",
-      "answer": "India",
-      "continentHint": "Asia"
-    },
-    {
       "type": "battlefield",
       "image": {
         "src": "/images/2026-07-13/battle.jpg",
@@ -27,8 +21,8 @@
         "attribution": { "fileTitle": "File:Japanese aircraft carrier Sōryū underway during Battle of Midway on 4 June 1942.jpg", "author": "United States Army Air Forces", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Japanese_aircraft_carrier_S%C5%8Dry%C5%AB_underway_during_Battle_of_Midway_on_4_June_1942.jpg" }
       },
       "clues": [
-        "A decisive naval battle in the Pacific theater of World War II.",
-        "Fought in June 1942, six months after Pearl Harbor."
+        "A codebreaking triumph let the defenders ambush a much larger carrier fleet.",
+        "Four enemy aircraft carriers were sunk in a single day, a turning point in a Pacific naval campaign."
       ],
       "options": ["Battle of Coral Sea", "Battle of Midway", "Battle of Leyte Gulf", "Battle of Iwo Jima"],
       "correctIndex": 1,
@@ -72,22 +66,22 @@
       "revealFact": "Columbus believed he had reached Asia; he never realized he had encountered a continent unknown to Europeans."
     },
     {
-      "type": "zoomOut",
-      "image": {
-        "src": "/images/2026-07-13/zoom.jpg",
-        "alt": "Extreme close-up of weathered grey stone steps and carved geometric pattern",
-        "attribution": { "fileTitle": "File:Pyramid of Kukulkan Chichen Itza 2012 (8952118044).jpg", "author": "Kirt Edblom", "license": "CC BY-SA 2.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pyramid_of_Kukulkan_Chichen_Itza_2012_(8952118044).jpg" }
-      },
-      "options": ["Chichen Itza", "Teotihuacan", "Tikal", "Tulum", "Caracol", "Copán"],
-      "correctIndex": 0,
-      "zoomLevels": [
-        { "scale": 8, "x": 48, "y": 40 },
-        { "scale": 5, "x": 48, "y": 38 },
-        { "scale": 3, "x": 49, "y": 40 },
-        { "scale": 1.8, "x": 50, "y": 42 },
-        { "scale": 1, "x": 50, "y": 50 }
-      ],
-      "revealFact": "This Maya step pyramid, El Castillo, was built by the Maya civilization on the Yucatán Peninsula."
+      "type": "atlas",
+      "prompt": "Where did the Maya build the step pyramid known as El Castillo?",
+      "answer": "Chichen Itza, Mexico",
+      "lat": 20.6843,
+      "lng": -88.5678,
+      "tolKm": 200,
+      "revealFact": "Twice a year, near the equinox, sunlight and shadow on El Castillo's staircase create the illusion of a serpent slithering down the pyramid."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Chinese dynasties", "members": ["Ming", "Tang", "Han", "Yuan"] },
+        { "category": "World currencies", "members": ["Yen", "Rupee", "Peso", "Dinar"] },
+        { "category": "Historic empires", "members": ["Ottoman", "Byzantine", "Mughal", "Persian"] },
+        { "category": "High mountains", "members": ["Everest", "K2", "Denali", "Kilimanjaro"] }
+      ]
     }
   ]
 }

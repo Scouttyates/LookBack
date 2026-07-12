@@ -6,18 +6,18 @@
       "type": "faceFromPast",
       "image": {
         "src": "/images/2026-07-17/face.jpg",
-        "alt": "Ancient mosaic depicting a young clean-shaven military commander in battle",
-        "attribution": { "fileTitle": "File:Alexander the Great mosaic.jpg", "author": "Unknown author", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alexander_the_Great_mosaic.jpg" }
+        "alt": "Marble bust of a young clean-shaven ancient Mediterranean ruler with tousled hair, against a warm ochre wall",
+        "attribution": {
+          "fileTitle": "File:Bust of Alexander the Great in Musei Capitolini.jpg",
+          "author": "Livioandronico2013",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_Alexander_the_Great_in_Musei_Capitolini.jpg"
+        }
       },
       "options": ["Alexander the Great", "Julius Caesar", "Hannibal Barca", "Cyrus the Great"],
       "correctIndex": 0,
       "revealFact": "Alexander the Great built one of the largest empires of the ancient world by his early thirties."
-    },
-    {
-      "type": "borderline",
-      "countryId": "turkey",
-      "answer": "Turkey",
-      "continentHint": "spanning Europe and Asia"
     },
     {
       "type": "battlefield",
@@ -27,8 +27,8 @@
         "attribution": { "fileTitle": "File:The Battle of Trafalgar by William Clarkson Stanfield.jpg", "author": "Clarkson Frederick Stanfield", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Battle_of_Trafalgar_by_William_Clarkson_Stanfield.jpg" }
       },
       "clues": [
-        "A British fleet decisively defeated a combined French and Spanish force.",
-        "Fought off Spain's southwest coast in 1805."
+        "An admiral broke with standard naval tactics, sailing his fleet directly into the enemy line rather than alongside it.",
+        "The admiral was fatally wounded by a sniper's shot but lived long enough to hear of the victory."
       ],
       "options": ["Battle of the Nile", "Battle of Trafalgar", "Battle of Copenhagen", "Battle of Jutland"],
       "correctIndex": 1,
@@ -72,22 +72,22 @@
       "revealFact": "The Black Death killed an estimated third of Europe's population over the following years."
     },
     {
-      "type": "zoomOut",
-      "image": {
-        "src": "/images/2026-07-17/zoom.jpg",
-        "alt": "Extreme close-up of weathered tan stone arches and worn brickwork",
-        "attribution": { "fileTitle": "File:Arch Colosseum Rome Italy.jpg", "author": "Jebulon", "license": "CC0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arch_Colosseum_Rome_Italy.jpg" }
-      },
-      "options": ["Colosseum", "Pantheon", "Roman Forum", "Circus Maximus", "Baths of Caracalla", "Arch of Constantine"],
-      "correctIndex": 0,
-      "zoomLevels": [
-        { "scale": 8, "x": 50, "y": 45 },
-        { "scale": 5, "x": 50, "y": 42 },
-        { "scale": 3, "x": 50, "y": 40 },
-        { "scale": 1.8, "x": 50, "y": 42 },
-        { "scale": 1, "x": 50, "y": 50 }
-      ],
-      "revealFact": "Completed in 80 CE, the Colosseum could hold up to 80,000 spectators for gladiatorial contests."
+      "type": "atlas",
+      "prompt": "Where was one of the Achaemenid Persian Empire's ceremonial capitals, favored as a winter residence?",
+      "answer": "Susa, Iran",
+      "lat": 32.1943,
+      "lng": 48.2540,
+      "tolKm": 250,
+      "revealFact": "Susa served the Achaemenid kings for centuries and later appears in the biblical Book of Esther as Shushan."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Galilean moons", "members": ["Io", "Europa", "Ganymede", "Callisto"] },
+        { "category": "Figures of Greek myth", "members": ["Jason", "Theseus", "Midas", "Daedalus"] },
+        { "category": "African rivers", "members": ["Congo", "Niger", "Zambezi", "Limpopo"] },
+        { "category": "Ancient landmarks", "members": ["Parthenon", "Petra", "Stonehenge", "Machu Picchu"] }
+      ]
     }
   ]
 }

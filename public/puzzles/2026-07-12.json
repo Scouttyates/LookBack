@@ -14,12 +14,6 @@
       "revealFact": "Elizabeth I ruled England for 44 years, a period later called the Elizabethan era."
     },
     {
-      "type": "borderline",
-      "countryId": "egypt",
-      "answer": "Egypt",
-      "continentHint": "Africa"
-    },
-    {
       "type": "battlefield",
       "image": {
         "src": "/images/2026-07-12/battle.jpg",
@@ -27,8 +21,8 @@
         "attribution": { "fileTitle": "File:Thomas Jones Barker, The Battle of Waterloo.jpg", "author": "Thomas Jones Barker", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Jones_Barker,_The_Battle_of_Waterloo.jpg" }
       },
       "clues": [
-        "Ended one emperor's final bid to reclaim power in Europe.",
-        "Fought in present-day Belgium in June 1815."
+        "An exiled emperor's final campaign ended when a late-arriving army tipped the balance against him.",
+        "Muddy ground from overnight rain delayed the attack and may have changed the outcome."
       ],
       "options": ["Battle of Austerlitz", "Battle of Borodino", "Battle of Waterloo", "Battle of Leipzig"],
       "correctIndex": 2,
@@ -71,22 +65,22 @@
       "revealFact": "The eruption preserved much of Pompeii almost perfectly, giving historians a detailed snapshot of Roman daily life."
     },
     {
-      "type": "zoomOut",
-      "image": {
-        "src": "/images/2026-07-12/zoom.jpg",
-        "alt": "Extreme close-up of a weathered grey-brown terracotta face with fine sculpted detail",
-        "attribution": { "fileTitle": "File:Head of a terracotta soldier, Sotilaan pää.jpg", "author": "JKestilä", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Head_of_a_terracotta_soldier,_Sotilaan_p%C3%A4%C3%A4.jpg" }
-      },
-      "options": ["Forbidden City", "Angkor Wat", "Terracotta Army", "Petra", "Machu Picchu", "Alhambra"],
-      "correctIndex": 2,
-      "zoomLevels": [
-        { "scale": 8, "x": 48, "y": 30 },
-        { "scale": 5, "x": 48, "y": 32 },
-        { "scale": 3, "x": 50, "y": 35 },
-        { "scale": 1.8, "x": 50, "y": 40 },
-        { "scale": 1, "x": 50, "y": 50 }
-      ],
-      "revealFact": "Buried with China's first emperor around 210 BCE, each of the thousands of soldier figures has a unique face."
+      "type": "atlas",
+      "prompt": "Where in the world is the city of Timbuktu?",
+      "answer": "Timbuktu, Mali",
+      "lat": 16.7735,
+      "lng": -3.0074,
+      "tolKm": 250,
+      "revealFact": "A Saharan trading and scholarly hub of the Mali Empire, Timbuktu was famed for its medieval manuscripts and universities."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Egyptian pharaohs", "members": ["Ramesses", "Khufu", "Akhenaten", "Hatshepsut"] },
+        { "category": "World deserts", "members": ["Sahara", "Gobi", "Atacama", "Namib"] },
+        { "category": "Greek monsters", "members": ["Medusa", "Cyclops", "Cerberus", "Chimera"] },
+        { "category": "Constellations", "members": ["Pegasus", "Draco", "Orion", "Perseus"] }
+      ]
     }
   ]
 }

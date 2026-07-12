@@ -6,23 +6,18 @@
       "type": "faceFromPast",
       "image": {
         "src": "/images/2026-07-09/face.jpg",
-        "alt": "Painted portrait of a European military and political leader in formal dress",
+        "alt": "Marble bust of a European military leader with short curled hair, photographed in a museum storage room",
         "attribution": {
-          "fileTitle": "File:Jacques-Louis David - The Emperor Napoleon in His Study at the Tuileries - Google Art Project.jpg",
-          "author": "Jacques-Louis David",
-          "license": "Public domain",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"
+          "fileTitle": "File:Bust of Napoleon MET SF2015 489.jpg",
+          "author": "Antonio Canova",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_Napoleon_MET_SF2015_489.jpg"
         }
       },
       "options": ["Napoleon Bonaparte", "Klemens von Metternich", "Alexander I of Russia", "Duke of Wellington"],
       "correctIndex": 0,
       "revealFact": "Napoleon crowned himself Emperor of the French in 1804 and dominated European politics for over a decade."
-    },
-    {
-      "type": "borderline",
-      "countryId": "italy",
-      "answer": "Italy",
-      "continentHint": "Europe"
     },
     {
       "type": "battlefield",
@@ -37,8 +32,8 @@
         }
       },
       "clues": [
-        "Fought on English soil in 1066.",
-        "Ended with the death of the reigning English king."
+        "An invading duke's forces landed by sea to challenge a newly crowned king.",
+        "The battle turned when the defenders broke formation to chase a feigned retreat."
       ],
       "options": ["Battle of Agincourt", "Battle of Hastings", "Battle of Bosworth Field", "Battle of Tours"],
       "correctIndex": 1,
@@ -87,27 +82,22 @@
       "revealFact": "Crowds began tearing down sections of the wall on the night of November 9, 1989; Germany formally reunified less than a year later."
     },
     {
-      "type": "zoomOut",
-      "image": {
-        "src": "/images/2026-07-09/zoom.jpg",
-        "alt": "Extreme close-up detail of a Renaissance oil painting",
-        "attribution": {
-          "fileTitle": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg",
-          "author": "Leonardo da Vinci",
-          "license": "Public domain",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg"
-        }
-      },
-      "options": ["Mona Lisa", "Girl with a Pearl Earring", "The Birth of Venus", "American Gothic", "The Scream", "Las Meninas"],
-      "correctIndex": 0,
-      "zoomLevels": [
-        { "scale": 8, "x": 46, "y": 38 },
-        { "scale": 5, "x": 48, "y": 36 },
-        { "scale": 3, "x": 50, "y": 35 },
-        { "scale": 1.8, "x": 50, "y": 40 },
-        { "scale": 1, "x": 50, "y": 50 }
-      ],
-      "revealFact": "Painted by Leonardo da Vinci in the early 1500s, it has hung in the Louvre since 1797."
+      "type": "atlas",
+      "prompt": "Where was the Kingdom of Aksum centered?",
+      "answer": "Aksum, Ethiopia",
+      "lat": 14.1213,
+      "lng": 38.7167,
+      "tolKm": 350,
+      "revealFact": "Aksum grew wealthy on trade linking Rome, Arabia, and India, and its rulers raised massive carved stone obelisks that still stand today."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Roman emperors", "members": ["Nero", "Trajan", "Hadrian", "Augustus"] },
+        { "category": "Stoic thinkers", "members": ["Seneca", "Epictetus", "Zeno", "Marcus Aurelius"] },
+        { "category": "Ancient wonders", "members": ["Colossus", "Lighthouse", "Hanging Gardens", "Mausoleum"] },
+        { "category": "Rivers of antiquity", "members": ["Tigris", "Euphrates", "Nile", "Indus"] }
+      ]
     }
   ]
 }

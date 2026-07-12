@@ -14,12 +14,6 @@
       "revealFact": "Marie Curie won Nobel Prizes in both Physics and Chemistry for her research on radioactivity."
     },
     {
-      "type": "borderline",
-      "countryId": "greece",
-      "answer": "Greece",
-      "continentHint": "Europe"
-    },
-    {
       "type": "battlefield",
       "image": {
         "src": "/images/2026-07-15/battle.jpg",
@@ -27,8 +21,8 @@
         "attribution": { "fileTitle": "File:RIAN archive 2383 The ruins of Stalingrad.jpg", "author": "Zelma / Георгий Зельма", "license": "CC BY-SA 3.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:RIAN_archive_2383_The_ruins_of_Stalingrad.jpg" }
       },
       "clues": [
-        "One of the bloodiest battles of World War II, fought in a Soviet city.",
-        "Ended with a German army's surrender in early 1943."
+        "House-to-house fighting reduced a major industrial city to rubble over months of brutal urban combat.",
+        "A surrounded army, cut off from supply and reinforcement, was eventually forced to surrender."
       ],
       "options": ["Battle of Kursk", "Battle of Stalingrad", "Battle of Berlin", "Battle of Leningrad"],
       "correctIndex": 1,
@@ -72,22 +66,22 @@
       "revealFact": "The Great Fire of London burned for four days and destroyed most of the medieval city, though few deaths were recorded."
     },
     {
-      "type": "zoomOut",
-      "image": {
-        "src": "/images/2026-07-15/zoom.jpg",
-        "alt": "Extreme close-up of oxidized green-grey draped metal folds",
-        "attribution": { "fileTitle": "File:Statue of Liberty close-up-NPS.jpg", "author": "National Park Service", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_Liberty_close-up-NPS.jpg" }
-      },
-      "options": ["Statue of Liberty", "Christ the Redeemer", "Motherland Calls", "Angel of the North", "Brandenburg Gate", "Leaning Tower of Pisa"],
-      "correctIndex": 0,
-      "zoomLevels": [
-        { "scale": 8, "x": 45, "y": 55 },
-        { "scale": 5, "x": 45, "y": 52 },
-        { "scale": 3, "x": 48, "y": 48 },
-        { "scale": 1.8, "x": 50, "y": 45 },
-        { "scale": 1, "x": 50, "y": 50 }
-      ],
-      "revealFact": "A gift from France, the Statue of Liberty was dedicated in New York Harbor in 1886."
+      "type": "atlas",
+      "prompt": "Where was the Roman town buried alongside its more famous neighbor when a volcano erupted?",
+      "answer": "Herculaneum, Italy",
+      "lat": 40.8062,
+      "lng": 14.3486,
+      "tolKm": 150,
+      "revealFact": "Buried under volcanic mud rather than ash, Herculaneum preserved wooden furniture, food, and even scrolls that its neighbor's drier burial could not."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Inventors", "members": ["Edison", "Tesla", "Bell", "Gutenberg"] },
+        { "category": "Volcanoes", "members": ["Vesuvius", "Krakatoa", "Etna", "Fuji"] },
+        { "category": "Chemical elements", "members": ["Cobalt", "Bismuth", "Tungsten", "Mercury"] },
+        { "category": "Roman gods", "members": ["Jupiter", "Juno", "Neptune", "Mars"] }
+      ]
     }
   ]
 }

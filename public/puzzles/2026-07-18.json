@@ -14,12 +14,6 @@
       "revealFact": "Catherine the Great ruled the Russian Empire for over three decades, expanding its territory and influence."
     },
     {
-      "type": "borderline",
-      "countryId": "canada",
-      "answer": "Canada",
-      "continentHint": "North America"
-    },
-    {
       "type": "battlefield",
       "image": {
         "src": "/images/2026-07-18/battle.jpg",
@@ -27,8 +21,8 @@
         "attribution": { "fileTitle": "File:The Conquest of Tenochtitlan.jpg", "author": "Unknown", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Conquest_of_Tenochtitlan.jpg" }
       },
       "clues": [
-        "Spanish conquistadors and their allies besieged an island capital city.",
-        "Marked the end of the Aztec Empire in 1521."
+        "A besieging force cut off food and fresh water to an island capital reachable only by causeways.",
+        "Disease weakened the defenders more than any weapon the attackers brought."
       ],
       "options": ["Fall of Tenochtitlan", "Battle of Cajamarca", "Battle of Otumba", "Battle of Puebla"],
       "correctIndex": 0,
@@ -71,22 +65,22 @@
       "revealFact": "This event is traditionally used to mark the fall of the Western Roman Empire and the start of the medieval period in Europe."
     },
     {
-      "type": "zoomOut",
-      "image": {
-        "src": "/images/2026-07-18/zoom.jpg",
-        "alt": "Extreme close-up of rose-pink carved sandstone with fine columned detail",
-        "attribution": { "fileTitle": "File:Petra detail of Al Khazneh (The treasury) 1822.jpg", "author": "Dosseman", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Petra_detail_of_Al_Khazneh_(The_treasury)_1822.jpg" }
-      },
-      "options": ["Palmyra", "Persepolis", "Petra", "Ephesus", "Baalbek", "Leptis Magna"],
-      "correctIndex": 2,
-      "zoomLevels": [
-        { "scale": 8, "x": 50, "y": 40 },
-        { "scale": 5, "x": 50, "y": 42 },
-        { "scale": 3, "x": 50, "y": 45 },
-        { "scale": 1.8, "x": 50, "y": 45 },
-        { "scale": 1, "x": 50, "y": 50 }
-      ],
-      "revealFact": "Carved directly into rose-colored sandstone cliffs, Petra was the capital of the Nabataean kingdom in present-day Jordan."
+      "type": "atlas",
+      "prompt": "Where did Buddhist monks build one of history's first great residential universities?",
+      "answer": "Nalanda, India",
+      "lat": 25.1358,
+      "lng": 85.4436,
+      "tolKm": 200,
+      "revealFact": "Nalanda operated as one of the world's first residential universities, drawing scholars from across Asia for centuries before its destruction in the 1190s."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Greek Titans", "members": ["Cronus", "Prometheus", "Rhea", "Hyperion"] },
+        { "category": "Mountain ranges", "members": ["Andes", "Alps", "Pyrenees", "Atlas"] },
+        { "category": "Romantic composers", "members": ["Chopin", "Liszt", "Brahms", "Schubert"] },
+        { "category": "Impressionist painters", "members": ["Monet", "Renoir", "Degas", "Manet"] }
+      ]
     }
   ]
 }

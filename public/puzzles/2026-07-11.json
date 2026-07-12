@@ -14,12 +14,6 @@
       "revealFact": "Genghis Khan founded the Mongol Empire, which became the largest contiguous land empire in history."
     },
     {
-      "type": "borderline",
-      "countryId": "chile",
-      "answer": "Chile",
-      "continentHint": "South America"
-    },
-    {
       "type": "battlefield",
       "image": {
         "src": "/images/2026-07-11/battle.jpg",
@@ -27,8 +21,8 @@
         "attribution": { "fileTitle": "File:Jacques-Louis David - Leonidas at Thermopylae - WGA6095.jpg", "author": "Jacques-Louis David", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_Leonidas_at_Thermopylae_-_WGA6095.jpg" }
       },
       "clues": [
-        "A small force held a narrow coastal pass against a much larger invading army.",
-        "Fought in ancient Greece in 480 BCE."
+        "A small force held a narrow mountain pass against an overwhelming invading army.",
+        "A local resident betrayed the defenders by revealing a hidden path around their position."
       ],
       "options": ["Battle of Marathon", "Battle of Thermopylae", "Battle of Salamis", "Battle of Plataea"],
       "correctIndex": 1,
@@ -72,22 +66,22 @@
       "revealFact": "The storming of the Bastille became a symbol of the French Revolution and is still celebrated as Bastille Day."
     },
     {
-      "type": "zoomOut",
-      "image": {
-        "src": "/images/2026-07-11/zoom.jpg",
-        "alt": "Extreme close-up of weathered tan limestone with subtle carved detail",
-        "attribution": { "fileTitle": "File:Profile Sphinx.jpg", "author": "Bilal Detailz", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Profile_Sphinx.jpg" }
-      },
-      "options": ["Great Sphinx of Giza", "Stonehenge", "Nazca Lines", "Moai of Easter Island", "Great Wall of China", "Machu Picchu"],
-      "correctIndex": 0,
-      "zoomLevels": [
-        { "scale": 8, "x": 55, "y": 40 },
-        { "scale": 5, "x": 55, "y": 42 },
-        { "scale": 3, "x": 52, "y": 45 },
-        { "scale": 1.8, "x": 50, "y": 48 },
-        { "scale": 1, "x": 50, "y": 50 }
-      ],
-      "revealFact": "Carved from limestone bedrock, the Great Sphinx is one of the largest and oldest monumental statues in the world."
+      "type": "atlas",
+      "prompt": "Where did the Shona people build the great stone city that later gave a modern nation its name?",
+      "answer": "Great Zimbabwe",
+      "lat": -20.2679,
+      "lng": 30.9337,
+      "tolKm": 300,
+      "revealFact": "The dry-stone walls of Great Zimbabwe, built without mortar, were the center of a wealthy trading kingdom from roughly the 11th to 15th centuries."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Renaissance masters", "members": ["Leonardo", "Titian", "Raphael", "Botticelli"] },
+        { "category": "Baroque composers", "members": ["Bach", "Handel", "Vivaldi", "Purcell"] },
+        { "category": "Early astronomers", "members": ["Kepler", "Copernicus", "Brahe", "Halley"] },
+        { "category": "Norse gods", "members": ["Odin", "Thor", "Loki", "Freya"] }
+      ]
     }
   ]
 }

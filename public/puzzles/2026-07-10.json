@@ -19,12 +19,6 @@
       "revealFact": "Cleopatra VII was the last active ruler of the Ptolemaic Kingdom of Egypt, reigning until 30 BCE."
     },
     {
-      "type": "borderline",
-      "countryId": "japan",
-      "answer": "Japan",
-      "continentHint": "Asia"
-    },
-    {
       "type": "battlefield",
       "image": {
         "src": "/images/2026-07-10/battle.jpg",
@@ -37,8 +31,8 @@
         }
       },
       "clues": [
-        "Fought over three days in Pennsylvania in July 1863.",
-        "Often called the turning point of the American Civil War."
+        "Two armies collided almost by accident, then fought for three days over the surrounding hills and ridges.",
+        "A massive infantry charge across open ground toward a stone wall ended in heavy losses for the attackers."
       ],
       "options": ["Battle of Gettysburg", "Battle of Antietam", "Battle of Bull Run", "Battle of Shiloh"],
       "correctIndex": 0,
@@ -86,27 +80,22 @@
       "revealFact": "More than 1,500 people died when the supposedly unsinkable liner went down on her maiden voyage."
     },
     {
-      "type": "zoomOut",
-      "image": {
-        "src": "/images/2026-07-10/zoom.jpg",
-        "alt": "Extreme close-up detail of white marble inlay and carved stonework",
-        "attribution": {
-          "fileTitle": "File:Taj Mahal detail-2.jpg",
-          "author": "David Castor",
-          "license": "Public domain",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_detail-2.jpg"
-        }
-      },
-      "options": ["Hagia Sophia", "Alhambra", "Blue Mosque", "Taj Mahal", "Forbidden City", "Potala Palace"],
-      "correctIndex": 3,
-      "zoomLevels": [
-        { "scale": 8, "x": 50, "y": 45 },
-        { "scale": 5, "x": 50, "y": 42 },
-        { "scale": 3, "x": 50, "y": 40 },
-        { "scale": 1.8, "x": 50, "y": 42 },
-        { "scale": 1, "x": 50, "y": 50 }
-      ],
-      "revealFact": "Built by Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal, it was completed around 1653."
+      "type": "atlas",
+      "prompt": "Where did the Khmer Empire build its capital?",
+      "answer": "Angkor, Cambodia",
+      "lat": 13.4125,
+      "lng": 103.8670,
+      "tolKm": 250,
+      "revealFact": "At its height Angkor was one of the largest pre-industrial urban complexes on Earth, anchored by the temple of Angkor Wat."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Explorers", "members": ["Magellan", "Da Gama", "Cartier", "Frobisher"] },
+        { "category": "Historic sailing ships", "members": ["Mayflower", "Endeavour", "Cutty Sark", "Golden Hind"] },
+        { "category": "Mediterranean islands", "members": ["Sicily", "Corsica", "Malta", "Sardinia"] },
+        { "category": "Sea straits", "members": ["Bosphorus", "Gibraltar", "Hormuz", "Dardanelles"] }
+      ]
     }
   ]
 }
