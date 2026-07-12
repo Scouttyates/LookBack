@@ -35,6 +35,7 @@
   import GuessTheYear from './mechanics/GuessTheYear.svelte';
   import ZoomOut from './mechanics/ZoomOut.svelte';
   import Atlas from './mechanics/Atlas.svelte';
+  import ThroughLine from './mechanics/ThroughLine.svelte';
 
   const TOTAL_ROUNDS = 7;
 
@@ -288,6 +289,12 @@
       <Atlas round={currentRound} oncomplete={handleRoundComplete} />
     {:else if currentRound.type === 'zoomOut'}
       <ZoomOut
+        round={currentRound}
+        oncomplete={handleRoundComplete}
+        puzzleDate={mode === 'daily' && puzzle ? puzzle.date : null}
+      />
+    {:else if currentRound.type === 'throughLine'}
+      <ThroughLine
         round={currentRound}
         oncomplete={handleRoundComplete}
         puzzleDate={mode === 'daily' && puzzle ? puzzle.date : null}
