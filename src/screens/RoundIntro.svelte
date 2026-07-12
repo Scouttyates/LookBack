@@ -15,15 +15,13 @@
 
   const LABELS: Record<RoundType, { title: string; hint: string }> = {
     faceFromPast:   { title: 'Face from the Past', hint: 'A portrait, a bust, a photograph. Name the historical figure.' },
-    borderline:     { title: 'BorderLine',         hint: 'Just the outline. Guess the country.' },
     battlefield:    { title: 'Battlefield',        hint: 'A famous battle, one image, a couple of clues.' },
     whichCameFirst: { title: 'Which Came First',   hint: 'Five pairs. Pick whichever happened first.' },
     timeline:       { title: 'Timeline',           hint: 'Four events. Put them in order.' },
     whereInHistory: { title: 'Where in History',   hint: 'A moment in time — what is it, and where?' },
     guessTheYear:   { title: 'Guess the Year',     hint: 'Slide to the year you think it happened.' },
-    zoomOut:        { title: 'Zoom Out',           hint: 'It starts far too close. Guess before it pulls back.' },
-    atlas:          { title: 'Atlas',          hint: 'A place in history — pin it on the world map.' },
-    throughLine:    { title: 'Through-Line',   hint: 'Sixteen tiles, four hidden groups. Find the links.' },
+    atlas:          { title: 'Atlas',              hint: 'A place in history — pin it on the world map.' },
+    throughLine:    { title: 'Through-Line',       hint: 'Sixteen tiles, four hidden groups. Find the links.' },
   };
 
   function roman(n: number): string {

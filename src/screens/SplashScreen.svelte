@@ -65,7 +65,7 @@
     </div>
   {:else}
     <p class="cover-intro">
-      A face, a border, a battle, a moment in time — and one image that starts far too close to guess.
+      A face, a battle, a moment in time — and a finale that puts it all together.
     </p>
     <div style="margin-top: var(--space-6)">
       <button class="btn btn-block" onclick={onbegin}>

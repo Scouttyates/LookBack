@@ -3,13 +3,11 @@ import { stars, computeTotal } from './scoring';
 
 const GLYPH: Record<RoundResult['type'], string> = {
   faceFromPast: '👤',
-  borderline: '🗺️',
   battlefield: '⚔️',
   whichCameFirst: '⏳',
   timeline: '⏳',
   whereInHistory: '📸',
   guessTheYear: '📅',
-  zoomOut: '🔍',
   atlas: '📍',
   throughLine: '🔗',
 };
@@ -26,7 +24,7 @@ function formatShareDate(iso: string): string {
 }
 
 function roundSummary(result: RoundResult): string {
-  return `${GLYPH[result.type]} ${result.score}`;
+  return `${GLYPH[result.type] ?? '•'} ${result.score}`;
 }
 
 export function buildShareText(

@@ -22,13 +22,11 @@ export interface ImageRef {
 
 export type RoundType =
   | 'faceFromPast'
-  | 'borderline'
   | 'battlefield'
   | 'whichCameFirst'
   | 'timeline'
   | 'whereInHistory'
   | 'guessTheYear'
-  | 'zoomOut'
   | 'atlas'
   | 'throughLine';
 
@@ -38,13 +36,6 @@ export interface FaceFromPastRound {
   options: string[]; // exactly 4 person names
   correctIndex: number;
   revealFact: string; // one line shown after answering
-}
-
-export interface BorderlineRound {
-  type: 'borderline';
-  countryId: string;      // slug matching public/borders/<countryId>.svg and countries.ts id
-  answer: string;          // canonical display name, e.g. "Portugal"
-  continentHint: string;   // hint 1 (-30 pts). Hint 2 (-further 30 pts) = first letter, derived at runtime.
 }
 
 export interface BattlefieldRound {
@@ -90,17 +81,6 @@ export interface GuessTheYearRound {
   revealFact: string;
 }
 
-export interface ZoomOutRound {
-  type: 'zoomOut';
-  image: ImageRef;
-  options: string[]; // exactly 6
-  correctIndex: number;
-  // 5 levels, most-zoomed first; last MUST be {scale:1, x:50, y:50}.
-  // x/y are transform-origin percentages into the image.
-  zoomLevels: { scale: number; x: number; y: number }[];
-  revealFact: string;
-}
-
 export interface AtlasRound {
   type: 'atlas';
   prompt: string;      // "Where in the world was the Kingdom of Aksum centered?"
@@ -124,13 +104,11 @@ export interface ThroughLineRound {
 
 export type Round =
   | FaceFromPastRound
-  | BorderlineRound
   | BattlefieldRound
   | WhichCameFirstRound
   | TimelineRound
   | WhereInHistoryRound
   | GuessTheYearRound
-  | ZoomOutRound
   | AtlasRound
   | ThroughLineRound;
 
@@ -139,7 +117,7 @@ export type Round =
 export interface Puzzle {
   puzzleNumber: number;
   date: string;    // ISO yyyy-mm-dd
-  // rounds[3] (slot 4) is whichCameFirst on odd puzzleNumbers, timeline on
+  // rounds[2] (slot 3) is whichCameFirst on odd puzzleNumbers, timeline on
   // even — an authoring convention only; the app renders whatever type is
   // present in the JSON.
   rounds: Round[]; // exactly 7, in play order (see docs/authoring-rules.md)
@@ -155,7 +133,7 @@ export interface PuzzleIndex {
 
 export interface RoundResult {
   type: RoundType;
-  score: number;    // 0-100 (0-200 for zoomOut)
+  score: number;    // 0-100 (0-200 for throughLine)
   detail: unknown;  // per-mechanic answer record, used for share + review
 }
 
@@ -187,15 +165,10 @@ export interface PersistedState {
   games: Record<string, GameState>; // keyed by date
 }
 
-// In-progress ZoomOut state, snapshotted to localStorage after every wrong
-// guess so a mid-round page reload doesn't reset progress. Cleared as soon as
-// the round finishes (the result then lives in PersistedState.games).
-export interface ZoomOutDraft {
-  date: string; // puzzle date — drafts for any other date are stale
-  levelIndex: number;
-  wrongPicks: number[];
-}
-
+// In-progress Through-Line state, snapshotted to localStorage after every
+// solved group or mistake so a mid-round page reload doesn't reset progress.
+// Cleared as soon as the round finishes (the result then lives in
+// PersistedState.games).
 export interface ThroughLineDraft {
   date: string;                 // puzzle date — drafts for any other date are stale
   solvedGroupIndices: number[];

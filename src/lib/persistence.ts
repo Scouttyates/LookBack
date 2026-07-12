@@ -1,7 +1,6 @@
-import type { PersistedState, GameState, ZoomOutDraft, ThroughLineDraft } from '../types';
+import type { PersistedState, GameState, ThroughLineDraft } from '../types';
 
 const KEY = 'lookback:v1';
-const ZOOMOUT_DRAFT_KEY = 'lookback:zoomout:draft:v1';
 const THROUGHLINE_DRAFT_KEY = 'lookback:throughline:draft:v1';
 
 const DEFAULT: PersistedState = {
@@ -64,37 +63,7 @@ export function markOnboarded(state: PersistedState): PersistedState {
 
 export function resetAll(): void {
   try { localStorage.removeItem(KEY); } catch { /* noop */ }
-  try { localStorage.removeItem(ZOOMOUT_DRAFT_KEY); } catch { /* noop */ }
   try { localStorage.removeItem(THROUGHLINE_DRAFT_KEY); } catch { /* noop */ }
-}
-
-export function saveZoomOutDraft(draft: ZoomOutDraft): void {
-  try {
-    localStorage.setItem(ZOOMOUT_DRAFT_KEY, JSON.stringify(draft));
-  } catch {
-    // Ignore quota/availability errors — round still playable in-memory
-  }
-}
-
-export function loadZoomOutDraft(date: string): ZoomOutDraft | null {
-  if (typeof localStorage === 'undefined') return null;
-  try {
-    const raw = localStorage.getItem(ZOOMOUT_DRAFT_KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as ZoomOutDraft;
-    // Stale draft from a previous puzzle — drop it.
-    if (parsed.date !== date) {
-      try { localStorage.removeItem(ZOOMOUT_DRAFT_KEY); } catch { /* noop */ }
-      return null;
-    }
-    return parsed;
-  } catch {
-    return null;
-  }
-}
-
-export function clearZoomOutDraft(): void {
-  try { localStorage.removeItem(ZOOMOUT_DRAFT_KEY); } catch { /* noop */ }
 }
 
 export function saveThroughLineDraft(draft: ThroughLineDraft): void {

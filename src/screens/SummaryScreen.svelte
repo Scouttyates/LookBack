@@ -60,18 +60,16 @@
 
   const ROUND_LABELS: Record<RoundResult['type'], string> = {
     faceFromPast: 'Face from the Past',
-    borderline: 'BorderLine',
     battlefield: 'Battlefield',
     whichCameFirst: 'Which Came First',
     timeline: 'Timeline',
     whereInHistory: 'Where in History',
     guessTheYear: 'Guess the Year',
-    zoomOut: 'Zoom Out',
     atlas: 'Atlas',
     throughLine: 'Through-Line',
   };
   function roundLabel(r: RoundResult): string {
-    return ROUND_LABELS[r.type];
+    return ROUND_LABELS[r.type] ?? r.type;
   }
 
   let dateLabel = $derived(new Date(`${puzzle.date}T00:00:00`).toLocaleDateString(undefined, { month: 'long', day: 'numeric' }));

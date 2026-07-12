@@ -72,7 +72,7 @@ function collectDecoys(puzzle) {
   const words = new Set();
   const add = (w) => { const n = norm(w); if (n) words.add(n); };
   for (const r of puzzle.rounds ?? []) {
-    if (r.type === 'faceFromPast' || r.type === 'battlefield' || r.type === 'zoomOut') {
+    if (r.type === 'faceFromPast' || r.type === 'battlefield') {
       (r.options ?? []).forEach((o, i) => { if (i !== r.correctIndex) add(o); });
     }
     if (r.type === 'whereInHistory') {
@@ -253,7 +253,7 @@ for (const p of puzzles) {
     if (!r.image) continue;
     const altNorm = norm(r.image.alt);
     let answer = null;
-    if (r.type === 'faceFromPast' || r.type === 'battlefield' || r.type === 'zoomOut') answer = r.options?.[r.correctIndex];
+    if (r.type === 'faceFromPast' || r.type === 'battlefield') answer = r.options?.[r.correctIndex];
     if (r.type === 'whereInHistory') answer = r.eventQuestion?.options?.[r.eventQuestion?.correctIndex];
     if (answer && altNorm.includes(norm(answer))) {
       warnings.push(`alt-leak: ${p.file} ${r.type} alt text may reveal the answer "${answer}"`);
@@ -311,7 +311,6 @@ function biasCheck(getIndex, label) {
 }
 biasCheck((r) => (r.type === 'faceFromPast' ? r.correctIndex : null), 'faceFromPast');
 biasCheck((r) => (r.type === 'battlefield' ? r.correctIndex : null), 'battlefield');
-biasCheck((r) => (r.type === 'zoomOut' ? r.correctIndex : null), 'zoomOut');
 
 for (const w of warnings) console.warn(`WARN  ${w}`);
 for (const f of failures) console.error(`FAIL  ${f}`);

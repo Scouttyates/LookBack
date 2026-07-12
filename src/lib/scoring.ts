@@ -2,13 +2,11 @@ import type {
   Round,
   GameState,
   FaceFromPastRound,
-  BorderlineRound,
   BattlefieldRound,
   WhichCameFirstRound,
   TimelineRound,
   WhereInHistoryRound,
   GuessTheYearRound,
-  ZoomOutRound,
   AtlasRound,
   ThroughLineRound,
 } from '../types';
@@ -16,31 +14,22 @@ import type {
 // ---------- Per-mechanic answer shapes (stored in RoundResult.detail) -------
 
 export interface FaceFromPastAnswer { picked: number }
-export interface BorderlineAnswer { solved: boolean; hintsUsed: 0 | 1 | 2; guesses: string[] }
 export interface BattlefieldAnswer { picked: number }
 export interface WhichCameFirstAnswer { picks: (0 | 1)[] } // length 5
 export interface TimelineAnswer { order: number[] } // final ordering: indices into round.events
 export interface WhereInHistoryAnswer { pickedEvent: number; pickedFollowUp: number }
 export interface GuessTheYearAnswer { guessYear: number }
-export interface ZoomOutAnswer { solvedAtLevel: 0 | 1 | 2 | 3 | 4 | null; picks: number[] }
 export interface AtlasAnswer { guessLat: number; guessLng: number; distanceKm: number }
 export interface ThroughLineAnswer { solvedGroupIndices: number[]; mistakes: number }
 
 // ---------- Scoring ----------------------------------------------------------
 
 export const MAX_ROUND = 100;
-// Zoom Out is the high-stakes finale, worth double a normal round.
-export const MAX_ZOOMOUT = 200;
 // Sum of all 7 rounds at perfect: 6*100 + 200 = 800.
 export const MAX_TOTAL = 800;
 
 export function scoreFaceFromPast(r: FaceFromPastRound, a: FaceFromPastAnswer): number {
   return a.picked === r.correctIndex ? MAX_ROUND : 0;
-}
-
-export function scoreBorderline(_r: BorderlineRound, a: BorderlineAnswer): number {
-  if (!a.solved) return 0;
-  return a.hintsUsed === 0 ? 100 : a.hintsUsed === 1 ? 70 : 40;
 }
 
 export function scoreBattlefield(r: BattlefieldRound, a: BattlefieldAnswer): number {
@@ -81,13 +70,6 @@ export function scoreGuessTheYear(r: GuessTheYearRound, a: GuessTheYearAnswer): 
   return 0;
 }
 
-const ZOOMOUT_SCORES = [200, 160, 120, 80, 40] as const;
-
-export function scoreZoomOut(_r: ZoomOutRound, a: ZoomOutAnswer): number {
-  if (a.solvedAtLevel === null) return 0;
-  return ZOOMOUT_SCORES[a.solvedAtLevel];
-}
-
 // Banded exactly like Guess-the-Year: 100 within tolKm, then doubling bands.
 export function scoreAtlas(r: AtlasRound, a: AtlasAnswer): number {
   const d = a.distanceKm, t = r.tolKm;
@@ -110,15 +92,13 @@ export function scoreThroughLine(_r: ThroughLineRound, a: ThroughLineAnswer): nu
 export function scoreRound(round: Round, detail: unknown): number {
   switch (round.type) {
     case 'faceFromPast':    return scoreFaceFromPast(round, detail as FaceFromPastAnswer);
-    case 'borderline':      return scoreBorderline(round, detail as BorderlineAnswer);
     case 'battlefield':     return scoreBattlefield(round, detail as BattlefieldAnswer);
     case 'whichCameFirst':  return scoreWhichCameFirst(round, detail as WhichCameFirstAnswer);
     case 'timeline':        return scoreTimeline(round, detail as TimelineAnswer);
     case 'whereInHistory':  return scoreWhereInHistory(round, detail as WhereInHistoryAnswer);
     case 'guessTheYear':    return scoreGuessTheYear(round, detail as GuessTheYearAnswer);
-    case 'zoomOut':         return scoreZoomOut(round, detail as ZoomOutAnswer);
-    case 'atlas':        return scoreAtlas(round, detail as AtlasAnswer);
-    case 'throughLine':  return scoreThroughLine(round, detail as ThroughLineAnswer);
+    case 'atlas':           return scoreAtlas(round, detail as AtlasAnswer);
+    case 'throughLine':     return scoreThroughLine(round, detail as ThroughLineAnswer);
   }
 }
 

@@ -17,7 +17,7 @@
     onnext: () => void;
   } = $props();
 
-  let roundMax = $derived(round.type === 'zoomOut' || round.type === 'throughLine' ? 200 : 100);
+  let roundMax = $derived(round.type === 'throughLine' ? 200 : 100);
   let pct = $derived(result.score / roundMax);
   let verdict = $derived(
     pct >= 1     ? 'Nailed it.' :
@@ -41,8 +41,6 @@
     switch (r.type) {
       case 'faceFromPast':
         return { headline: r.options[r.correctIndex], sub: '', blurb: r.revealFact, list: [] };
-      case 'borderline':
-        return { headline: r.answer, sub: `Continent — ${r.continentHint}`, blurb: '', list: [] };
       case 'battlefield':
         return { headline: r.options[r.correctIndex], sub: `Fought in ${formatYear(r.revealYear)}`, blurb: '', list: [] };
       case 'whereInHistory':
@@ -54,8 +52,6 @@
         };
       case 'guessTheYear':
         return { headline: formatYear(r.answerYear), sub: '', blurb: r.revealFact, list: [] };
-      case 'zoomOut':
-        return { headline: r.options[r.correctIndex], sub: '', blurb: r.revealFact, list: [] };
       case 'whichCameFirst':
         return {
           headline: verdict,

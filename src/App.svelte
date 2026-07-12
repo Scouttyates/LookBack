@@ -27,13 +27,11 @@
   import ArchiveScreen from './screens/ArchiveScreen.svelte';
 
   import FaceFromPast from './mechanics/FaceFromPast.svelte';
-  import BorderLine from './mechanics/BorderLine.svelte';
   import Battlefield from './mechanics/Battlefield.svelte';
   import WhichCameFirst from './mechanics/WhichCameFirst.svelte';
   import Timeline from './mechanics/Timeline.svelte';
   import WhereInHistory from './mechanics/WhereInHistory.svelte';
   import GuessTheYear from './mechanics/GuessTheYear.svelte';
-  import ZoomOut from './mechanics/ZoomOut.svelte';
   import Atlas from './mechanics/Atlas.svelte';
   import ThroughLine from './mechanics/ThroughLine.svelte';
 
@@ -273,8 +271,6 @@
     </div>
     {#if currentRound.type === 'faceFromPast'}
       <FaceFromPast round={currentRound} oncomplete={handleRoundComplete} />
-    {:else if currentRound.type === 'borderline'}
-      <BorderLine round={currentRound} oncomplete={handleRoundComplete} />
     {:else if currentRound.type === 'battlefield'}
       <Battlefield round={currentRound} oncomplete={handleRoundComplete} />
     {:else if currentRound.type === 'whichCameFirst'}
@@ -287,12 +283,6 @@
       <GuessTheYear round={currentRound} oncomplete={handleRoundComplete} />
     {:else if currentRound.type === 'atlas'}
       <Atlas round={currentRound} oncomplete={handleRoundComplete} />
-    {:else if currentRound.type === 'zoomOut'}
-      <ZoomOut
-        round={currentRound}
-        oncomplete={handleRoundComplete}
-        puzzleDate={mode === 'daily' && puzzle ? puzzle.date : null}
-      />
     {:else if currentRound.type === 'throughLine'}
       <ThroughLine
         round={currentRound}

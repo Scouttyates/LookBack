@@ -9,7 +9,6 @@
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
     "lint:puzzles": "node scripts/lint-puzzles.mjs",
-    "borders": "node scripts/generate-borders.mjs",
     "fetch-image": "node scripts/fetch-image.mjs",
     "prepare": "git config core.hooksPath .githooks"
   },
