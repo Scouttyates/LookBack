@@ -1,0 +1,86 @@
+{
+  "puzzleNumber": 18,
+  "date": "2026-07-26",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-26/face.jpg",
+        "alt": "Painted portrait of a bearded older man with a white ruff collar and dark robe, glancing to one side",
+        "attribution": { "fileTitle": "File:Justus Sustermans - Portrait of Galileo Galilei (Uffizi).jpg", "author": "Justus Sustermans", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Justus_Sustermans_-_Portrait_of_Galileo_Galilei_(Uffizi).jpg" }
+      },
+      "options": ["Galileo Galilei", "Isaac Newton", "Nicolaus Copernicus", "Johannes Kepler"],
+      "correctIndex": 0,
+      "revealFact": "Galileo's telescopic discoveries and his support for a Sun-centered universe brought him lasting fame and a famous clash with the Church."
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-26/battle.jpg",
+        "alt": "Painting of an 18th-century officer and his soldiers meeting richly dressed nobles beside a war elephant on a plain",
+        "attribution": { "fileTitle": "File:Robert Clive and Mir Jafar after the Battle of Plassey, 1757 by Francis Hayman.jpg", "author": "Francis Hayman", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robert_Clive_and_Mir_Jafar_after_the_Battle_of_Plassey,_1757_by_Francis_Hayman.jpg" }
+      },
+      "clues": [
+        "A trading company's small private army faced a ruler's host many times larger on a mango-tree plain, but bribery had already hollowed out the other side.",
+        "The lopsided victory let a foreign company begin ruling a vast and wealthy region."
+      ],
+      "options": ["Battle of Buxar", "Battle of Plassey", "Battle of Panipat", "Siege of Seringapatam"],
+      "correctIndex": 1,
+      "revealYear": 1757
+    },
+    {
+      "type": "timeline",
+      "events": [
+        { "label": "The Hagia Sophia is completed in Constantinople", "year": 537 },
+        { "label": "Notre-Dame cathedral is finished in Paris", "year": 1345 },
+        { "label": "St. Peter's Basilica is completed in Rome", "year": 1626 },
+        { "label": "The Empire State Building opens in New York", "year": 1931 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-26/moment.jpg",
+        "alt": "Black-and-white photo of a towering wall of dust rolling toward a row of small houses on flat open ground",
+        "attribution": { "fileTitle": "File:Dust storm approaching Stratford, Texas.jpg", "author": "George Everett Marsh Jr., NOAA", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dust_storm_approaching_Stratford,_Texas.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What is shown in this photograph?",
+        "options": ["A Dust Bowl storm", "A coal mine collapse", "The Great Smog of London", "A volcanic ashfall"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "In which decade did these storms devastate American farms?",
+        "options": ["The 1930s", "The 1890s", "The 1950s", "The 1970s"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "The Boxer Rebellion besieges foreign legations in Beijing before being crushed by an eight-nation force.",
+      "answerYear": 1900,
+      "minYear": 1700,
+      "maxYear": 2000,
+      "tolerance": 6,
+      "revealFact": "The anti-foreign Boxer Uprising was put down by an eight-nation alliance, further weakening China's ailing Qing dynasty."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where did a caravan city grow rich in the desert, its colonnaded avenues once ruled by a rebel queen who defied Rome?",
+      "answer": "Palmyra, Syria",
+      "lat": 34.5528,
+      "lng": 38.2668,
+      "tolKm": 200,
+      "revealFact": "Palmyra was a wealthy desert trading city whose queen Zenobia briefly challenged Rome before it was subdued, and it was partly destroyed again in modern times."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Orchestral instruments", "members": ["Oboe", "Cello", "Harp", "Timpani"] },
+        { "category": "Norse realms", "members": ["Asgard", "Midgard", "Jotunheim", "Helheim"] },
+        { "category": "Operas", "members": ["Carmen", "Aida", "Tosca", "Rigoletto"] },
+        { "category": "African capitals", "members": ["Cairo", "Nairobi", "Accra", "Harare"] }
+      ]
+    }
+  ]
+}

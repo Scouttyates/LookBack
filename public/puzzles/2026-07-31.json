@@ -1,0 +1,87 @@
+{
+  "puzzleNumber": 23,
+  "date": "2026-07-31",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-31/face.jpg",
+        "alt": "Engraving of a warrior king standing with a long spear and a large oval shield in traditional dress",
+        "attribution": { "fileTitle": "File:KingShaka.jpg", "author": "James King", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:KingShaka.jpg" }
+      },
+      "options": ["Cetshwayo", "Menelik II", "Shaka Zulu", "Samori Ture"],
+      "correctIndex": 2,
+      "revealFact": "Shaka transformed Zulu warfare with the short stabbing spear and new tactics, forging a small clan into a powerful kingdom in southern Africa."
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-31/battle.jpg",
+        "alt": "Painting of mounted commanders in tricorne hats and armor on a battlefield with cavalry clashing behind them",
+        "attribution": { "fileTitle": "File:Pieter van Bloemen - The Duke of Marlborough and the Earl of Cadogan at Blenheim (Hochstadt).jpg", "author": "Pieter van Bloemen", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pieter_van_Bloemen_-_The_Duke_of_Marlborough_and_the_Earl_of_Cadogan_at_Blenheim_(Hochstadt).jpg" }
+      },
+      "clues": [
+        "An allied army made a bold, secret march of hundreds of miles to surprise a great power's forces beside a river.",
+        "The stunning victory shattered that power's aura of invincibility in a long war over a disputed throne."
+      ],
+      "options": ["Battle of Ramillies", "Battle of Malplaquet", "Battle of Oudenarde", "Battle of Blenheim"],
+      "correctIndex": 3,
+      "revealYear": 1704
+    },
+    {
+      "type": "whichCameFirst",
+      "pairs": [
+        { "a": "The zipper is patented in its modern form", "aYear": 1913, "b": "The safety pin is patented", "bYear": 1849, "firstIndex": 1 },
+        { "a": "The first mechanical typewriter goes on sale", "aYear": 1874, "b": "The ballpoint pen reaches shops", "bYear": 1945, "firstIndex": 0 },
+        { "a": "The microwave oven is invented", "aYear": 1945, "b": "Coca-Cola is first sold as a fountain drink", "bYear": 1886, "firstIndex": 1 },
+        { "a": "The first home refrigerator goes on sale", "aYear": 1913, "b": "Velcro is patented", "bYear": 1955, "firstIndex": 0 },
+        { "a": "Sliced bread is first sold in stores", "aYear": 1928, "b": "The modern chain-driven bicycle appears", "bYear": 1885, "firstIndex": 1 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-31/moment.jpg",
+        "alt": "Black-and-white photo of a long single-file line of people climbing a steep snowy mountain slope",
+        "attribution": { "fileTitle": "File:Packers ascending summit of Chilkoot Pass, ca 1898 (MOHAI 7230).jpg", "author": "Eric A. Hegg", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Packers_ascending_summit_of_Chilkoot_Pass,_ca_1898_(MOHAI_7230).jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What is shown in this photograph?",
+        "options": ["The Klondike Gold Rush", "The building of the transcontinental railroad", "The Oregon Trail migration", "A Himalayan expedition"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "The goldfields these prospectors sought lay in which territory?",
+        "options": ["The Yukon", "Alaska", "Colorado", "South Africa"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "The Brooklyn Bridge opens, then the longest suspension bridge in the world.",
+      "answerYear": 1883,
+      "minYear": 1700,
+      "maxYear": 2000,
+      "tolerance": 6,
+      "revealFact": "When it opened in 1883, the Brooklyn Bridge was the longest suspension bridge in the world and a wonder of engineering."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where did a mound-building people raise a great earthwork city crowned by an enormous flat-topped pyramid of packed earth?",
+      "answer": "Cahokia, United States",
+      "lat": 38.6553,
+      "lng": -90.0618,
+      "tolKm": 200,
+      "revealFact": "Cahokia was the largest pre-Columbian city north of Mexico, home to tens of thousands and dominated by Monks Mound, a massive earthen pyramid."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Reformation figures", "members": ["Luther", "Calvin", "Zwingli", "Knox"] },
+        { "category": "Romantic poets", "members": ["Byron", "Shelley", "Keats", "Wordsworth"] },
+        { "category": "Ancient historians", "members": ["Herodotus", "Thucydides", "Livy", "Tacitus"] },
+        { "category": "Seven hills of Rome", "members": ["Palatine", "Capitoline", "Aventine", "Quirinal"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "puzzleNumber": 16,
+  "date": "2026-07-24",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-24/face.jpg",
+        "alt": "Painted full-length portrait of a man in an ornate red-and-black military uniform with gold epaulettes and a star-studded sash, holding a document",
+        "attribution": { "fileTitle": "File:Général Toussaint Louverture.jpg", "author": "Unknown author", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:G%C3%A9n%C3%A9ral_Toussaint_Louverture.jpg" }
+      },
+      "options": ["Jean-Jacques Dessalines", "Toussaint Louverture", "Henri Christophe", "Miguel Hidalgo"],
+      "correctIndex": 1,
+      "revealFact": "Toussaint Louverture led the only slave revolt in history to found a free state, setting the colony of Saint-Domingue on the road to becoming independent Haiti."
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-24/battle.jpg",
+        "alt": "Painting of a swirling cavalry battle among tents and banners, lit by fires and drifting smoke",
+        "attribution": { "fileTitle": "File:Battle of Vienna (1683) by Józef Brandt.PNG", "author": "Józef Brandt", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Battle_of_Vienna_(1683)_by_J%C3%B3zef_Brandt.PNG" }
+      },
+      "clues": [
+        "A great imperial army besieged a walled capital for two months until a relief force swept down from the wooded hills above it.",
+        "A massive cavalry charge, remembered as one of the largest in history, broke the siege and marked the empire's furthest advance into the continent."
+      ],
+      "options": ["Siege of Malta", "Siege of Belgrade", "Siege of Vienna", "Siege of Constantinople"],
+      "correctIndex": 2,
+      "revealYear": 1683
+    },
+    {
+      "type": "timeline",
+      "events": [
+        { "label": "Copernicus argues that the Earth travels around the Sun", "year": 1543 },
+        { "label": "Francis Bacon sets out a method for modern experimental science", "year": 1620 },
+        { "label": "Robert Hooke first describes living cells under a microscope", "year": 1665 },
+        { "label": "Antonie van Leeuwenhoek observes tiny 'animalcules' through a lens", "year": 1676 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-24/moment.jpg",
+        "alt": "Black-and-white photo looking down a long reflecting pool packed with an enormous crowd, a tall stone obelisk in the distance",
+        "attribution": { "fileTitle": "File:March on Washington - Reflecting Pool.jpg", "author": "Warren K. Leffler, U.S. News & World Report", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:March_on_Washington_-_Reflecting_Pool.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What gathering is shown here?",
+        "options": ["Woodstock", "The March on Washington", "V-E Day celebrations", "A presidential inauguration"],
+        "correctIndex": 1
+      },
+      "followUpQuestion": {
+        "prompt": "At which memorial did the crowd gather to hear the day's speeches?",
+        "options": ["The Lincoln Memorial", "The Washington Monument", "The Capitol", "The Jefferson Memorial"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "Japan's Meiji Restoration ends the rule of the shogun and begins a rush to modernize.",
+      "answerYear": 1868,
+      "minYear": 1600,
+      "maxYear": 2000,
+      "tolerance": 8,
+      "revealFact": "The Meiji Restoration returned power to the emperor and launched Japan on a rapid transformation into an industrial world power."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where stood the thousand-year capital of the Silla kingdom, dotted with grassy royal burial mounds and an ancient stone observatory?",
+      "answer": "Gyeongju, South Korea",
+      "lat": 35.8562,
+      "lng": 129.2247,
+      "tolKm": 200,
+      "revealFact": "Gyeongju was the capital of Silla for nearly a thousand years and still preserves royal tombs and Cheomseongdae, one of the oldest surviving observatories in East Asia."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Egyptian gods", "members": ["Osiris", "Isis", "Horus", "Anubis"] },
+        { "category": "Roman provinces", "members": ["Gaul", "Hispania", "Dacia", "Britannia"] },
+        { "category": "Dutch painters", "members": ["Vermeer", "Van Gogh", "Hals", "Steen"] },
+        { "category": "Silk Road cities", "members": ["Samarkand", "Kashgar", "Bukhara", "Merv"] }
+      ]
+    }
+  ]
+}

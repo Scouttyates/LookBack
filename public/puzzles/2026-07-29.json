@@ -1,0 +1,87 @@
+{
+  "puzzleNumber": 21,
+  "date": "2026-07-29",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-29/face.jpg",
+        "alt": "Loosely painted, unfinished self-portrait of an older man in a dark cap against a dark background",
+        "attribution": { "fileTitle": "File:Unfinished Self-Portrait, Rembrandt van Rijn, c. 1659, Musée Granet, Aix-en-Provence.jpg", "author": "Rembrandt", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Unfinished_Self-Portrait,_Rembrandt_van_Rijn,_c._1659,_Mus%C3%A9e_Granet,_Aix-en-Provence.jpg" }
+      },
+      "options": ["Rembrandt van Rijn", "Peter Paul Rubens", "Titian", "Albrecht Dürer"],
+      "correctIndex": 0,
+      "revealFact": "Rembrandt van Rijn, the Dutch master of light and shadow, painted himself dozens of times across his life, leaving one of art's great visual diaries."
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-29/battle.jpg",
+        "alt": "Painting of a chaotic last stand as cavalrymen with revolvers are overwhelmed by mounted warriors on open grassland",
+        "attribution": { "fileTitle": "File:Edgar Samuel Paxson - Custer's Last Stand.jpg", "author": "Edgar Samuel Paxson", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edgar_Samuel_Paxson_-_Custer%27s_Last_Stand.jpg" }
+      },
+      "clues": [
+        "A confident cavalry commander split his regiment and attacked a huge encampment, badly underestimating the warriors defending it.",
+        "His entire detachment was surrounded and wiped out, a stunning defeat that shocked a nation."
+      ],
+      "options": ["Battle of Tippecanoe", "Battle of Horseshoe Bend", "Battle of the Little Bighorn", "Battle of Wounded Knee"],
+      "correctIndex": 2,
+      "revealYear": 1876
+    },
+    {
+      "type": "whichCameFirst",
+      "pairs": [
+        { "a": "Mercator devises his famous map projection for sailors", "aYear": 1569, "b": "Ptolemy compiles his great atlas of the known world", "bYear": 150, "firstIndex": 1 },
+        { "a": "Abel Tasman becomes the first European to reach New Zealand", "aYear": 1642, "b": "Vitus Bering charts the strait between Asia and America", "bYear": 1728, "firstIndex": 0 },
+        { "a": "David Livingstone traces the course of the Zambezi in Africa", "aYear": 1855, "b": "Lewis and Clark map a route to the Pacific across North America", "bYear": 1805, "firstIndex": 1 },
+        { "a": "Roald Amundsen's team is first to reach the South Pole", "aYear": 1911, "b": "Robert Peary claims to reach the North Pole", "bYear": 1909, "firstIndex": 1 },
+        { "a": "John Harrison's marine chronometer finally solves the longitude problem", "aYear": 1761, "b": "The first solo sailing voyage around the world is completed", "bYear": 1898, "firstIndex": 0 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-29/moment.jpg",
+        "alt": "Black-and-white photo of rows of men seated in a wooden dock flanked by white-helmeted guards in a courtroom",
+        "attribution": { "fileTitle": "File:Defendants in the dock at the Nuremberg Trials.jpg", "author": "U.S. Army Signal Corps", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Defendants_in_the_dock_at_the_Nuremberg_Trials.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What proceedings are shown here?",
+        "options": ["The Nuremberg trials", "The League of Nations assembly", "A United States Senate hearing", "The trial of the Templars"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "These trials prosecuted the leaders of which regime?",
+        "options": ["Nazi Germany", "Fascist Italy", "Imperial Japan", "Soviet Russia"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "Howard Carter opens the long-sealed tomb of the boy pharaoh Tutankhamun.",
+      "answerYear": 1922,
+      "minYear": 1700,
+      "maxYear": 2000,
+      "tolerance": 6,
+      "revealFact": "The near-intact tomb of Tutankhamun, found in 1922, filled museums with golden treasures and sparked a worldwide craze for ancient Egypt."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where did a great empire raise a ceremonial capital of vast columned halls and grand stairways, later burned to the ground by a conqueror?",
+      "answer": "Persepolis, Iran",
+      "lat": 29.9354,
+      "lng": 52.8916,
+      "tolKm": 200,
+      "revealFact": "Persepolis was the ceremonial capital of the Persian Achaemenid Empire until Alexander the Great's army burned it in 330 BCE."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Norse creatures", "members": ["Fenrir", "Jörmungandr", "Sleipnir", "Nidhogg"] },
+        { "category": "Mesopotamian cities", "members": ["Ur", "Uruk", "Lagash", "Kish"] },
+        { "category": "Byzantine emperors", "members": ["Justinian", "Heraclius", "Basil", "Constantine"] },
+        { "category": "Greek islands", "members": ["Crete", "Rhodes", "Corfu", "Naxos"] }
+      ]
+    }
+  ]
+}

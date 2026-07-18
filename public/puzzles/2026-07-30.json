@@ -1,0 +1,86 @@
+{
+  "puzzleNumber": 22,
+  "date": "2026-07-30",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-30/face.jpg",
+        "alt": "Manuscript illumination of an armored figure on a white horse carrying a red banner before a walled town",
+        "attribution": { "fileTitle": "File:Jeanne d'Arc - Les vies des femmes célèbres.jpg", "author": "Jean Pichore", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeanne_d%27Arc_-_Les_vies_des_femmes_c%C3%A9l%C3%A8bres.jpg" }
+      },
+      "options": ["Eleanor of Aquitaine", "Catherine of Siena", "Isabella of France", "Joan of Arc"],
+      "correctIndex": 3,
+      "revealFact": "Joan of Arc, a teenage peasant who said she heard the voices of saints, rallied French armies during the Hundred Years' War before being captured and burned at the stake."
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-30/battle.jpg",
+        "alt": "Painting of red-coated soldiers making a desperate stand against a mass of warriors with shields and spears below a steep hill",
+        "attribution": { "fileTitle": "File:Charles Edwin Fripp (1854-1906) - The Battle of Isandlwana, 22 January 1879 - NAM. 1960-11-182 - National Army Museum.jpg", "author": "Charles Edwin Fripp", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charles_Edwin_Fripp_(1854-1906)_-_The_Battle_of_Isandlwana,_22_January_1879_-_NAM._1960-11-182_-_National_Army_Museum.jpg" }
+      },
+      "clues": [
+        "A modern imperial army, confident in its rifles, was overwhelmed by a far larger force using speed, spears, and a sweeping encirclement.",
+        "The disaster was one of the worst ever suffered by that empire at the hands of a technologically weaker foe."
+      ],
+      "options": ["Battle of Rorke's Drift", "Battle of Isandlwana", "Battle of Blood River", "Battle of Omdurman"],
+      "correctIndex": 1,
+      "revealYear": 1879
+    },
+    {
+      "type": "timeline",
+      "events": [
+        { "label": "Shakespeare's company opens the Globe Theatre in London", "year": 1599 },
+        { "label": "Jane Austen publishes Pride and Prejudice", "year": 1813 },
+        { "label": "The first Impressionist exhibition scandalizes Paris", "year": 1874 },
+        { "label": "Louis Armstrong's recordings help jazz sweep the world", "year": 1926 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-30/moment.jpg",
+        "alt": "Black-and-white photo of workers in a large workshop assembling a giant copper hand and head",
+        "attribution": { "fileTitle": "File:Workmen constructing the Statue of Liberty in Bartholdi's Parisian warehouse workshop; first model; left hand; and quarter-size head-; Winter 1882? LCCN97502750.jpg", "author": "Albert Fernique", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Workmen_constructing_the_Statue_of_Liberty_in_Bartholdi%27s_Parisian_warehouse_workshop;_first_model;_left_hand;_and_quarter-size_head-;_Winter_1882%3F_LCCN97502750.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What monument is being built in this workshop?",
+        "options": ["The Statue of Liberty", "The Eiffel Tower", "Christ the Redeemer", "The Colossus of Rhodes"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "Which country gave this statue as a gift?",
+        "options": ["France", "Portugal", "Sweden", "Greece"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "The Spanish Armada is defeated in its attempt to invade England.",
+      "answerYear": 1588,
+      "minYear": 1400,
+      "maxYear": 1800,
+      "tolerance": 8,
+      "revealFact": "The defeat of the Spanish Armada in 1588 marked the rise of English sea power and the waning of Spanish naval dominance."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where did one of the world's first great cities stand, laid out on a brick grid with covered drains, its writing still undeciphered today?",
+      "answer": "Mohenjo-daro, Pakistan",
+      "lat": 27.3294,
+      "lng": 68.1381,
+      "tolKm": 200,
+      "revealFact": "Mohenjo-daro was one of the largest cities of the Indus Valley Civilization, remarkable for its planned streets and drainage more than 4,000 years ago."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Andean civilizations", "members": ["Inca", "Moche", "Nazca", "Chimú"] },
+        { "category": "Ancient trade goods", "members": ["Silk", "Amber", "Ivory", "Frankincense"] },
+        { "category": "Norse weapons", "members": ["Mjolnir", "Gungnir", "Gram", "Tyrfing"] },
+        { "category": "Crusader states", "members": ["Jerusalem", "Antioch", "Edessa", "Tripoli"] }
+      ]
+    }
+  ]
+}

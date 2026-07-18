@@ -1,0 +1,87 @@
+{
+  "puzzleNumber": 15,
+  "date": "2026-07-23",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-23/face.jpg",
+        "alt": "Mughal miniature of a young ruler with a golden halo, holding a falcon on his hand, in a yellow robe",
+        "attribution": { "fileTitle": "File:Emperor Akbar.png", "author": "Unknown artist", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emperor_Akbar.png" }
+      },
+      "options": ["Ashoka", "Tipu Sultan", "Akbar", "Shivaji"],
+      "correctIndex": 2,
+      "revealFact": "Akbar expanded the Mughal Empire across much of the Indian subcontinent and was renowned for his administrative reforms and unusual religious tolerance."
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-23/battle.jpg",
+        "alt": "Aged painting of a walled mission compound on open ground, with columns of soldiers advancing on its walls",
+        "attribution": { "fileTitle": "File:Fall-of-the-alamo-gentilz 1844.jpg", "author": "Theodore Gentilz", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fall-of-the-alamo-gentilz_1844.jpg" }
+      },
+      "clues": [
+        "A few hundred defenders held a fortified mission for nearly two weeks against an army many times their size.",
+        "Their last stand became a rallying cry that fueled a wider war for a territory's independence."
+      ],
+      "options": ["The Alamo", "Battle of San Jacinto", "Battle of Goliad", "Battle of Buena Vista"],
+      "correctIndex": 0,
+      "revealYear": 1836
+    },
+    {
+      "type": "whichCameFirst",
+      "pairs": [
+        { "a": "Samuel Morse sends his first long-distance telegraph message", "aYear": 1844, "b": "The first transatlantic telegraph cable links Europe and North America", "bYear": 1858, "firstIndex": 0 },
+        { "a": "The first commercial radio station begins regular broadcasts", "aYear": 1920, "b": "Thomas Edison invents the phonograph", "bYear": 1877, "firstIndex": 1 },
+        { "a": "The first communications satellite relays a live television signal", "aYear": 1962, "b": "The first message is sent over the ARPANET", "bYear": 1969, "firstIndex": 0 },
+        { "a": "The World Wide Web is opened to the public", "aYear": 1991, "b": "The first hand-held mobile phone call is made", "bYear": 1973, "firstIndex": 1 },
+        { "a": "The first daily newspaper is printed in England", "aYear": 1702, "b": "The first postage stamp, the Penny Black, is issued", "bYear": 1840, "firstIndex": 0 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-23/moment.jpg",
+        "alt": "Black-and-white photo of a four-engine propeller plane flying low over a crowd of children standing on a mound of rubble",
+        "attribution": { "fileTitle": "File:C-54 landing at Tempelhof.jpg", "author": "Henry Ries / U.S. Air Force", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:C-54_landing_at_Tempelhof.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What is shown here?",
+        "options": ["The Berlin Airlift", "The Prague Spring", "The fall of the Berlin Wall", "The Marshall Plan"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "Which power had cut off the city by land, forcing supplies to come by air?",
+        "options": ["The Soviet Union", "France", "Britain", "The United States"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "President Lincoln's Emancipation Proclamation declares enslaved people in the rebelling states to be free.",
+      "answerYear": 1863,
+      "minYear": 1700,
+      "maxYear": 2000,
+      "tolerance": 6,
+      "revealFact": "The Emancipation Proclamation reframed the American Civil War as a struggle to end slavery and opened the Union Army to Black soldiers."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where did a Bronze Age civilization build a sprawling palace of painted halls and twisting corridors, remembered in legend as a labyrinth?",
+      "answer": "Knossos, Greece",
+      "lat": 35.2979,
+      "lng": 25.1631,
+      "tolKm": 200,
+      "revealFact": "Knossos was the largest palace of the Minoan civilization on Crete; its maze-like plan may have inspired the Greek legend of the Labyrinth and the Minotaur."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Chess pieces", "members": ["King", "Queen", "Bishop", "Rook"] },
+        { "category": "Clergy titles", "members": ["Pope", "Cardinal", "Deacon", "Abbot"] },
+        { "category": "Hindu deities", "members": ["Vishnu", "Shiva", "Ganesha", "Kali"] },
+        { "category": "Greek letters", "members": ["Alpha", "Beta", "Gamma", "Omega"] }
+      ]
+    }
+  ]
+}

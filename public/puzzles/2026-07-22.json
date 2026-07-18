@@ -1,0 +1,86 @@
+{
+  "puzzleNumber": 14,
+  "date": "2026-07-22",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-22/face.jpg",
+        "alt": "Album painting of a seated woman in an elaborate golden headdress and an embroidered robe",
+        "attribution": { "fileTitle": "File:A Tang Dynasty Empress Wu Zetian.JPG", "author": "Unknown author", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_Tang_Dynasty_Empress_Wu_Zetian.JPG" }
+      },
+      "options": ["Empress Dowager Cixi", "Wu Zetian", "Yang Guifei", "Empress Lü"],
+      "correctIndex": 1,
+      "revealFact": "Wu Zetian rose from imperial consort to become the only woman ever to rule China in her own name as emperor, founding her own short-lived dynasty."
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-22/battle.jpg",
+        "alt": "Painting of hundreds of oar-driven galleys crowded together and firing on one another in a wide bay",
+        "attribution": { "fileTitle": "File:Battle of Lepanto 1571.jpg", "author": "Unidentified painter", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Battle_of_Lepanto_1571.jpg" }
+      },
+      "clues": [
+        "A vast fleet of oar-driven galleys clashed in a gulf, one of the last great sea battles decided mainly by ramming and boarding.",
+        "An alliance of Christian states broke the naval momentum of a great empire, even though the war changed few borders."
+      ],
+      "options": ["Battle of Trafalgar", "Battle of Tsushima", "Battle of Navarino", "Battle of Lepanto"],
+      "correctIndex": 3,
+      "revealYear": 1571
+    },
+    {
+      "type": "timeline",
+      "events": [
+        { "label": "Sargon of Akkad forges the world's first empire in Mesopotamia", "year": -2334 },
+        { "label": "The Maurya Empire unites most of the Indian subcontinent", "year": -321 },
+        { "label": "The Abbasid Caliphate makes Baghdad a center of learning", "year": 762 },
+        { "label": "The Aztec Triple Alliance rises to dominate the Valley of Mexico", "year": 1428 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-22/moment.jpg",
+        "alt": "Black-and-white photo from the ramp of a landing craft as helmeted soldiers wade through surf toward a smoky beach",
+        "attribution": { "fileTitle": "File:Into the Jaws of Death 23-0455M edit.jpg", "author": "Robert F. Sargent, U.S. Coast Guard", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Into_the_Jaws_of_Death_23-0455M_edit.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What is shown in this photograph?",
+        "options": ["The Gallipoli landings", "The Dunkirk evacuation", "The D-Day Normandy landings", "The Inchon landing"],
+        "correctIndex": 2
+      },
+      "followUpQuestion": {
+        "prompt": "On which country's coast did this landing take place?",
+        "options": ["France", "Italy", "Belgium", "Netherlands"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "The volcano Krakatoa erupts, one of the most violent eruptions in recorded history.",
+      "answerYear": 1883,
+      "minYear": 1700,
+      "maxYear": 2000,
+      "tolerance": 8,
+      "revealFact": "The 1883 eruption of Krakatoa was heard thousands of miles away and threw enough ash into the sky to cool global temperatures for months."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where did the kingdom of Kush raise clusters of steep, narrow royal pyramids, long after the age of the great Egyptian pyramids had ended?",
+      "answer": "Meroë, Sudan",
+      "lat": 16.9333,
+      "lng": 33.75,
+      "tolKm": 200,
+      "revealFact": "Meroë was a royal city of the Kingdom of Kush; its field of more than forty small, steep-sided pyramids still stands in the Sudanese desert."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Mughal emperors", "members": ["Babur", "Humayun", "Aurangzeb", "Shah Jahan"] },
+        { "category": "Legendary creatures", "members": ["Griffin", "Phoenix", "Kraken", "Basilisk"] },
+        { "category": "Italian city-states", "members": ["Florence", "Venice", "Genoa", "Milan"] },
+        { "category": "Ballets", "members": ["Giselle", "Coppélia", "Nutcracker", "Firebird"] }
+      ]
+    }
+  ]
+}

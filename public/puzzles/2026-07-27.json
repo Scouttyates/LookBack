@@ -1,0 +1,87 @@
+{
+  "puzzleNumber": 19,
+  "date": "2026-07-27",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-27/face.jpg",
+        "alt": "Black-and-white photograph of a moustached man in a formal dark Western suit and tie",
+        "attribution": { "fileTitle": "File:Sun Yat Sen portrait 2.jpg", "author": "K.T. Thompson studio, Shanghai", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sun_Yat_Sen_portrait_2.jpg" }
+      },
+      "options": ["Chiang Kai-shek", "Mao Zedong", "Sun Yat-sen", "Puyi"],
+      "correctIndex": 2,
+      "revealFact": "Sun Yat-sen helped topple China's last dynasty in 1911 and is honored on both sides of the Taiwan Strait as a founding father of modern China."
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-27/battle.jpg",
+        "alt": "Painting of charging highland clansmen clashing with a line of red-coated infantry",
+        "attribution": { "fileTitle": "File:Culloden (David Morier).jpg", "author": "David Morier", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Culloden_(David_Morier).jpg" }
+      },
+      "clues": [
+        "Lightly-armed clansmen charged across open, boggy moorland straight into disciplined musket volleys and cannon fire.",
+        "The slaughter ended a dynasty's last bid to reclaim a throne and broke an old way of life for good."
+      ],
+      "options": ["Battle of Bannockburn", "Battle of Falkirk", "Battle of Prestonpans", "Battle of Culloden"],
+      "correctIndex": 3,
+      "revealYear": 1746
+    },
+    {
+      "type": "whichCameFirst",
+      "pairs": [
+        { "a": "George Eastman introduces the handheld Kodak camera", "aYear": 1888, "b": "Louis Daguerre unveils the daguerreotype, making photography practical", "bYear": 1839, "firstIndex": 1 },
+        { "a": "Eadweard Muybridge's photos prove a galloping horse fully leaves the ground", "aYear": 1878, "b": "The Lumière brothers hold the first public movie screening", "bYear": 1895, "firstIndex": 0 },
+        { "a": "Technicolor fills a full-length feature with vivid color", "aYear": 1935, "b": "The Jazz Singer brings synchronized speech to the movies", "bYear": 1927, "firstIndex": 1 },
+        { "a": "Walt Disney releases the first feature-length animated film", "aYear": 1937, "b": "Color television reaches American living rooms", "bYear": 1954, "firstIndex": 0 },
+        { "a": "The first camera-phone picture is shared", "aYear": 1997, "b": "Kodachrome color film reaches everyday photographers", "bYear": 1935, "firstIndex": 1 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-27/moment.jpg",
+        "alt": "Aerial color photo of a large curved concrete dam with round intake towers, a reservoir on one side and a river canyon on the other",
+        "attribution": { "fileTitle": "File:HOOVER DAM ON THE COLORADO RIVER - NARA - 548938.jpg", "author": "Charles O'Rear, U.S. National Archives (DOCUMERICA)", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:HOOVER_DAM_ON_THE_COLORADO_RIVER_-_NARA_-_548938.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What structure is shown here?",
+        "options": ["The Hoover Dam", "The Grand Coulee Dam", "The Aswan High Dam", "The Glen Canyon Dam"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "This dam holds back which river?",
+        "options": ["The Colorado River", "The Mississippi River", "The Columbia River", "The Rio Grande"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "Colonists in Boston dump chests of British tea into the harbor to protest taxation.",
+      "answerYear": 1773,
+      "minYear": 1600,
+      "maxYear": 1900,
+      "tolerance": 6,
+      "revealFact": "The Boston Tea Party, a protest against British taxes, hardened tensions that soon boiled over into the American Revolution."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where did an unknown civilization lay out a huge grid-planned city crowned by vast pyramids to the Sun and Moon?",
+      "answer": "Teotihuacan, Mexico",
+      "lat": 19.6925,
+      "lng": -98.8438,
+      "tolKm": 200,
+      "revealFact": "Teotihuacan was one of the largest cities of the ancient world, already a vast ruin when the later Aztecs found it and gave it the name we still use."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Greek philosophers", "members": ["Socrates", "Plato", "Aristotle", "Pythagoras"] },
+        { "category": "Asian capitals", "members": ["Seoul", "Bangkok", "Hanoi", "Manila"] },
+        { "category": "Gothic cathedrals", "members": ["Chartres", "Reims", "Cologne", "Amiens"] },
+        { "category": "Baroque painters", "members": ["Caravaggio", "Rubens", "Velázquez", "Poussin"] }
+      ]
+    }
+  ]
+}

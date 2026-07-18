@@ -1,0 +1,86 @@
+{
+  "puzzleNumber": 12,
+  "date": "2026-07-20",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-20/face.jpg",
+        "alt": "Painted scroll portrait of a seated lord in black robes holding a short baton, before a gold screen of mountain scenery",
+        "attribution": { "fileTitle": "File:Tokugawa Ieyasu2.JPG", "author": "Kanō Tan'yū", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokugawa_Ieyasu2.JPG" }
+      },
+      "options": ["Oda Nobunaga", "Toyotomi Hideyoshi", "Takeda Shingen", "Tokugawa Ieyasu"],
+      "correctIndex": 3,
+      "revealFact": "Tokugawa Ieyasu outlasted his rivals to unify Japan and founded a shogunate that would keep the country at peace under his family for over 250 years."
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-20/battle.jpg",
+        "alt": "Colored drawing of ancient war chariots with archers charging forward, above rows of hieroglyphs",
+        "attribution": { "fileTitle": "File:Ramses III (Ramesses II) lanciato col suo carro, e seguito da tre figli ugualmente sul carro, assale una fortezza piantata sopra una rupe, saettandone gli atterriti difensori (NYPL b14291206-425635).jpg", "author": "Scan by NYPL (Ippolito Rosellini)", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ramses_III_(Ramesses_II)_lanciato_col_suo_carro,_e_seguito_da_tre_figli_ugualmente_sul_carro,_assale_una_fortezza_piantata_sopra_una_rupe,_saettandone_gli_atterriti_difensori_(NYPL_b14291206-425635).jpg" }
+      },
+      "clues": [
+        "A young ruler riding at the head of his chariotry was nearly cut off when the enemy sprang an ambush, and had to rally his shaken troops in person.",
+        "The clash between two great powers ended not in conquest but in one of the earliest recorded peace treaties in history."
+      ],
+      "options": ["Battle of Kadesh", "Battle of Megiddo", "Battle of Actium", "Battle of Carchemish"],
+      "correctIndex": 0,
+      "revealYear": -1274
+    },
+    {
+      "type": "timeline",
+      "events": [
+        { "label": "Leif Erikson's Norse crews reach the forests of North America", "year": 1000 },
+        { "label": "Zheng He sets sail with China's great treasure fleet", "year": 1405 },
+        { "label": "Bartolomeu Dias rounds the southern tip of Africa", "year": 1488 },
+        { "label": "James Cook charts the eastern coast of Australia", "year": 1770 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-20/moment.jpg",
+        "alt": "Color photograph of a glowing orange fireball rising against a pitch-black sky",
+        "attribution": { "fileTitle": "File:Trinity explosion (color).jpg", "author": "National Nuclear Security Administration / Nevada Site Office", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trinity_explosion_(color).jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What is happening in this photograph?",
+        "options": ["The first test of a nuclear weapon", "The Hindenburg disaster", "A volcanic eruption at night", "A large meteor breaking apart"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "In which U.S. state did this take place?",
+        "options": ["New Mexico", "Nevada", "Arizona", "Utah"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "A Visigothic army under Alaric sacks the city of Rome for the first time in centuries.",
+      "answerYear": 410,
+      "minYear": 100,
+      "maxYear": 800,
+      "tolerance": 20,
+      "revealFact": "Alaric's sack of Rome in 410 stunned the ancient world and became a symbol of Rome's accelerating decline in the west."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where did a desert kingdom raise one of the world's largest cities of mud brick, a sprawl of nine great walled citadels?",
+      "answer": "Chan Chan, Peru",
+      "lat": -8.11,
+      "lng": -79.0745,
+      "tolKm": 200,
+      "revealFact": "Chan Chan was the capital of the Chimú kingdom and the largest adobe city in the pre-Columbian Americas, until the Inca absorbed it in the 15th century."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Greek muses", "members": ["Calliope", "Clio", "Terpsichore", "Urania"] },
+        { "category": "Planetary moons", "members": ["Titan", "Triton", "Phobos", "Charon"] },
+        { "category": "Classical composers", "members": ["Mozart", "Haydn", "Beethoven", "Gluck"] },
+        { "category": "Pacific islands", "members": ["Fiji", "Samoa", "Tahiti", "Tonga"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "puzzleNumber": 17,
+  "date": "2026-07-25",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-25/face.jpg",
+        "alt": "Engraved bust portrait of a bearded man in a turban and robe",
+        "attribution": { "fileTitle": "File:Saladin's imaginary portrait.jpg", "author": "Michel Bakni", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saladin%27s_imaginary_portrait.jpg" }
+      },
+      "options": ["Harun al-Rashid", "Mehmed the Conqueror", "Baibars", "Saladin"],
+      "correctIndex": 3,
+      "revealFact": "Saladin united much of the Muslim Middle East and retook Jerusalem from the Crusaders, yet was so admired for his chivalry that even his enemies wrote of it."
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-25/battle.jpg",
+        "alt": "Engraving of a chaotic ancient battle with war elephants, cavalry, and fallen soldiers",
+        "attribution": { "fileTitle": "File:The battle of Zama LCCN2012645609.jpg", "author": "Cornelis Cort", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_battle_of_Zama_LCCN2012645609.jpg" }
+      },
+      "clues": [
+        "War elephants were turned against their own side when the defenders opened lanes in their ranks and let the beasts charge harmlessly through.",
+        "The defeat ended a decades-long struggle between two great powers and left one of them dominant for centuries."
+      ],
+      "options": ["Battle of Trebia", "Battle of Pharsalus", "Battle of Philippi", "Battle of Zama"],
+      "correctIndex": 3,
+      "revealYear": -202
+    },
+    {
+      "type": "whichCameFirst",
+      "pairs": [
+        { "a": "The Glorious Revolution ousts England's king with little bloodshed", "aYear": 1688, "b": "The English Parliament executes King Charles I", "bYear": 1649, "firstIndex": 1 },
+        { "a": "The July Revolution topples the French king Charles X", "aYear": 1830, "b": "Revolutionary France abolishes its monarchy and declares a republic", "bYear": 1792, "firstIndex": 1 },
+        { "a": "A wave of liberal revolutions sweeps across Europe", "aYear": 1848, "b": "The Paris Commune briefly seizes the French capital", "bYear": 1871, "firstIndex": 0 },
+        { "a": "The Bolsheviks seize power in the Russian Revolution", "aYear": 1917, "b": "The Mexican Revolution erupts against a long dictatorship", "bYear": 1910, "firstIndex": 1 },
+        { "a": "The Young Turk Revolution forces reform on the Ottoman Empire", "aYear": 1908, "b": "Portugal overthrows its monarchy and becomes a republic", "bYear": 1910, "firstIndex": 0 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-25/moment.jpg",
+        "alt": "Photo of an enormous gray ash column billowing thousands of feet up from the summit of a mountain",
+        "attribution": { "fileTitle": "File:MSH80 eruption mount st helens 05-18-80-dramatic-edit.jpg", "author": "Austin Post, U.S. Geological Survey", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:MSH80_eruption_mount_st_helens_05-18-80-dramatic-edit.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What is shown in this photograph?",
+        "options": ["The eruption of Mount St. Helens", "The eruption of Mount Vesuvius", "The Tunguska event", "A large wildfire firestorm"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "In which U.S. state did this eruption happen?",
+        "options": ["Washington", "Oregon", "California", "Idaho"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "The many states of the Italian peninsula are unified into a single kingdom.",
+      "answerYear": 1861,
+      "minYear": 1500,
+      "maxYear": 2000,
+      "tolerance": 8,
+      "revealFact": "After decades of struggle led by figures such as Garibaldi and Cavour, most of the Italian peninsula was joined under one crown in 1861."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where did an ancient people build elaborate multi-story stone villages tucked into the alcoves of high desert cliffs?",
+      "answer": "Mesa Verde, United States",
+      "lat": 37.2309,
+      "lng": -108.4618,
+      "tolKm": 200,
+      "revealFact": "Mesa Verde preserves the cliff dwellings of the Ancestral Puebloans, who built stone villages into the canyon walls before leaving them around 1300."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Samurai warlords", "members": ["Oda Nobunaga", "Toyotomi Hideyoshi", "Takeda Shingen", "Date Masamune"] },
+        { "category": "Mountain passes", "members": ["Khyber", "Brenner", "Bolan", "Simplon"] },
+        { "category": "Physicists", "members": ["Newton", "Bohr", "Planck", "Fermi"] },
+        { "category": "Zodiac signs", "members": ["Aries", "Leo", "Libra", "Scorpio"] }
+      ]
+    }
+  ]
+}

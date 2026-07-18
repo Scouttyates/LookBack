@@ -1,0 +1,86 @@
+{
+  "puzzleNumber": 20,
+  "date": "2026-07-28",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-28/face.jpg",
+        "alt": "Painting of a crowned ruler in a white robe and pointed golden diadem, surrounded by warriors in feathered headdresses",
+        "attribution": { "fileTitle": "File:Daniel del Valle, Moctezuma II Museo Nacional De Arte.jpg", "author": "Daniel del Valle", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daniel_del_Valle,_Moctezuma_II_Museo_Nacional_De_Arte.jpg" }
+      },
+      "options": ["Atahualpa", "Montezuma II", "Pachacuti", "Cuauhtémoc"],
+      "correctIndex": 1,
+      "revealFact": "Montezuma II ruled the Aztec Empire at its height and died during the Spanish conquest of his capital, Tenochtitlan."
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-28/battle.jpg",
+        "alt": "Painting of a richly dressed king raising his arm in his golden chariot as a cavalry battle rages around him",
+        "attribution": { "fileTitle": "File:Charles le Brun - Bataille d'Arbélès (Louvre, INV 2895) Flying Darius.jpg", "author": "Charles Le Brun", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charles_le_Brun_-_Bataille_d%27Arb%C3%A9l%C3%A8s_(Louvre,_INV_2895)_Flying_Darius.jpg" }
+      },
+      "clues": [
+        "A young conqueror, heavily outnumbered, drove his charge straight at the enemy king, who panicked and fled the field.",
+        "The rout threw open the heart of the largest empire the world had yet seen."
+      ],
+      "options": ["Battle of Gaugamela", "Battle of Issus", "Battle of the Hydaspes", "Battle of Granicus"],
+      "correctIndex": 0,
+      "revealYear": -331
+    },
+    {
+      "type": "timeline",
+      "events": [
+        { "label": "William Herschel discovers the planet Uranus", "year": 1781 },
+        { "label": "Michael Faraday shows that magnetism can generate electricity", "year": 1831 },
+        { "label": "Albert Einstein publishes his theory of general relativity", "year": 1915 },
+        { "label": "Edwin Hubble shows that the universe is expanding", "year": 1929 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-28/moment.jpg",
+        "alt": "Black-and-white photo of a vast wooden hall filled with rows of hospital beds and patients tended by staff in aprons",
+        "attribution": { "fileTitle": "File:Emergency hospital during Influenza epidemic, Camp Funston, Kansas - NCP 1603.jpg", "author": "Otis Historical Archives, National Museum of Health and Medicine", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emergency_hospital_during_Influenza_epidemic,_Camp_Funston,_Kansas_-_NCP_1603.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What is shown in this photograph?",
+        "options": ["The 1918 influenza pandemic", "A World War I gas attack", "A tuberculosis sanatorium", "The founding of the Red Cross"],
+        "correctIndex": 0
+      },
+      "followUpQuestion": {
+        "prompt": "Roughly how many people did this pandemic kill worldwide?",
+        "options": ["Tens of millions", "About one million", "About ten thousand", "A few hundred"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "The Prophet Muhammad and his followers migrate from Mecca to Medina.",
+      "answerYear": 622,
+      "minYear": 200,
+      "maxYear": 1200,
+      "tolerance": 15,
+      "revealFact": "Muhammad's migration, known as the Hijra, marks year one of the Islamic calendar and the founding of the first Muslim community."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where were a cluster of great churches carved downward out of solid rock, each hewn from a single mass of stone?",
+      "answer": "Lalibela, Ethiopia",
+      "lat": 12.0317,
+      "lng": 39.0473,
+      "tolKm": 200,
+      "revealFact": "Lalibela's eleven medieval churches were cut down into the volcanic rock as a 'New Jerusalem' and remain a major place of pilgrimage in Ethiopia."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "Arthurian legend", "members": ["Camelot", "Excalibur", "Merlin", "Avalon"] },
+        { "category": "American founding fathers", "members": ["Washington", "Jefferson", "Madison", "Hamilton"] },
+        { "category": "Spanish painters", "members": ["Goya", "El Greco", "Murillo", "Miró"] },
+        { "category": "Chinese inventions", "members": ["Gunpowder", "Compass", "Paper", "Porcelain"] }
+      ]
+    }
+  ]
+}

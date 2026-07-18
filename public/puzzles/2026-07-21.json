@@ -1,0 +1,87 @@
+{
+  "puzzleNumber": 13,
+  "date": "2026-07-21",
+  "rounds": [
+    {
+      "type": "faceFromPast",
+      "image": {
+        "src": "/images/2026-07-21/face.jpg",
+        "alt": "Painted portrait of a dark-haired man with sideburns and a moustache in an ornate red-and-gold military coat with heavy gold epaulettes",
+        "attribution": { "fileTitle": "File:Simón Bolívar by José Gil de Castro.jpg", "author": "José Gil de Castro", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sim%C3%B3n_Bol%C3%ADvar_by_Jos%C3%A9_Gil_de_Castro.jpg" }
+      },
+      "options": ["Simón Bolívar", "José de San Martín", "Antonio José de Sucre", "Bernardo O'Higgins"],
+      "correctIndex": 0,
+      "revealFact": "Simón Bolívar led the campaigns that freed six present-day nations from Spanish rule, earning the title 'El Libertador.'"
+    },
+    {
+      "type": "battlefield",
+      "image": {
+        "src": "/images/2026-07-21/battle.jpg",
+        "alt": "Painted folding screen crowded with thousands of samurai, banners, and cavalry spread across a green valley",
+        "attribution": { "fileTitle": "File:Sekigaharascreen.jpg", "author": "Sekigahara Town Archive of History and Cultural Anthropology", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sekigaharascreen.jpg" }
+      },
+      "clues": [
+        "Two great coalitions of warlords met in a fog-bound mountain valley to settle who would rule the whole country.",
+        "The tide turned when one lord switched sides in the middle of the fighting, dooming his former allies."
+      ],
+      "options": ["Battle of Nagashino", "Battle of Okehazama", "Battle of Sekigahara", "Battle of Dan-no-ura"],
+      "correctIndex": 2,
+      "revealYear": 1600
+    },
+    {
+      "type": "whichCameFirst",
+      "pairs": [
+        { "a": "René Laënnec invents the stethoscope", "aYear": 1816, "b": "William Harvey describes how blood circulates through the body", "bYear": 1628, "firstIndex": 1 },
+        { "a": "John Snow traces a cholera outbreak to a single London water pump", "aYear": 1854, "b": "Gregor Mendel works out the basic laws of heredity", "bYear": 1866, "firstIndex": 0 },
+        { "a": "Wilhelm Röntgen produces the first X-ray images", "aYear": 1895, "b": "Andreas Vesalius publishes his detailed maps of human anatomy", "bYear": 1543, "firstIndex": 1 },
+        { "a": "Karl Landsteiner identifies the human blood groups", "aYear": 1901, "b": "The first successful human heart transplant is performed", "bYear": 1967, "firstIndex": 0 },
+        { "a": "Frederick Banting and Charles Best isolate insulin", "aYear": 1921, "b": "Edward Jenner introduces the smallpox vaccine", "bYear": 1796, "firstIndex": 1 }
+      ]
+    },
+    {
+      "type": "whereInHistory",
+      "image": {
+        "src": "/images/2026-07-21/moment.jpg",
+        "alt": "Color photo of three heavy-coated statesmen seated side by side outdoors, with uniformed officers standing behind them",
+        "attribution": { "fileTitle": "File:Yalta Conference cropped.jpg", "author": "U.S. Army Signal Corps", "license": "Public domain", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yalta_Conference_cropped.jpg" }
+      },
+      "eventQuestion": {
+        "prompt": "What gathering is shown here?",
+        "options": ["The Potsdam Conference", "The Yalta Conference", "The Congress of Vienna", "The Paris Peace Conference"],
+        "correctIndex": 1
+      },
+      "followUpQuestion": {
+        "prompt": "In what year did the three leaders meet here?",
+        "options": ["1945", "1919", "1938", "1815"],
+        "correctIndex": 0
+      }
+    },
+    {
+      "type": "guessTheYear",
+      "prompt": "The Taj Mahal is completed as a marble tomb for a Mughal emperor's beloved wife.",
+      "answerYear": 1653,
+      "minYear": 1400,
+      "maxYear": 1800,
+      "tolerance": 15,
+      "revealFact": "Shah Jahan raised the Taj Mahal over roughly two decades as a mausoleum for his wife Mumtaz Mahal; it is now among the most visited monuments on earth."
+    },
+    {
+      "type": "atlas",
+      "prompt": "Where did an ancient city grow up around a giant marble temple to a goddess, counted among the seven wonders of the ancient world?",
+      "answer": "Ephesus, Turkey",
+      "lat": 37.941,
+      "lng": 27.3419,
+      "tolKm": 200,
+      "revealFact": "Ephesus was one of the greatest cities of the ancient Mediterranean, and its Temple of Artemis was famed as one of the Seven Wonders of the World."
+    },
+    {
+      "type": "throughLine",
+      "groups": [
+        { "category": "British monarchs", "members": ["Victoria", "Anne", "Stephen", "Alfred"] },
+        { "category": "Waterfalls", "members": ["Niagara", "Iguazu", "Angel", "Yosemite"] },
+        { "category": "Shakespeare tragedies", "members": ["Hamlet", "Macbeth", "Othello", "Lear"] },
+        { "category": "Aztec gods", "members": ["Quetzalcoatl", "Tlaloc", "Huitzilopochtli", "Tezcatlipoca"] }
+      ]
+    }
+  ]
+}
