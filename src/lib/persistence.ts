@@ -55,6 +55,15 @@ export function saveGame(state: PersistedState, game: GameState): PersistedState
   return next;
 }
 
+export function discardGame(state: PersistedState, date: string): PersistedState {
+  if (!(date in state.games)) return state;
+  const games = { ...state.games };
+  delete games[date];
+  const next = { ...state, games };
+  save(next);
+  return next;
+}
+
 export function markOnboarded(state: PersistedState): PersistedState {
   const next = { ...state, hasOnboarded: true };
   save(next);

@@ -68,9 +68,9 @@
       .thumb img { width: 100%; height: 100%; object-fit: cover; }
 
       /* LookBack (featured, dark) */
-      .card--lookback { background: var(--ink); box-shadow: 0 12px 28px -14px rgba(0,0,0,.55); }
+      .card--lookback { background: var(--ink); box-shadow: 0 12px 28px -14px rgba(0,0,0,.55); min-height: 148px; }
       .card--lookback .spine { background: var(--ochre); }
-      .card--lookback .thumb { width: 134px; }
+      .card--lookback .thumb { width: 128px; }
       .card--lookback .thumb img { filter: sepia(.16) contrast(1.05) brightness(.98); }
       .card--lookback .thumb::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 50%, var(--ink)); }
       .card--lookback .kicker { color: var(--ochre); }
@@ -79,9 +79,9 @@
       .card--lookback .sub { font-size: 12px; color: #a7a396; margin-top: 6px; }
 
       /* Verbatim (light, with type-case thumb) */
-      .card--verbatim { background: var(--paper-card); border: 1px solid var(--line); box-shadow: 0 6px 16px -12px rgba(0,0,0,.3); }
+      .card--verbatim { background: var(--paper-card); border: 1px solid var(--line); box-shadow: 0 6px 16px -12px rgba(0,0,0,.3); min-height: 150px; }
       .card--verbatim .spine { background: var(--ink-2); }
-      .card--verbatim .thumb { width: 118px; }
+      .card--verbatim .thumb { width: 128px; }
       .card--verbatim .thumb img { filter: sepia(.14) contrast(1.02); }
       .card--verbatim .thumb::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 42%, var(--paper-card)); }
       .card--verbatim .kicker { color: var(--muted); }
@@ -190,54 +190,73 @@
         var state = null;
         try { state = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
         var games = (state && state.games) || {};
-
-        // Footer stats
         var streak = (state && state.streak && state.streak.currentStreak) || 0;
-        var best = null, played = 0;
-        Object.keys(games).forEach(function (k) {
-          var g = games[k];
-          if (g && g.currentRoundIndex >= 7) {
-            played += 1;
-            var sc = g.totalScore || 0;
-            if (best === null || sc > best) best = sc;
-          }
-        });
-        document.getElementById('stat-streak').textContent = String(streak);
-        document.getElementById('stat-best').textContent = best === null ? '—' : String(best);
-        document.getElementById('stat-played').textContent = String(played);
 
-        // Resolve today's playable puzzle (mirrors the game's pickPlayableDate)
+        // Footer stats, optionally excluding one date (a healed phantom — below).
+        function renderStats(excludeDate) {
+          var best = null, played = 0;
+          Object.keys(games).forEach(function (k) {
+            if (k === excludeDate) return;
+            var g = games[k];
+            if (g && g.currentRoundIndex >= 7) {
+              played += 1;
+              var sc = g.totalScore || 0;
+              if (best === null || sc > best) best = sc;
+            }
+          });
+          document.getElementById('stat-streak').textContent = String(streak);
+          document.getElementById('stat-best').textContent = best === null ? '—' : String(best);
+          document.getElementById('stat-played').textContent = String(played);
+        }
+
+        function renderStatus(g, noPuzzle) {
+          var statusEl = document.getElementById('lb-status');
+          var subEl = document.getElementById('lb-sub');
+          var ctaEl = document.getElementById('lb-cta');
+          if (noPuzzle) {
+            statusEl.textContent = '';
+            subEl.textContent = 'Today’s edition is being prepared';
+            ctaEl.textContent = 'Check back →';
+          } else if (g && g.currentRoundIndex >= 7) {
+            var s = stars(g.totalScore || 0);
+            statusEl.textContent = '✓ Done';
+            subEl.textContent = (g.totalScore || 0) + '/800 · ' + '★'.repeat(s) + '☆'.repeat(5 - s);
+            ctaEl.textContent = 'View result →';
+          } else if (g && g.currentRoundIndex > 0) {
+            statusEl.textContent = 'In progress';
+            subEl.textContent = 'Round ' + (g.currentRoundIndex + 1) + ' of 7';
+            ctaEl.textContent = 'Continue →';
+          } else {
+            statusEl.textContent = 'New';
+            subEl.textContent = 'New puzzle ready · 7 rounds';
+            ctaEl.textContent = 'Play →';
+          }
+        }
+
+        // Resolve today's puzzle — strictly today or nothing (no fallback to an
+        // earlier day), matching the game. Then validate any stored completion
+        // against today's real puzzle, so a launch-era phantom (a completion
+        // saved under a date whose puzzle was later re-authored) is not shown.
         var today = todayISO();
         fetch('/puzzles/index.json', { cache: 'no-cache' })
           .then(function (r) { return r.ok ? r.json() : null; })
           .catch(function () { return null; })
           .then(function (index) {
-            var playable = today;
-            if (index && index.available) {
-              if (index.available.indexOf(today) === -1) {
-                var past = index.available.filter(function (x) { return x <= today; });
-                playable = past.length ? past[past.length - 1] : index.available[index.available.length - 1];
-              }
+            var hasToday = index && index.available && index.available.indexOf(today) !== -1;
+            if (!hasToday) {
+              renderStatus(null, true);
+              renderStats(null);
+              return;
             }
-            var g = games[playable] || null;
-            var statusEl = document.getElementById('lb-status');
-            var subEl = document.getElementById('lb-sub');
-            var ctaEl = document.getElementById('lb-cta');
-
-            if (g && g.currentRoundIndex >= 7) {
-              var s = stars(g.totalScore || 0);
-              statusEl.textContent = '✓ Done';
-              subEl.textContent = (g.totalScore || 0) + '/800 · ' + '★'.repeat(s) + '☆'.repeat(5 - s);
-              ctaEl.textContent = 'View result →';
-            } else if (g && g.currentRoundIndex > 0) {
-              statusEl.textContent = 'In progress';
-              subEl.textContent = 'Round ' + (g.currentRoundIndex + 1) + ' of 7';
-              ctaEl.textContent = 'Continue →';
-            } else {
-              statusEl.textContent = 'New';
-              subEl.textContent = 'New puzzle ready · 7 rounds';
-              ctaEl.textContent = 'Play →';
-            }
+            fetch('/puzzles/' + today + '.json', { cache: 'no-cache' })
+              .then(function (r) { return r.ok ? r.json() : null; })
+              .catch(function () { return null; })
+              .then(function (pz) {
+                var g = games[today] || null;
+                var phantom = g && pz && g.puzzleNumber !== pz.puzzleNumber;
+                renderStatus(phantom ? null : g, false);
+                renderStats(phantom ? today : null);
+              });
           });
       })();
     </script>

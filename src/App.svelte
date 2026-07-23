@@ -15,7 +15,7 @@
   import { track } from '@vercel/analytics';
 
   import { fetchIndex, fetchPuzzle, resolveDailyDate, todayISO } from './lib/puzzle';
-  import { load, save, saveGame, markOnboarded } from './lib/persistence';
+  import { load, save, saveGame, discardGame, markOnboarded } from './lib/persistence';
   import { advanceStreak } from './lib/streak';
   import { computeTotal } from './lib/scoring';
 
@@ -78,6 +78,17 @@
         puzzle = p;
         mode = 'daily';
         game = persisted.games[p.date] ?? null;
+
+        // Heal launch-era artifacts: an early build's date-fallback could save a
+        // completed game under a date whose puzzle was later re-authored/re-dated
+        // (e.g. the pre-launch set had today's date pointing at a different
+        // puzzle). If the stored game is for a different puzzle than today's,
+        // discard it so the player gets today's real puzzle instead of a phantom
+        // "already done" screen.
+        if (game && game.puzzleNumber !== p.puzzleNumber) {
+          persisted = discardGame(persisted, p.date);
+          game = null;
+        }
 
         if (!persisted.hasOnboarded) {
           screen = 'tutorial';
