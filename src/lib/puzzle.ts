@@ -28,9 +28,10 @@ export async function fetchPuzzle(date: string): Promise<Puzzle> {
   return res.json();
 }
 
-export function pickPlayableDate(index: PuzzleIndex, iso: string): string {
-  if (index.available.includes(iso)) return iso;
-  // Fall back to the most recent available date not in the future
-  const past = index.available.filter((d) => d <= iso);
-  return past.length ? past[past.length - 1] : index.available[index.available.length - 1];
+export function resolveDailyDate(index: PuzzleIndex, iso: string): string | null {
+  // The daily is today's puzzle or nothing — never an earlier day. This makes
+  // "never serve a previous (possibly completed) puzzle" a structural guarantee
+  // rather than a fallback we have to keep getting right. Deliberate replays of
+  // past days still happen through the Archive (as unscored practice).
+  return index.available.includes(iso) ? iso : null;
 }

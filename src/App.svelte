@@ -14,7 +14,7 @@
 
   import { track } from '@vercel/analytics';
 
-  import { fetchIndex, fetchPuzzle, pickPlayableDate, todayISO } from './lib/puzzle';
+  import { fetchIndex, fetchPuzzle, resolveDailyDate, todayISO } from './lib/puzzle';
   import { load, save, saveGame, markOnboarded } from './lib/persistence';
   import { advanceStreak } from './lib/streak';
   import { computeTotal } from './lib/scoring';
@@ -25,6 +25,7 @@
   import SummaryScreen from './screens/SummaryScreen.svelte';
   import TutorialScreen from './screens/TutorialScreen.svelte';
   import ArchiveScreen from './screens/ArchiveScreen.svelte';
+  import NoPuzzleScreen from './screens/NoPuzzleScreen.svelte';
 
   import FaceFromPast from './mechanics/FaceFromPast.svelte';
   import Battlefield from './mechanics/Battlefield.svelte';
@@ -42,6 +43,7 @@
     | 'error'
     | 'tutorial'
     | 'splash'
+    | 'noPuzzle'
     | 'archive'
     | 'roundIntro'
     | 'round'
@@ -66,7 +68,12 @@
       try {
         const idx = await fetchIndex();
         index = idx;
-        const date = pickPlayableDate(idx, todayISO());
+        const date = resolveDailyDate(idx, todayISO());
+        if (date === null) {
+          // No puzzle authored for today — never fall back to an earlier day.
+          screen = 'noPuzzle';
+          return;
+        }
         const p = await fetchPuzzle(date);
         puzzle = p;
         mode = 'daily';
@@ -194,7 +201,11 @@
   function goHome() {
     mode = 'daily';
     if (index) {
-      const date = pickPlayableDate(index, todayISO());
+      const date = resolveDailyDate(index, todayISO());
+      if (date === null) {
+        screen = 'noPuzzle';
+        return;
+      }
       if (puzzle?.date !== date) {
         fetchPuzzle(date).then((p) => {
           puzzle = p;
@@ -255,6 +266,8 @@
       onbegin={beginFromSplash}
       onarchive={openArchive}
     />
+  {:else if screen === 'noPuzzle'}
+    <NoPuzzleScreen today={todayISO()} onarchive={openArchive} />
   {:else if screen === 'archive' && index}
     <ArchiveScreen {index} {persisted} onback={goHome} onpick={pickArchiveDate} />
   {:else if screen === 'roundIntro' && game && currentRound}

@@ -13,3 +13,9 @@ if git diff --cached --name-only | grep -q '^public/puzzles/.*\.json$'; then
   echo "→ LookBack: linting puzzles…"
   npm run lint:puzzles --silent
 fi
+
+# Non-blocking heads-up: how many days of authored daily puzzles remain.
+# Runs on every commit (that is when low runway would otherwise go unnoticed).
+# Never fails the commit — check:runway always exits 0; the `|| true` is belt-
+# and-suspenders so a tooling hiccup can't block you either.
+npm run check:runway --silent || true
